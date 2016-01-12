@@ -1,0 +1,77 @@
+@charset "utf-8";
+/* reset.css */
+body,dl,dd,ul,ol,h1,h2,h3,h4,h5,h6,form,input,textarep,th,td{margin:0;padding:0;}
+table{border-collapse:collapse;}
+img{border:none; vertical-align:top;}
+li{list-style:none}
+a{text-decoration:none;}
+textarea{ resize:none; overflow:auto;}
+input,textarea,select,lable{ outline:none;}
+.clear{zoom:1;}
+.clear:after{content:"";display:block;clear:both;}
+.wrap{width:960px;
+	  margin:0 auto;}
+/* end reset.css */
+
+/* Life VIP.css*/
+
+#topMenu{height:74px;background:#f7f8f6;}
+.wrap .title h2{width:170px;float:left;background:url(../img/img-1.png) no-repeat 0 10px;height:0px;overflow:hidden;padding-top:74px;}
+.wrap .title h1{float:right;padding-top:12px;}
+.wrap .title h1 a{font-size:12px;color:#666666;}
+#header{background:url(../img/img-2.png) repeat-x;height:38px;margin-bottom:2px;}
+#header .nav li{float:left;height:38px;}
+#header .nav li a{float:left;padding:0 16px;line-height:34px;margin-top:5px;color:#fff;font-weight:bold;font-size:14px;}
+#header p{float:right;}
+#header p span{font-size:6px;;color:#f7ffd8;padding-right:8px;}
+#header p a{font-size:12px;color:#fff;}
+#header .nav li .active{color:#000;background:#f7f5f5;
+	-webkit-border-radius:2px 2px 0 0;
+	-moz-border-radius:2px 2px 0 0;
+	border-radius:2px 2px 0 0;}
+#header .nav li a:hover{text-decoration:underline;color:#000;background:#f7f5f5;
+	-webkit-border-radius:2px 2px 0 0;
+	-moz-border-radius:2px 2px 0 0;
+	border-radius:2px 2px 0 0;
+}
+
+#bottom{}
+#bottom .top h2{height:33px;background:#fdfdfd;font-size:12px;margin-top:10px;margin-left:640px;margin-bottom:10px;}
+#bottom .top h2 a{color:#cd1a09;}
+#bottom .top h2 span{color:#333;}
+#bottom .top p{width:960px;margin:0 auto;position:relative;}
+#bottom .top p img{width:960px;height:287px;}
+#bottom .top p a{position:absolute;left:285px;top:200px;}
+#bottom .center{width:960px;margin:0 auto;padding-left:1px;}
+#bottom .center h1{font:24px/74px "宋体";border-bottom:1px solid #f2f2f2;}
+#bottom .center h1 a{color:#cd1a09;}
+
+#bottom .center li{float:left;width:304px;height:116px;border-right:1px solid #f7f7f7;}
+#bottom .center li p{zoom:1;margin-left:102px;font:14px/28px "宋体";color:#434343;font-weight:bold;padding-top:15px;}
+#bottom .center li p a{width:155px;float:left;font:12px/22px "宋体"; color:#666;}
+#bottom .center li span{float:left;width:86px;height:86px;padding-top:26px;}
+.text1 span{background:url(../img/img-0011.gif) no-repeat 0 26px;}
+.text2 span{background:url(../img/img-0011.gif) no-repeat -86px 26px;}
+.text2{margin-left:15px;}
+.text3 span{float:left;background:url(../img/img-0011.gif) no-repeat -172px 26px;}
+.text3{margin-left:15px;float:left;}
+.text4 span{float:left;background:url(../img/img-0011.gif) no-repeat -258px 26px;}
+.text5 span{float:left;background:url(../img/img-0011.gif) no-repeat -344px 26px;}
+.text5{margin-left:15px;}
+.text6 span{float:left;background:url(../img/img-0011.gif) no-repeat -430px 26px;}
+.text6{margin-left:15px;}
+.text7 span{float:left;background:url(../img/img-0011.gif) no-repeat -516px 26px;}
+.text8 span{float:left;background:url(../img/img-0011.gif) no-repeat -602px 26px;}
+.text8{margin-left:15px;}
+.text9 span{float:left;background:url(../img/img-0011.gif) no-repeat -688px 26px;}
+.text9{margin-left:15px;}
+#bottom .bottom{width:960px;margin:0 auto;}
+#bottom .bottom img{width:960px;height:107px;margin:20px 0;border-top:1px solid #f7f7f7;}
+
+#footer{float:left;border-top:1px solid #ccc;width:100%;margin:0 auto;margin-bottom:24px;}
+#footer .top{padding:14px 0 0 0;width:100%;margin:0 auto;text-align:center;}
+#footer .top a{font:12px/28px "宋体";color:#666;padding-right:19px;font-weight:bold;}
+#footer .bottom{width:17%;margin:0 auto;}
+#footer .bottom a{font-size:12px;color:#333;}
+#footer .bottom a span{color:#666;padding-right:25px;}
+/* end Life VIP.css*/

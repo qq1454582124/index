@@ -1,0 +1,418 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>微云</title>
+<link rel="stylesheet" type="text/css" href="css/base.css" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" type="text/css" href="css/note.css" />
+</head>
+
+<body>
+<div id="header" class="clear"><!--header-->
+	<div id="move-success-tips">
+		<i class="ico"></i>
+		文件移动成功
+	</div>
+	<div id="delete-tips">
+		<i class="ico"></i>
+		请选择文件
+	</div>
+	<div id="rename-tips">
+		<i class="ico"></i>
+		只能对单个文件（夹）重命名
+	</div>
+	<div id="delete-success-tips">
+		<i class="ico"></i>
+		删除文件成功
+	</div>
+	<a class="logo" href="#"></a>
+	<div id="head-app" class="app"><!--移动端下载按钮-->
+		<a class="ico icon-apple"></a>
+		<a class="ico icon-android"></a>
+		<a class="ios"><i></i>下载微云iPhone版</a>
+		<a class="android"><i></i>下载微云Android版</a>
+	</div>
+	<div class="right navR ftYahei"><!--右侧内容-->
+		<div class="ad-head alignR gray">
+			<a href="#">关于腾讯微云开展“净网行动”公告</a>
+			<a href="#">反馈</a>
+		</div>
+		<div id="search"><!--搜索条-->
+			<i class="ico"></i>
+			<input type="text" placeholder="搜索全部文件" />
+		</div>
+		<div id="userBox"><!--用户头像-->
+			<img src="img/g.jpg" />
+			<i></i>
+		</div>
+		<div id="userMenu">
+			<dl>
+				<dt>微云</dt>
+				<dd><label>已使用：</label><span>1.85G</span></dd>
+				<dd class="mb5"><label>总容量：</label><span>10242G</span></dd>
+				<dd class="main-space"><div class="use-space" style="width:0%;"></div></dd>
+			</dl>
+			<ul class="ui-menu">
+				<li><a href="javascript:;">独立密码<span>（未开启）</span></a></li>
+				<li><a href="javascript:;">https模式<span>（未开启）</span></a></li>
+				<li><a href="javascript:;">下载客户端</a></li>
+				<li><a href="login.html">退出</a></li>
+			</ul>
+		</div>
+	</div>
+</div><!--头部End-->
+
+<div id="wrap" class="clear ftYahei">
+	<div class="sideNav left ft14"><!--左侧菜单-->
+		<div id="upload" class="upload"><a><b>+</b>添加</a></div>
+		<ul id="drop-menu">
+			<li><input type="file" name="file"/><a href="javascript:;">文件</a></li>
+			<li><a id="newbulitnote" href="javascript:;">笔记<i></i></a></li>
+		</ul>
+		<div id="scrollBox">
+			<div id="scrollCont">
+				<ul id="sideMenu" class="sideMenu">
+					<li type="folder" class="cur"><a class="nav-icon all"><i></i>目录</a></li>
+					<li type="recent"><a class="nav-icon recent"><i></i>最近</a></li>
+					<li class="nav-line"><span></span></li>
+					<li type="docu"><a class="nav-icon doc"><i></i>文档</a></li>
+					<li type="jpg"><a class="nav-icon album"><i></i>图片</a></li>
+					<li type="mp3"><a class="nav-icon music"><i></i>音乐</a></li>
+					<li type="avi"><a class="nav-icon video"><i></i>视频</a></li>
+					<li type="note" id="note-btn"><a class="nav-icon note"><i></i>笔记</a></li>
+					<li class="nav-line"><span></span></li>
+					<!--<li type="qqOutline"><a class="nav-icon offline"><i></i>QQ离线文件</a></li>->
+					<li class="nav-line"><span></span></li>
+					<!--暂时把剪贴板和分享的链接注释，以后加功能时再打开-->
+					<!--<li><a class="nav-icon clip"><i></i>剪贴板</a></li>
+					<li class="nav-line"><span></span></li>
+					<li><a class="nav-icon share"><i></i>分享的链接</a></li>-->
+					<li type="recycle"><a class="nav-icon recycle"><i></i>回收站</a></li>
+				</ul>
+				<p class="mobile">
+					<a class="android" href="javascript:;">Android</a>
+					<a class="iphone" href="javascript:;">iPhone</a>
+					<a class="ipad" href="javascript:;">iPad</a>
+				</p>
+			</div>
+			<div id="scroll"><!--滚动条-->
+				<div id="scrollBar"></div>
+			</div>
+		</div>
+	</div><!--左侧菜单End-->
+	<div id="box" class="right"><!--右侧内容区域-->
+		<div id="toolbar" class="toolbar ft14 clear"><!--顶部工具栏-->
+			<div id="folder-toolbar" class="tBtn left">
+				<!--<a class="nav-icon down"><i></i>下载</a>-->
+				<a id="share" class="nav-icon share2"><i></i>分享</a>
+				<!--<a class="nav-icon move"><i></i>移动到</a>-->
+				<a id="rename" class="nav-icon rename"><i></i>重命名</a>
+				<a id="delete" class="nav-icon delete"><i></i>删除</a>
+				<a id="new" class="nav-icon newfile"><i></i>新建文件夹</a>
+				<!--<a class="nav-icon refresh"><i></i></a>-->
+			</div>
+			<div id="view-drop" class="tBtn right">
+				<a id="showDom" class="nav-icon vtree left"><i></i></a>
+				<a id="view-btn" class="nav-icon view left"><i></i><b></b></a>
+				<ul id="drop-box">
+					<li id="sort-by-time"><a class="nav-icon time"><i></i>按时间排序</a></li>
+					<li id="sort-by-word"><a class="nav-icon char"><i></i>按字母顺序</a></li>
+					<li id="sort-by-normal" class="on"><a class="nav-icon thumb"><i></i>显示缩略图</a></li>
+				</ul>
+			</div>
+			<!--生成最近列表的头部-->
+			<div id="tBtn-recent" class="tBtn left">
+				<a class="nav-icon clear-resord"><i></i>清空记录</a>
+			</div>
+			<!--生成最近列表的头部结束-->
+			<!--生成回收站列表的头部-->
+			<div id="tBtn-recycle" class="tBtn left">
+				<a class="nav-icon clear-recycle"><i></i>清空回收站</a>
+			</div>
+			<!--生成回收站列表的头部结束-->
+			<!--生成QQ离线文件列表的头部-->
+			<div id="tBtn-qqOutline" class="tBtn left">
+				<a class="nav-icon delete"><i></i>删除</a>
+			</div>
+			<!--生成QQ离线文件列表的头部结束-->
+			<!--生成笔记列表的头部-->
+			<div id="tBtn-note" class="tBtn left">
+				<a class="nav-icon refresh" id="tBtn-refreshNote"><i></i></a>
+			</div>
+			<!--生成笔记列表的头部结束-->
+			<!--生成音乐类型文件列表的头部-->
+			<div id="tBtn-music" class="tBtn left">
+				<a class="nav-icon delete"><i></i>删除</a>
+			</div>
+			<!--生成音乐类型文件列表的头部结束-->
+			<!--生成图片类型文件列表的头部-->
+			<div id="tBtn-picture" class="tBtn left">
+				<a class="nav-icon delete"><i></i>删除</a>
+			</div>
+			<!--生成图片类型文件列表的头部结束-->
+			<!--生成视频类型文件列表的头部-->
+			<div id="tBtn-avi" class="tBtn left">
+				<a class="nav-icon delete"><i></i>删除</a>
+			</div>
+			<!--生成视频类型文件列表的头部结束-->
+			<!--生成文档类型文件列表的头部-->
+			<div id="tBtn-docu" class="tBtn left">
+				<a class="nav-icon delete"><i></i>删除</a>
+			</div>
+			<!--生成文档类型文件列表的头部结束-->
+			<div id="view-mode-sort" class="view-mode-sort clear">
+			    <span class="on all left">全部</span>
+			    <span class="doc left">DOC</span>
+			    <span class="xls left">XLS</span>
+			    <span class="ppt left">PPT</span>
+			    <span class="pdf left">PDF</span>
+			</div>
+			<!--生成文档类型文件列表的头部结束-->
+		</div>
+		<div id="main-box" class="main-box clear"><!--右侧包括目录树和文件夹展示区域-->
+			<div id="dom-box">
+				<ul id="disk_sidebar" class="disk_sidebar">
+					<li id="d0">
+						<span class="arrow arrow_down"></span>
+						<span class="folder"></span>
+						<div class="active" title="微云">微云</div>
+						<ul id="root_ul"></ul>
+					</li>
+				</ul>
+			</div>
+			<div id="content-box" class="content-box left"><!--右侧文件夹展示区域-->
+				<div id="content-nav" class="content-nav clear"><!--右侧展示区域顶部导航栏-->
+					<label for="content-nav-checkbox" id="checkbox-box" class="checkbox-box left">
+						<i id="content-nav-checkbox" class="content-nav-checkbox"></i>
+					</label>
+					<div id="main-path" class="main-path left clear">
+					</div>
+				</div>
+				<div id="content" class="content clear">
+				</div><!--右侧文件夹区域-->
+			</div>
+		</div>
+	</div><!--右侧内容End-->
+</div>
+
+<!---------------------------------弹出层的内容------------------------------------------------------------>
+
+<div id="enter_box"></div><!--弹窗下面的半透明div--->
+<div class="enter_middle" id="enter_middle"><!---弹窗--->
+	<div class="enter_head clear">
+		<p class="enter_p">微云iPhone版</p>
+		<span id="enter_span">×</span>
+	</div>
+	<div class="enter_con clear"></div>
+</div>
+
+<div id="share_box">
+	<div id="share_head" class="clear">
+		<p>分享：gfhfhg</p>
+		<span id="share_spanhead">×</span>
+	</div>
+	<div id="share_m" class="clear">
+		<div id="share_mbox">已创建连接</div>
+		<a href="#">添加访问密码</a>
+	</div>
+	<ul id="share_ul">
+		<li id="share_li1"><a href="#" id="share_a1" class="share_active">连接分享</a></li>
+		<li id="share_li2"><a href="#" id="share_a2">邮件分享</a></li>
+	</ul>
+	<div id="change_box">
+		<p>复制链接发送给您的好友吧！</p>
+		<div id="change_text">
+			<a href="#">http://mobile.qzone.qq.com/l?g=1357&sharekey=0aa33e8ce3f1f6ff1c25c87c443ad79c
+			</a>
+		</div>
+		<span>复制链接</span>
+	</div>
+	
+	<div id="change_box2">
+		<div id="change_inp">
+			收件人：
+			<input type="text" value="输入收件人，多收件人中间用分号隔开"/>
+		</div>
+		<div id="change_area">
+			<span>发送内容：</span>
+			<textarea>我通过微云给你分享了“gfhfhg”，http://mobile.qzone.qq.com/l?g=1357&sharekey=0aa33e8ce3f1f6ff1c25c87c443ad79c
+			</textarea>
+			
+		</div>
+		<span id="area_span">发送</span>
+	</div>
+</div>
+
+<div id="enter_del"><!--删除文件的弹窗--->
+	<div id="del_head" class="clear">
+		<p>删除文件</p>
+		<span id="del_span">×</span>
+	</div>
+	<div id="del_nav">
+		<div id="del_navt">
+			<div id="del_img"><img src="img/del.gif"/></div>
+			<div id="del_text">
+				<p id="del_p1">确定要删除这个文件夹吗？</p>
+				<p id="del_p2">已删除的文件可以在回收站找到</p>
+			</div>		
+		</div>
+		<div id="del_navb">
+			<span id="del_span1">确定</span>
+			<span id="del_span2">取消</span>
+		</div>
+	</div>
+	
+</div>	
+
+
+<div id="enterCon1">
+	<div class="enter_conL"><img src="img/qrcode.png"/></div>
+	<div class="enter_conR">
+		<h3 class="enter_ah3">方法1：前往App Store下载</h3>
+		<a href="#" class="a1">前往App Store</a>
+		<h3>方法2：短信获取下载地址</h3>
+		<p>请填写手机号，下载地址将发送到您的手机</p>
+		<input class="text" type="text" value=""/>
+		<input class="enter_btn" type="button" value="发送短信"/>
+	</div>
+</div>
+
+<div id="enterCon2">
+	<div class="enter_conL"><img src="img/qrcode.png"/></div>
+	<div class="enter_conR">
+		<h3 class="enter_ah3">方法1：下载安装包</h3>
+		<a href="#" class="a1">点击开始下载</a>
+		<h3>方法2：短信获取下载地址</h3>
+		<p>请填写手机号，下载地址将发送到您的手机</p>
+		<input class="text" type="text" value=""/>
+		<input class="enter_btn" type="button" value="发送短信"/>
+	</div>
+</div>
+
+<div id="enterCon3">
+	<div class="enter_conL"><img src="img/qrcode.png"/></div>
+	<div class="enter_conR">
+		<h3 class="enter_ah3">前往App Store下载</h3>
+		<a href="#" class="a1">前往App Store</a>
+	</div>
+</div>
+<!------------------------------弹出层内容结束--------------------------------------------------------------->
+
+<!---------------------------------生成文件列表的内容------------------------------------------------------------>
+<div id="f-ico" class="f-ico left clear">      <!--需要隐藏的一组五个按钮-->
+	<!--<a href="#" class="nav-icon down"><i></i></a>
+	<a href="#" class="nav-icon share2"><i></i></a>
+	<a href="#" class="nav-icon move"><i></i></a>
+	<a href="#" class="nav-icon rename"><i></i></a>
+	<a href="#" class="nav-icon delete"><i></i></a>-->
+</div>
+<!------------------------------生成文件列表内容结束--------------------------------------------------------------->
+<!---------------------------------暂无文件显示的内容------------------------------------------------------------>
+<div id="empty-file-page">
+	<div class="empty-file-box">
+		<div class="empty-box">
+	        <div class="ico"></div>
+	        <p class="title">暂无文件</p>
+	        <p class="content">请点击左上角的“上传”按钮添加</p>
+	    </div>
+    </div>
+</div>
+<!---------------------------------暂无文件显示的内容结束------------------------------------------------------------>
+<!---------------------------------空笔记显示内容------------------------------------------------------------>
+<div id="empty-note-page">
+	<div class="empty-note-box">
+		<div class="empty-wrap">
+	        <div class="ico"></div>
+	        <p class="title">暂无笔记</p>
+	        <p class="content">您可以通过“新建笔记”进行添加</p>
+	    </div>
+    </div>
+</div>
+<!---------------------------------空笔记显示内容结束------------------------------------------------------------>
+<!--编辑笔记-->
+<div id="fullBox">
+	<div class="full clear">
+		<!--左侧笔记目录-->
+		<div class="memory left">
+			<dl class="memory-dl">
+				<!--<dt></dt>
+				<dd>
+					<div>
+						<p>新建笔记</p>
+						<br />
+						<p>2015年1月1日</p>
+					</div>
+				</dd>-->
+			</dl>
+		</div>
+		<!--右侧的笔记内容-->
+		<div class="r-note left">
+			<div class="note-tool clear">
+				<ul class="changbtn left clear" id="ulbtn">
+					<li class="bold" n="粗体"></li>
+					<li class="italic" n="斜体"></li >
+					<li class="underline" n="下划线"></li>
+					<li class="family" n="字体"></li>
+					<li class="fnsize" n="文字大小" id="lalal"></li>
+					<li class="fncolor" n="文字颜色&amp;背景"></li>
+					<li class="outorder" n="无序列表"></li>
+					<li class="order" n="有序列表"></li>
+					<!--<li class="align" n="对齐调整"></li>-->
+					<li class="increase-texti" n="增加缩进"></li>
+					<li class="decrease-texti" n="减少缩紧"></li>
+					<!--<li class="checkbox" n="插入复选框"></li>
+					<li class="uploadf" n="上传图片"></li>-->
+				</ul>
+				<!--提示浮动-->
+				<div class="minipoint" id="hovermini">1111</div>
+				<!--字体下拉列表-->
+				<div class="fontlist">
+					<ul class="fontStyles">
+						<li type="song" class='active'><i></i>宋体</li>
+						<li type="microsoft"><i></i>微软雅黑</li>
+						<li type="black"><i></i>黑体</li>
+						<li type="black"><i></i>楷体_GB2312</li>
+						<li type="you"><i></i>幼圆</li>
+						<li type="arial"><i></i>Arial</li>
+						<li type="arial-black"><i></i>Arial Black</li>
+						<li type="comic"><i></i>Comic Sans MS</li>
+						<li type="tahoma"><i></i>Tahoma</li>
+					</ul>
+				</div>
+				<!--字体大小下拉列表-->
+				<div class="fontslist" id="sizesList">
+					<ul class="fontSize">
+						<li type="x-small" class='active'><i></i>特小</li>
+						<li type="small"><i></i>小</li>
+						<li type="medium"><i></i>中</li>
+						<li type="large"><i></i>大</li>
+						<li type="x-large"><i></i>较大</li>
+						<li type="xx-large"><i></i>最大</li>
+					</ul>
+				</div>
+				<!--字体颜色下拉列表-->
+				<div class="fontColor clear"></div>
+				<div class="savebtn right">保存</div>
+			</div>
+			<!--输入的内容区-->
+			<div class="note-word" contentEditable="true"></div>
+		</div>
+		<!--下边12px的小边-->
+		<!--<div class="note-bottom left"></div>-->
+	</div>
+</div>
+<!--编辑笔记结束-->
+<script src="js/tween.js"></script>
+<script src="js/common.js"></script>
+<script src="js/data.js"></script>
+<script src="js/File.js"></script>
+<script src="js/index.js"></script>
+<script src="js/view.js"></script>
+<script src="js/noteData.js"></script>
+<script src="js/NoteFile.js"></script>
+<script src="js/note.js"></script>
+<script src="js/scroll.js"></script>
+<script src="js/pop.js"></script>
+</body>
+</html>

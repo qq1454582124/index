@@ -1,0 +1,854 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="../css/common.css"/>
+<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+<link rel="stylesheet" type="text/css" href="../css/style.css"/>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/js.js"></script>
+<title>订单-我的美联美购</title>
+       
+         
+  <script type="text/javascript">
+ 	 $(function(){	
+      $('.bar-l-li1').hover(function(){
+ 	    $('.bar-ul1').show()
+	    $('.bar-l-li1').addClass('bar-l-li2')
+ 	   },function(){
+ 		    $('.bar-ul1').hide()
+	         $('.bar-l-li1').removeClass('bar-l-li2')
+ 		   })
+ 	  $('.shop-car').hover(function(){
+ 		  $('.shop-cart-info').show();
+		   $('.icon-delta').addClass('icon-delta1')
+  		  },function(){
+ 		     $('.shop-cart-info').hide();
+ 	         $('.icon-delta').removeClass('icon-delta1')
+  		})
+ })
+		$(function(){
+		$(".delivery").click(function(){
+	   $(".show_layer").show();
+			$(".remind").show();
+			})
+		 $(".del_1").click(function(){
+			$(".show_layer").hide();
+			$(".remind1").hide();
+			})
+		})
+		
+		//是否取消订单
+
+		$(function(){
+		 $(".cancel_order").click(function(){
+			$(".show_layer").show();
+			$(".is_cancel").show();
+	})
+		
+		$(".del").click(function(){
+			$(".show_layer").hide();
+			$(".is_cancel").hide();
+			})
+	})
+		
+		$(function(){
+	   $(".del_4").click(function(){     
+		   $(".show_layer").show();
+		  	$(".delete_one").show();
+      })		
+			$(".del").click(function(){
+		   $(".show_layer").hide();
+			 $(".delete_one").hide();
+			 
+			 })	
+	})
+ </script>
+
+</head>
+<body>
+
+     <div class="head-bar">
+     <div class="head-bar2 webwidth clearfix">
+         <div class="head-bar-l fl clearfix">
+            <div class="webcomes fl">您好，欢迎来到美联美购</div>
+            <div class="login-con fl">
+             <a href="#">请登录</a> 
+             <a href="#">【免费注册】</a>
+           </div>
+         </div>
+         <div class="head-bar-r fr clearfix">
+           <ul class="bar-r-list-1 fl">
+             <li><a href="#">我的订单</a></li>
+             <li  class="bar-l-li1"><a href="#">我的美购</a>
+                <ul class="bar-ul1">
+                  <li><a href="#">我的订单</a></li>
+                  <li><a href="#"> 我的钱包</a></li>
+                  <li><a href="#">我的优惠券</a></li>
+                  <li><a href="#"> 我的收藏</a></li>
+                  <li><a href="#"> 会员等级</a></li>
+                </ul>
+              </li>
+           </ul>          
+            <ul class="bar-r-list-2 fr">
+             <li class="bar-r-li1"><a href="#">手机美购</a></li>
+             <li><a href="#">联系客服</a></li>
+             <li><a href="#">收藏本站</a></li>
+             <li><a href="#">帮助</a></li>
+            </ul>
+        </div>
+    </div>
+ </div>
+ 
+  <div class="logo-con clearfix">
+      <h1 class="logo fl"><a href="#"><img src="../images/logo.png" /></a></h1> 
+      <div class="search-con fl">
+        <div class="search-top">
+         <input type="text" value="奶粉" class="index-search" />
+         <a href="#">搜一搜</a>
+       </div>
+       <div class="search-bottom">
+          <a href="#" class="hota1">奶粉</a>
+          <a href="#">纸尿裤</a>
+          <a href="#">奶粉</a>
+          <a href="#">纸尿裤</a>
+          <a href="#">奶粉</a>
+          <a href="#">纸尿裤</a>
+          <a href="#">奶粉</a>
+          <a href="#">奶粉</a>
+       </div>
+     </div>
+      <div class="shop-car">
+        <a href="#" class="shop-car-a">
+          <span class="cart-info">购物车<b>(1)</b>件</span>
+          <b class="icon-delta"></b>
+         </a>
+          <div class="shop-cart-info">
+             <ul class="shop-cart-list">
+                <li>
+                <div class="car-img clearfix">
+                  <a href="#" class="fl"><img src="../images/tab1.jpg" /> </a>
+                  <dl class="fr car-dl">
+                    <dt>Merries 花王妙而舒 婴儿纸尿裤 </dt>
+                    <dd>L44片*2包</dd>
+                    <dd><i>￥236.00</i>×1</dd>
+                  </dl>
+                </div>
+               </li>              
+                <li>
+                <div class="car-img clearfix">
+                  <a href="#" class="fl"><img src="../images/tab1.jpg" /> </a>
+                  <dl class="fr car-dl">
+                    <dt>Merries 花王妙而舒 婴儿纸尿裤 </dt>
+                    <dd>L44片*2包</dd>
+                    <dd><i>￥236.00</i>×1</dd>
+                  </dl>
+                </div>
+               </li>               
+                <li>
+                <div class="car-img clearfix">
+                  <a href="#" class="fl"><img src="../images/tab1.jpg" /> </a>
+                  <dl class="fr car-dl">
+                    <dt>Merries 花王妙而舒 婴儿纸尿裤 </dt>
+                    <dd>L44片*2包</dd>
+                    <dd><i>￥236.00</i>×1</dd>
+                  </dl>
+                </div>
+               </li>           
+                <li>
+                <div class="car-img clearfix">
+                  <a href="#" class="fl"><img src="../images/tab1.jpg" /> </a>
+                  <dl class="fr car-dl">
+                    <dt>Merries 花王妙而舒 婴儿纸尿裤 </dt>
+                    <dd>L44片*2包</dd>
+                    <dd><i>￥236.00</i>×1</dd>
+                  </dl>
+                </div>
+               </li>
+                <div class="shop-pay clearfix">
+                     <ol class="shop-list fl"> 
+                       <li>共<b>1</b>件商品</li>
+                       <li>共计<span>￥236.00</span></li>
+                     </ol>
+                     <a href="#" class="fr">去购物车结算</a>
+                </div>                    
+             </ul>          
+          </div>
+      </div>
+  </div>
+  <div class="nav">
+    <ul class="nav-list webwidth clearfix">
+       <li class="nav-one"><a href="#">首页</a></li>
+       <li><a href="#">母婴专区</a></li>
+       <li><a href="#">美容彩妆</a></li>
+       <li><a href="#">家居个护</a></li>
+       <li><a href="#">进口美食</a></li>
+       <li><a href="#">营养保健</a></li>
+       <li><a href="#">正品保证</a></li>
+     </ul>
+  </div>
+      <div class="webwidth margin-bottom83 clearfix">
+      <div class="page"><a>首页</a>><a>个人中心</a>><a>我的订单</a></div>
+
+          <!--我的业务列表-->
+      <div class="service_l clearfix" >  
+        <ul>
+        <li ><a href="#">我的美联</a></li> 
+        <li class="one"><a href="#">我的订单</a></li>
+        <li ><a href="#">基本信息</a></li>
+        <li><a href="#">收货地址</a></li>
+        <li><a href="#">我的会员等级</a></li>
+        <li><a href="#">我的优惠劵</a></li>
+        <li><a href="#">我的收藏</a></li>
+       </ul>  
+   </div>
+   
+        <!--订单列表-->
+        <div class="order_r clearfix">
+         <div class="order_list clearfix ">
+          <ul>
+          <li class="one"><a>所有订单</a></li>
+          <li><a>待付款<span>0</span></a></li> 
+          <li><a>待发货<span>0</span></a></li>
+          <li><a>待收货<span>2</span></a></li>
+          <li><a>待评价<span>1</span></a></li>
+     
+        </ul>
+        <div class="recycle_bin"><a><img src="../images/del_4.png" />订单回收站</a></div>  
+       </div>
+        <div class="seacher_order clearfix"><input  value="输入商品或订单号搜索" /><a>搜索</a></div>
+       
+         <!--订单信息-->
+         <div class="order_con">
+      	                                                                	    	                                                
+          <table>
+          <td class="one">商品信息</td>
+          <td >单价(元)</td>
+          <td>数量</td>
+          <td>总计(元)</td>
+          <td class="five" >订单状态 </td>
+          <td class="six">操作</td>
+         </table>
+       </div>
+         
+              <div class="order_info">
+             <table cellpadding="0" cellspacing="0">
+                <tr class="order_no">
+                  	<td colspan="7"  >
+                     2015-06-15<span>订单号：201506011557ORDER06223730</span>
+                </td>
+             </tr> 
+             <tr>
+             <td class="tr_top">
+               <table>
+                  <tr>
+                  <td class="td_one clearfix" >
+                  	   <a>
+                      <img src="../images/tab1.jpg" />
+                    	<span> Merries 花王妙而舒 婴儿纸尿裤 L44片*2包</span>
+                      </a>  
+                  </td>
+                  <td>
+                      <div><del>359.00</del></div>
+                      <div>236.00</div>
+                  </td>
+                  <td>
+                   1
+                </td>
+            </tr>
+         </table>
+          <table>   
+                <tr>
+                  <td class="td_one clearfix"> 
+                   	   <a>
+                    	<img src="../images/tab1.jpg" />
+                    	<span>Merries 花王妙而舒 婴儿纸尿裤 L44片*2包</span>
+                    </a>  
+                  </td>
+       
+                  <td>
+                      <div><del>359.00</del></div>
+                      <div>236.00</div>
+                   </td>
+        
+                <td>
+                 1
+            </td>
+          </table>
+       </td>
+               <td class="td_four" >
+                 <div><del>359.00</del></div>
+                 </div><div>236.00</div>
+             </td>
+       
+                  <td class="td_five">
+                    <div><a>等待付款</a></div><div><a>订单详情</a></div>
+                 </td>
+      
+                  <td  class="td_six">
+                      <div class="time_one">请在<span>01小时08分28秒</span>内付款</div>
+                      <div class="pay"><a>立即付款</a></div>
+                      <div  class="cancel_order" >取消订单</div>
+                </td>
+          </tr>  
+      </table>
+    </div>
+        <div class="order_info">
+             <table cellpadding="0" cellspacing="0">
+              <tr class="order_no">
+                  	<td colspan="7"  >
+                     2015-06-15<span>订单号：201506011557ORDER06223730</span>
+                </td>
+             </tr> 
+           <tr >
+             <td class="tr_top">
+               <table>
+                  <tr>
+                  <td class="td_one clearfix" >
+                  	   <a>
+                      <img src="../images/tab1.jpg" />
+                    	<span> Merries 花王妙而舒 婴儿纸尿裤 L44片*2包</span>
+                      </a>  
+                  </td>
+                  <td>
+                      <div><del>359.00</del></div>
+                      <div>236.00</div>
+                  </td>
+                  <td>
+                   1
+                </td>
+            </tr>
+         </table>
+            <table>   
+                <tr>
+                  <td class="td_one clearfix"> 
+                   	   <a>
+                    	<img src="../images/tab1.jpg" />
+                    	<span> Merries 花王妙而舒 婴儿纸尿裤 L44片*2包</span>
+                    </a>  
+                  </td>
+                    <td>
+                      <div><del>359.00</del></div>
+                      <div>236.00</div>
+                   </td>
+                <td>
+                 1
+            </td>
+          </table>
+        </td>
+          <td class="td_four">
+             <div><del>359.00</del></div>
+             </div><div>236.00</div>
+           </td>
+                <td class="td_five">
+                       <div><a>等待收货</a></div>
+                       <div><a>订单详情</a></div>
+                       <div class="check_logistics"><a>查看物流</a></div>
+                 </td>
+                   <td  class="td_six">
+                    <div class="pay"><a>确认收货</a></div>
+                    <div  class="cancel_order" >退货/退款</div>
+                </td>
+           </tr>  
+       </table>
+      </div>
+            <div class="order_info">
+             <table cellpadding="0" cellspacing="0">
+               <tr class="order_no">
+                  	<td colspan="7"  >
+                     2015-06-15<span>订单号：201506011557ORDER06223730</span>
+                </td>
+             </tr> 
+            
+            <tr >
+              <td class="tr_top">
+               <table>
+                  <tr>
+                  <td class="td_one clearfix" >
+                  	   <a>
+                      <img src="../images/tab1.jpg" />
+                    	<span> Merries 花王妙而舒 婴儿纸尿裤 L44片*2包</span>
+                      </a>  
+                  </td>
+                  <td>
+                      <div><del>359.00</del></div>
+                      <div>236.00</div>
+                  </td>
+                  <td>
+                   1
+                </td>
+               
+            </tr>
+         </table>
+         
+         <table>   
+                <tr>
+                  <td class="td_one clearfix"> 
+                   	   <a>
+                    	<img src="../images/tab1.jpg" />
+                    	<span> Merries 花王妙而舒 婴儿纸尿裤 L44片*2包</span>
+                    </a>  
+                  </td>
+       
+                  <td>
+                      <div><del>359.00</del></div>
+                      <div>236.00</div>
+                   </td>
+        
+                <td>
+                 1
+            </td>
+                
+             
+      
+         </table>
+      </td>
+      
+             <td class="td_four">
+                   <div><del>359.00</del></div>
+                  </div><div>236.00</div>
+                  
+              </td>
+            
+    
+                   <td class="td_five">
+                       <div><a>等待收货</a></div>
+                       <div><a>订单详情</a></div>
+                 </td>
+      
+                  <td  class="td_six">
+                  
+                      <div class="pay delivery"><a>提醒发货</a></div>
+                      <div  class="cancel_order" >退货/退款</div>
+                </td>
+       
+       
+          </tr>  
+       </table>
+      </div>
+   
+   
+         <div class="order_info">
+             <table cellpadding="0" cellspacing="0">
+              
+                <tr class="order_no">
+                  	<td colspan="7"  >
+                     2015-06-15<span>订单号：201506011557ORDER06223730</span>
+                </td>
+             </tr> 
+            
+            <tr >
+              <td class="tr_top">
+               <table>
+                  <tr>
+                  <td class="td_one clearfix" >
+                  	   <a>
+                      <img src="../images/tab1.jpg" />
+                    	<span> Merries 花王妙而舒 婴儿纸尿裤 L44片*2包</span>
+                      </a>  
+                  </td>
+                  <td>
+                      <div><del>359.00</del></div>
+                      <div>236.00</div>
+                  </td>
+                  <td>
+                   1
+                </td>
+              
+            </tr>
+         </table>
+         
+         <table>   
+                <tr>
+                  <td class="td_one clearfix"> 
+                   	   <a>
+                    	<img src="../images/tab1.jpg" />
+                    	<span> Merries 花王妙而舒 婴儿纸尿裤 L44片*2包</span>
+                    </a>  
+                  </td>
+                     <td>
+                      <div><del>359.00</del></div>
+                      <div>236.00</div>
+                  </td>
+                 <td>
+                 1
+            </td>
+          </table>
+      </td>
+   
+              <td class="td_four">
+                   <div><del>359.00</del></div>
+                  </div><div>236.00</div>
+                  
+              </td>
+   
+   
+                   <td class="td_five">
+                       <div><a>等待收货</a></div>
+                       <div><a>订单详情</a></div>
+                 </td>
+      
+                  <td  class="td_six">
+                  
+                      <div class="pay"><a>评价</a></div>
+                      <div  class="cancel_order" >申请售后</div>
+                </td>
+         
+   
+          </tr>  
+       </table>
+      </div>
+
+    
+      <div class="order_info">
+             <table cellpadding="0" cellspacing="0">
+              
+                <tr class="order_no">
+                  	<td colspan="7"  >
+                     2015-06-15<span>订单号：201506011557ORDER06223730</span>
+                     <i class="del_4"></i>
+                </td>
+             </tr> 
+            
+            <tr >
+              <td class="tr_top">
+               <table>
+                  <tr>
+                  <td class="td_one clearfix" >
+                  	   <a>
+                      <img src="../images/tab1.jpg" />
+                    	<span> Merries 花王妙而舒 婴儿纸尿裤 L44片*2包</span>
+                      </a>  
+                  </td>
+                  <td>
+                      <div><del>359.00</del></div>
+                      <div>236.00</div>
+                  </td>
+                  <td>
+                   1
+                </td>
+                  
+            </tr>
+         </table>
+         
+         <table>   
+                <tr>
+                  <td class="td_one clearfix"> 
+                   	   <a>
+                    	<img src="../images/tab1.jpg" />
+                    	<span> Merries 花王妙而舒 婴儿纸尿裤 L44片*2包</span>
+                    </a>  
+                  </td>
+       
+                  <td>
+                      <div><del>359.00</del></div>
+                      <div>236.00</div>
+                   </td>
+        
+                <td>
+                 1
+            </td>
+                
+              
+      
+         </table>
+      </td>
+     
+                   <td class="td_four">
+                   <div><del>359.00</del></div>
+                  </div><div>236.00</div>
+                  
+              </td>
+              
+     
+                   <td class="td_five">
+                       <div><a>交易成功</a></div>
+                       <div><a>等待收货</a></div>
+                       <div><a>订单详情</a></div>
+                 </td>
+      
+                  <td  class="td_six">
+                  
+                
+                      <div><a>再次购买</a></div>
+                      <div ><a>申请售后</a></div>
+                </td>
+        
+        
+        
+          </tr>  
+       </table>
+      </div>
+
+    
+      <div class="order_info">
+             <table cellpadding="0" cellspacing="0">
+              
+                <tr class="order_no">
+                  	<td colspan="7"  >
+                     2015-06-15<span>订单号：201506011557ORDER06223730</span>
+                     <i class="del_4"></i>
+                </td>
+             </tr> 
+            
+            <tr >
+              <td class="tr_top">
+               <table>
+                  <tr>
+                  <td class="td_one clearfix" >
+                  	   <a>
+                      <img src="../images/tab1.jpg" />
+                    	<span> Merries 花王妙而舒 婴儿纸尿裤 L44片*2包</span>
+                      </a>  
+                  </td>
+                  <td>
+                      <div><del>359.00</del></div>
+                      <div>236.00</div>
+                  </td>
+                  <td>
+                   1
+                </td>
+                
+            </tr>
+         </table>
+         
+         <table>   
+                <tr>
+                  <td class="td_one clearfix"> 
+                   	   <a>
+                    	<img src="../images/tab1.jpg" />
+                    	<span> Merries 花王妙而舒 婴儿纸尿裤 L44片*2包</span>
+                    </a>  
+                  </td>
+       
+                  <td>
+                      <div><del>359.00</del></div>
+                      <div>236.00</div>
+                   </td>
+        
+                <td>
+                 1
+            </td>
+                
+             
+      
+           </table>
+        </td>
+        
+                <td class="td_four">
+                   <div><del>359.00</del></div>
+                  </div><div>236.00</div>
+                  
+              </td>
+                    <td class="td_five">
+                       <div><a>交易成功</a></div>
+                       <div><a>等待收货</a></div>
+                       <div><a>订单详情</a></div>
+                 </td>
+      
+                  <td  class="td_six">
+                  
+                
+                      <div><a>再次购买</a></div>
+                
+                </td>
+           </tr>  
+       </table>
+      </div>
+
+
+     </div>
+  </div>
+ 
+  <!--这是底部-->
+      <div class="index-footer"> 
+        <div class="index-foot clearfix"> 
+          <div class="index-foot-l fl">  
+             <div class="foot-l-top">
+                   <ul class="l-top-list">
+                    <li class="clearfix">
+                        <div class="fl top-list-pic">
+                           <img src="../images/zhen.png" />
+                        </div>
+                        <div class="fl top-list-con"> 
+                          <span>100%</span>
+                          <span>原装正品</span>
+                        </div>
+                    </li>
+
+                    <li class="clearfix">
+                        <div class="fl top-list-pic">
+                          <a><img src="../images/feij.png" /></a>
+                        </div>
+                        <div class="fl top-list-con"> 
+                          <span>100%</span>
+                          <span>海外直采</span>
+                        </div>
+                    </li>
+
+                    <li class="clearfix">
+                        <div class="fl top-list-pic">
+                          <a><img src="../images/pai.png" /></a>
+                        </div>
+                        <div class="fl top-list-con"> 
+                          <span>100%</span>
+                          <span>极速发货</span>
+                        </div>
+                    </li>
+
+                     <li class="clearfix">
+                        <div class="fl top-list-pic">
+                          <a><img src="../images/tui.png" /></a>
+                        </div>
+                        <div class="fl top-list-con"> 
+                          <span>100%</span>
+                          <span>无忧退货</span>
+                        </div>
+                    </li>
+                   </ul>
+              </div>
+  
+              <div class="foot-l-bottom clearfix">
+                 <dl class="dl1">
+                   <dt><h3>美联美购保障</h3></dt>
+                   <dd><a href="#">正品保证</a></dd>
+                   <dd><a href="#">国内退货</a></dd>
+                   <dd><a href="#">7天无理由退换货</a></dd>
+                  </dl>
+ 
+                   <dl>
+                   <dt><h3>新手帮助</h3></dt>
+                   <dd><a href="#">购物指南</a></dd>
+                   <dd><a href="#">常见问题</a></dd>
+                   <dd><a href="#">在线客服</a></dd>
+                  </dl>
+                  
+                  <dl>
+                   <dt><h3>支付方式</h3></dt>
+                   <dd><a href="#">支付宝支付</a></dd>
+                   <dd><a href="#">网银支付</a></dd>
+                   <dd><a href="#">快捷支付</a></dd> 
+                  </dl>    
+ 
+                  <dl>
+                   <dt><h3>商家指导</h3></dt>
+                   <dd><a href="#">售后服务</a></dd>
+                   <dd><a href="#">咨询与投诉</a></dd>
+                   <dd><a href="#">退货政策</a></dd>
+                   <dd><a href="#">退货流程</a></dd>
+                  </dl> 
+  
+                   <dl class="lastdl">
+                   <dt><h3>商家指导</h3></dt>
+                   <dd><a href="#">商家帮助</a></dd>
+                   <dd><a href="#">商家入驻</a></dd>
+                   <dd><a href="#">新手指导</a></dd>
+                   <dd><a href="#">广告服务</a></dd>
+                  </dl>                   
+             </div>
+          </div>
+            <div class="index-foot-r fr">
+            <div class="foot-r-phone">
+              <h3>4000-000-000</h3>
+              <p>周一到周日  09:00 - 24:00</p>
+            </div>
+            <div class="foot-r-weixin">
+              <img src="../images/weixin.jpg" />
+              <p>扫描下载客户端</p>
+            </div>
+         </div>
+       </div>
+    </div>
+  <div class="footer-bottom"><span>增值电信业务经营许可证：渝Bx-xxxxxxxx-x</span><span>美联公司版权所有@1997-2015</span></div>
+
+         <div class="remind remind1">
+        <div class="del_1"><img class="del_3"  src="../images/del_3.png" /></div>
+        提醒发货成功，我们将尽快安排给你发货！
+     </div>
+   </div>
+
+        <!--这是蒙版-->
+       <div class="show_layer"></div>
+        <!--取消订单提示-->
+        <div class="is_cancel">
+         <div class="del"></div>
+         <div class="hint"><i></i>你确定取消改订单吗？取消订单后，不能恢复。</div>
+         <section class="choose">
+          请选择取消订单的理由：<select>
+                            <option value="1">请选择关闭的理由</option>
+                            <option value="2">我不想买了</option>
+                            <option value="3">信息填写错误，重新拍</option>
+                            <option value="4">付款遇到困难</option>
+                            <option value="4">重复下单</option>
+                            <option value="5">忘记使用优惠券</option>
+                            <option value="6">其他原因</option>
+                           </select>
+         
+         </section>
+            <div  class="confrim_box"><div class="confirm1">确定</div><div class="cencel1">取消</div></div>
+       
+       </div>
+        
+        
+       <!--删除订单提示-->
+        <div class="delete_one">
+         <div class="del"></div>
+          <h3>你确定要删除该订单吗？</h3>
+          <div class="delete_hint">删除后，你可在订单回收站找回，或永久删除</div>    
+          <div  class="confrim_box confrim_box1"><div class="confirm1">确定</div><div class="cencel1">取消</div></div>
+      
+      </div>
+        
+ 
+        <!--在线购物车-->
+     <div class="m-rightbar" id="rightBar">
+   <ul>
+    <li>
+      <a href="#" class="shops-cars">
+        <span class="txt">购物车</span>
+        <span class="num">333</span>
+      </a>
+    </li>
+    <li><a href=""# class="servon-line"><span class="txt">在线客户</span></a></li>
+    <li><a href="#" class="srcoll-top"></a></li>
+   </ul>
+ </div>
+  
+
+
+ <script>
+ 
+ var footer_top = $(".index-footer").offset().top;
+$(window).scroll(function() {
+    if($(window).scrollTop() + $(window).height() > footer_top + 100) {
+		$(".m-rightbar").css({ top: "auto", bottom: $(".index-footer").height() + 100 });
+    } else {
+		$(".m-rightbar").css({ top: "", bottom: "" });
+	}
+});
+ 
+ 
+
+
+ $(window).scroll(function() {
+    if($(window).scrollTop() + $(window).height() > footer_top + 100) {
+		$(".is_cancel").css({ top: "auto", bottom: $(".index-footer").height() + 100 });
+    } else {
+		$(".is_cancel").css({ top: "", bottom: "" });
+	}
+});
+
+
+	$(window).scroll(function() {
+    if($(window).scrollTop() + $(window).height() > footer_top + 100) {
+		$(".delete_one").css({ top: "auto", bottom: $(".index-footer").height() + 100 });
+    } else {
+		$(".delete_one").css({ top: "", bottom: "" });
+	}
+});
+ 
+ </script>
+
+
+</body>
+</html>

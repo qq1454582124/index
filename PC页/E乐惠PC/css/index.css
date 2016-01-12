@@ -1,0 +1,502 @@
+a:-webkit-any-link {
+color: -webkit-link;
+text-decoration: underline;
+cursor: auto;
+}
+
+
+
+
+
+
+<!--element>element	div>p	选择父元素为 <div> 元素的所有 <p> 元素。-->
+<!--:before	p:before	在每个 <p> 元素的内容之前插入内容。-->
+<!--:after	p:after	在每个 <p> 元素的内容之后插入内容。-->
+
+body, html {
+padding: 0px;
+margin: 0px;
+}
+body {
+margin: 0px 0px;
+padding: 0px 0px;
+font-family: "Microsoft YaHei","LiHei Pro Medium";
+font-weight: 100;
+}
+
+#banner {
+height: 820px;
+height: 820px;
+width: 100%;
+min-width: 1200px;
+background-position: center;
+background-repeat: no-repeat;
+}
+#banner>.bg {
+position: relative;
+z-index: -1;
+}
+#banner>.bg>div {
+height: 820px;
+width: 100%;
+min-width: 1200px;
+background-position: center;
+background-repeat: no-repeat;
+position: absolute;
+top: 0px;
+}
+#banner>.bg>.in {
+-webkit-animation: bannerShow 3s linear;
+-moz-animation: bannerShow 3s linear;
+-o-animation: bannerShow 3s linear;
+animation: bannerShow 3s linear;
+opacity: 1;
+}
+#banner>.bg>.bg2 {
+background-image: url(../images/Erefuel_index_banner2.jpg);
+}
+#nav {
+position: relative;
+z-index: 9999;
+height: 70px;
+margin: 0px 0px;
+background-image: url(../images/Erefuel_index_topbar.png);
+background-repeat: repeat-x;
+}
+#nav>ul {
+width: 1200px;
+margin: auto auto;
+padding: 0px;
+list-style: none;
+}
+#nav>ul>li {
+width: auto;
+float: right;
+}
+#nav>ul>li:nth-child(2)>a {
+padding-left: 7px;
+padding-right: 6px;
+}
+#nav>ul>li>a {
+font-size: 24px;
+color: #ffffff;
+text-decoration: none;
+height: 0px;
+line-height: 88px;
+display: inline-block;
+background: rgba(0, 0, 0,0.2);
+margin-right: 20px;
+}
+#nav>ul>li>a.out {
+height: 0px;
+transition: height 0.3s ease;
+}
+#nav>ul>li>a:hover {
+height: 70px;
+transition: height 0.3s ease;
+}
+#nav>ul>li:nth-child(3)>a {
+padding-left: 21px;
+padding-right: 20px;
+}
+#nav>ul>li:nth-child(4)>a {
+padding-left: 28px;
+padding-right: 28px;
+}
+.right-margin {
+margin-right: 300px;
+}
+#nav .navlogo {
+	width: 195px;
+	height: 195px;
+	border-radius:50%;
+	margin:13px 0 0 39px;
+	overflow:hidden;
+	float: left;
+	background-image: url(../images/Erefuel_logo1.png);
+	background-repeat: no-repeat;
+	background-position: 39px 13px.;
+}
+/* 头部结束 */
+
+
+/* 正文开始 */
+#banner>#slogan {
+width: 1200px;
+margin: auto auto;
+padding-top: 240px;
+color: #ffffff;
+}
+#banner>#slogan>.a {
+font-size: 55px;
+margin-left: 30px;
+}
+#banner>#slogan>.b {
+font-size: 45px;
+margin-left: 30px;
+}
+#banner>#slogan .download {
+margin-left: 30px;
+width: 300px;
+height: 80px;
+display: block;
+margin-top: 30px;
+background-image: url(../images/Erefuel_index_download1.png);
+transition: background-image 0.3s ease;
+background-repeat: no-repeat;
+}
+
+
+#content {
+width: 100%;
+}
+
+.section {
+width: 100%;
+min-width: 1200px;
+height: 800px;
+margin-left: auto auto;
+}
+.section>.title {
+font-size: 38px;
+text-align: center;
+padding-top: 60px;
+padding-bottom: 5px;
+}
+.section>div {
+margin: auto auto;
+}
+#section1 {
+width: 1200px;
+margin: auto auto;
+background-image: url(../images/Erefuel_index_section1_bg.png);
+background-position: 40px bottom;
+background-repeat: no-repeat;
+}
+#section1>.title {
+color: #ff7d7d;
+}
+#section1>.img1 {
+height: 300px;
+width: 720px;
+background-image: url(../images/Erefuel_index_section1_img1.png);
+background-repeat: no-repeat;
+background-position: center;
+}
+#section1>.img2 {
+height: 160px;
+width: 720px;
+margin-top: 40px;
+background-image: url(../images/Erefuel_index_section1_img2.png);
+background-position: 150px bottom;
+background-repeat: no-repeat;
+background-position: center;
+}
+.section>.context {
+height: 100px;
+width: 1200px;
+margin: auto auto;
+margin-top: 40px;
+}
+.section>.context>div:first-child {
+width: 360px;
+padding-left: 40px;
+}
+.section>.context>div>div:first-child {
+margin-bottom: 10px;
+color: #000000;
+font-size: 22px;
+}
+.section>.context>div>div {
+color: #969696;
+font-size: 18px;
+}
+.section>.context>div>div:first-child>span {
+position: absolute;
+font-size: 48px;
+margin-top: -25px;
+}
+.section>.context>div>div {
+color: #969696;
+font-size: 18px;
+}
+.section>.context>div>div {
+color: #969696;
+font-size: 18px;
+}
+.section>.context>div {
+width: 350px;
+padding-left: 50px;
+float: left;
+}
+#section2 {
+background-color: #f7f8f9;
+}
+#section2>.title {
+color: #50bd3c;
+}
+#section2>.img1 {
+height: 300px;
+width: 720px;
+background-image: url(../images/Erefuel_index_section2_img1.png);
+background-repeat: no-repeat;
+background-position: center;
+}
+#section2>.img2 {
+height: 160px;
+width: 720px;
+margin-top: 40px;
+background-image: url(../images/Erefuel_index_section2_img2.png);
+background-position: 150px bottom;
+background-repeat: no-repeat;
+background-position: center;
+}
+
+#section3>.title {
+color: #31abaf;
+}
+#section3>.img1 {
+height: 300px;
+width: 720px;
+background-image: url(../images/Erefuel_index_section3_img1.png);
+background-repeat: no-repeat;
+background-position: center;
+}
+#section3>.img2 {
+height: 160px;
+width: 720px;
+background-image: url(../images/Erefuel_index_section3_img2.png);
+background-position: 150px bottom;
+background-repeat: no-repeat;
+background-position: center;
+}
+/* 正文结束 */
+
+/* 底部开始 */
+#footer {
+width: 100%;
+height: 380px.;
+background-color: #505050;
+font-size: 14px;
+}
+#footer>div {
+width: 1200px;
+height: 400px;
+background-color: #505050;
+margin: auto auto;
+}
+#footer .title {
+padding-top: 40px;
+padding-bottom: 30px;
+font-size: 26px;
+color: #dcdcdc;
+margin-left: 50px;
+}
+#footer .android {
+position: relative;
+width: 120px;
+height: 120px;
+float: left;
+margin-top: 15px;
+margin-left: 50px;
+background-image: url(../images/Erefuel_footer_andriod1.png);
+transition: background-image 0.3s ease;
+background-repeat: no-repeat;
+}
+user agent stylesheeta:-webkit-any-link {
+color: -webkit-link;
+text-decoration: underline;
+cursor: auto;
+}
+#footer .android>div, #footer .ios>div {
+position: absolute;
+bottom: 5px;
+width: 120px;
+color: #ffffff;
+text-align: center;
+}
+#footer .ios {
+position: relative;
+width: 120px;
+height: 120px;
+float: left;
+margin-left: 90px;
+margin-top: 15px;
+background-image: url(../images/Erefuel_footer_ios1.png);
+transition: background-image 0.3s ease;
+background-repeat: no-repeat;
+}
+#footer .qr {
+width: 120px;
+height: 120px;
+float: left;
+margin-left: 90px;
+margin-top: 15px;
+background-image: url(../images/Erefuel_footer_qr.png);
+transition: background-image 0.3s ease;
+background-repeat: no-repeat;
+background-size: 120px;
+}
+#footer .tel {
+width: 150px;
+margin-left: 210px;
+color: #c8c8c8;
+float: left;
+}
+#footer .tel>div:first-child {
+background-image: url(../images/iErefuel_sign_tel.png);
+background-position: left;
+background-repeat: no-repeat;
+}
+#footer .tel>div {
+padding-left: 30px;
+}
+#footer .tel>div:nth-child(2) {
+color: #ffffff;
+}
+#footer .tel>.t2 {
+margin-top: 35px;
+}
+#footer .email {
+margin-left: 100px;
+color: #c8c8c8;
+float: left;
+}
+#footer .email>.e2 {
+margin-top: 35px;
+}
+#footer .addr {
+margin-left: 210px;
+margin-top: 15px;
+color: #c8c8c8;
+float: left;
+}
+#footer .addr>div:first-child {
+background-image: url(../images/Erefuel_sign_addr.png);
+background-position: left;
+background-repeat: no-repeat;
+}
+#footer .line {
+clear: both;
+width: 1200px;
+height: 1px;
+background-color: #686868;
+margin-top: 190px;
+}
+#footer .time {
+margin-top: 14px;
+text-align: center;
+color: #929292;
+}
+#footer .link {
+margin-top: 16px;
+text-align: center;
+}
+#footer .link>a {
+font-size: 12px;
+color: #929292;
+text-decoration: none;
+}
+#footer .copyright {
+margin-top: 12px;
+text-align: center;
+color: #929292;
+}
+#footer .addr>div {
+padding-left: 30px;
+}
+
+
+/* 底部结束 */
+#dialog_box {
+position: fixed;
+width: 100%;
+height: 100%;
+top: 0px;
+z-index: 100;
+display: none;
+}
+#dialog_bg {
+filter: alpha(Opacity=50);
+-moz-opacity: 0.5;
+opacity: 0.5;
+background-color: #000000;
+}
+#dialog_bg {
+position: fixed;
+display: block;
+width: 100%;
+height: 100%;
+}
+#download_dialog {
+position: static;
+display: table-cell;
+vertical-align: middle;
+}
+#download_dialog>div {
+width: 620px;
+height: 380px;
+background-color: #ffffff;
+display: block;
+position: relative;
+top: -50%;
+margin: auto auto;
+}
+#download_dialog>div>#close {
+background-image: url(../images/Erefuel_webmain1_download_close.png);
+width: 46px;
+height: 46px;
+display: block;
+position: absolute;
+right: 0px;
+top: 0px;
+background-repeat: no-repeat;
+}
+#download_dialog>div>.version {
+position: absolute;
+left: 60px;
+top: 50px;
+font-size: 24px;
+color: #000000;
+}
+#download_dialog>div>.download_android {
+position: absolute;
+left: 60px;
+top: 130px;
+}
+.download_android {
+width: 250px;
+height: 60px;
+display: block;
+background-image: url(../images/Erefuel_webmain_downloadandroid.png);
+transition: background-image 0.3s ease;
+background-repeat: no-repeat;
+}
+#download_dialog>div>.download_ios {
+position: absolute;
+left: 55px;
+top: 230px;
+}
+.download_ios {
+width: 250px;
+height: 60px;
+display: block;
+background-image: url(../images/Erefuel_webmain_downloadios.png);
+transition: background-image 0.3s ease;
+background-repeat: no-repeat;
+}
+#download_dialog>div>.scantxt {
+position: absolute;
+left: 413px;
+top: 100px;
+color: #014B82;
+font-size: 16px;
+font-weight: bold;
+}
+#download_dialog>div>.download_qrcode {
+position: absolute;
+left: 400px;
+top: 130px;
+}
+
+

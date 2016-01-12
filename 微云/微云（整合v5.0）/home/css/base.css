@@ -1,0 +1,98 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*-----------------------------------------初始化样式------------------------------------------*/
+html{ overflow:hidden;}
+body{ padding:0; margin:0 auto; background-color:#FFF; line-height:24px;}
+img{ border:none;}
+h1,h2,h3,h4,h5,h6,hr,blockquote,form,ul,ol,li,p,pre,dl,dt,dd,fieldset,legend,button,input,textarea,th,td{ padding:0; margin:0;}
+ul,ol,li{ list-style:none;}
+sup{ vertical-align:text-top;}
+sub{ vertical-align:text-bottom;}
+legend { color:#000;}
+fieldset{ border:0;} 
+button,input,select,textarea { font-size:100%;}
+table{ border-collapse:collapse; border-spacing:0;}
+.clear{ zoom:1;}
+.clear:after{ content:""; display:block; height:0; clear:both;}
+.left{ float:left; _display:inline;}
+.right{ float:right;}
+.hr_10{ clear:both; height:10px; overflow:hidden; font-size:1px; line-height:1px;}
+.hr_20{ clear:both; height:20px; overflow:hidden; font-size:1px; line-height:1px;}
+
+/*------------------------------------------字体样式-------------------------------------------*/
+body,button,input,select,textarea{ font-family:SimSun; color:#808080; font-size:12px;}
+h1,h2,h3,h4,h5,h6{ font-size:100%;}
+address,cite,dfn,em,var{ font-style:normal }
+code,kbd,pre,samp{ font-family:courier new, courier, monospace;}
+small{ font-size:12px;}
+.bold{ font-weight:bold;}
+.ft12{ font-size:12px;}
+.ft14{ font-size:14px;}
+.ft16{ font-size:16px;}
+.ft18{ font-size:18px;}
+.ft30{ font-size:30px;}
+.normal{ font-weight:normal;}
+a{ color:#808080; text-decoration:none;}
+a:hover{ color:#C00;}
+a.red{ color:#B70B00;}
+a.red:hover{ color:#B70B00;}
+a.white,.white a,.white{ color:#FFF;}
+a.white:hover,.white a:hover{ color:#C00;}
+a.green,.green a,.green{ color:#43A102;}
+a.green:hover,.green a:hover{ color:#C00;}
+a.org,.org a,.org{ color:#F59600;}
+a.org:hover,.org a:hover{ color:#C00;}
+a.gray,.gray a,.gray{ color:#686868;}
+a.gray:hover,.gray a:hover{ color:#C00;}
+.red{ color:#DB0B0B;}
+.ftYahei{ font-family:Microsoft YaHei;}
+.ftSimsun{ font-family:SimSun;}
+
+::-webkit-input-placeholder{ /* WebKit browsers */ color:#999;}
+:-moz-placeholder{ /* Mozilla Firefox 4 to 18 */ color:#999;}
+::-moz-placeholder{ /* Mozilla Firefox 19+ */ color:#999;}
+:-ms-input-placeholder{ /* Internet Explorer 10+ */ color:#999;}
+ 
+/*-----------------------------------------全局元素----------------------------------------*/
+.mt5{ margin-top:5px;}
+.mt{ margin-top:10px;}
+.ml5{ margin-left:5px;}
+.ml10{ margin-left:10px;}
+.mr20{ margin-right:20px;}
+.mb5{ margin-bottom:5px;}
+.mb10{ margin-bottom:10px;}
+.mb15{ margin-bottom:15px;}
+#margin0{ margin:0;}
+.bordG,.borderG{ border:1px solid #ccc;}
+.borderG{ border-top:none;}
+
+.wrapper{ width:1000px; margin:0 auto;}
+.center{ text-align:center;}
+.alignR{ text-align:right;}
+.none{ display:none;}
+.indent{ text-indent:2em;}
+
+.bgGray{ background:#F5F6F9;}
+
+/*头部*/
+#header{ background:#FFF; height:49px; border-bottom:1px solid #D8DCE5; padding:0 12px 0 22px; z-index:10;}
+.logo{ background:url(../img/logo.png) no-repeat center; float:left; width:160px; height:49px;}
+/*登陆*/
+#login{ background:#FFF; width:618px; padding-top:50px; border:1px solid #ccc; position:absolute; left:50%; top:50%;}
+#login h3{ font-size:14px; margin-bottom:30px;}
+.qr-login{ width:150px; height:270px; padding:0 55px; float:left; position:relative;}
+.qr-img{ margin-bottom:20px;}
+.qr-img img{ display:block; width:148px; height:148px; border:1px solid #ccc;}
+.qr-info a{ background:#F1F1F1; width:150px; height:30px; line-height:30px; display:block; border-radius:15px; cursor:pointer;}
+.qr-info a:hover{ background:#ddd; color:#808080}
+.qr-line{ background:#ddd; width:1px; height:245px; position:absolute; top:5px; right:0;}
+.login{ float:left; width:300px; padding-left:50px;}
+#loginform p{ height:55px;}
+#loginform input{ width:210px; height:18px; line-height:18px; padding:11px 0 11px 30px; font-size:16px; border:1px solid #ccc; border-radius:5px;}
+#loginform .user{ background:url(../img/user.jpg) no-repeat 8px 50%;}
+#loginform .pass{ background:url(../img/pass.jpg) no-repeat 8px 50%;}
+#loginform .submit{ background:#72C328; display:block; width:92px; height:34px; line-height:34px; text-align:center; font-size:14px; font-weight:bold; color:#FFF; border-radius:5px; cursor:pointer; border:1px solid #52B31B;}
+#loginform .submit:hover{ background:#8ACE33;}
+#login .alignR{ clear:both; height:45px; line-height:45px; padding-right:10px;}
+#login .alignR a{ display:inline-block;}

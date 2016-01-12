@@ -1,0 +1,499 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="../css/common.css"/>
+<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+<link rel="stylesheet" type="text/css" href="../css/style.css"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/js.js"></script>
+<title>无标题文档</title>
+       
+         
+  <script type="text/javascript">
+	 $(function(){	
+      $('.bar-l-li1').hover(function(){
+ 	    $('.bar-ul1').show()
+	    $('.bar-l-li1').addClass('bar-l-li2')
+ 	   },function(){
+ 		    $('.bar-ul1').hide()
+	         $('.bar-l-li1').removeClass('bar-l-li2')
+ 		   })
+ 	  $('.shop-car').hover(function(){
+ 		  $('.shop-cart-info').show();
+		   $('.icon-delta').addClass('icon-delta1')
+  		  },function(){
+ 		     $('.shop-cart-info').hide();
+ 	         $('.icon-delta').removeClass('icon-delta1')
+  		})
+ 
+})
+		
+	//删除提示
+	$(function(){
+		$(".delete1").click(function(){
+			
+			$(".show_layer").show();
+			$(".delete").show();
+		})
+		$(".del_2").click(function(){
+			
+			$(".show_layer").hide();
+			$(".delete").hide();
+			
+			})
+		
+		})	
+		
+		$(function(){
+			$(".right").click(function(){
+		     var thisClass=$(this).attr("class");
+	
+			 if(thisClass=="right"){
+				 $(this).addClass("curent_r").removeClass("right");
+				 $(" .city_top1").toggle()
+				 
+			 }else{
+				 
+				 
+				 $(this).addClass("right").removeClass("curent_r");
+				 $(" .city_top1").toggle() 
+				 
+				 }
+		       })
+			
+	       })
+		
+		$(function(){
+			$(".right1").click(function(){
+		     var thisClass=$(this).attr("class");
+	       if(thisClass=="right1"){
+				 $(this).addClass("curent_r").removeClass("right1");
+				 $(".city_top2").toggle()
+				 
+			 }else{
+				 
+				 
+				 $(this).addClass("right1").removeClass("curent_r");
+				 $(".city_top2").toggle() 
+				 
+				 }
+		       })
+			
+	       })
+
+
+       $(function(){
+			$(".right2").click(function(){
+		     var thisClass=$(this).attr("class");
+	
+			 if(thisClass=="right2"){
+				 $(this).addClass("curent_r").removeClass("right2");
+				 $(".city_top3").toggle()
+				 
+			 }else{
+				 
+				 
+				 $(this).addClass("right2").removeClass("curent_r");
+				 $(".city_top3").toggle() 
+				 
+				 }
+		       })
+			
+	       })
+
+    			
+			
+		
+   </script> 
+
+
+</head>
+<body>
+
+     
+         <div class="head-bar">
+         <div class="head-bar2 webwidth clearfix">
+           <div class="head-bar-l fl clearfix">
+            <div class="webcomes fl">您好，欢迎来到美联美购</div>
+            <div class="login-con fl">
+             <a href="#">请登录</a> 
+             <a href="#">【免费注册】</a>
+           </div>
+         </div>
+           <div class="head-bar-r fr clearfix">
+           <ul class="bar-r-list-1 fl">
+             <li><a href="#">我的订单</a></li>
+             <li  class="bar-l-li1"><a href="#">我的美购</a>
+                <ul class="bar-ul1">
+                  <li><a href="#">我的订单</a></li>
+                  <li><a href="#"> 我的钱包</a></li>
+                  <li><a href="#">我的优惠券</a></li>
+                  <li><a href="#"> 我的收藏</a></li>
+                  <li><a href="#"> 会员等级</a></li>
+                </ul>
+              </li>
+           </ul>          
+            <ul class="bar-r-list-2 fr">
+             <li class="bar-r-li1"><a href="#">手机美购</a></li>
+             <li><a href="#">联系客服</a></li>
+             <li><a href="#">收藏本站</a></li>
+             <li><a href="#">帮助</a></li>
+            </ul>
+        </div>
+    </div>
+ </div>
+ 
+  <div class="logo-con clearfix">
+      <h1 class="logo fl"><a href="#"><img src="../images/logo.png" /></a></h1> 
+      <div class="search-con fl">
+        <div class="search-top">
+         <input type="text" value="奶粉" class="index-search" />
+         <a href="#">搜一搜</a>
+       </div>
+       <div class="search-bottom">
+          <a href="#" class="hota1">奶粉</a>
+          <a href="#">纸尿裤</a>
+          <a href="#">奶粉</a>
+          <a href="#">纸尿裤</a>
+          <a href="#">奶粉</a>
+          <a href="#">纸尿裤</a>
+          <a href="#">奶粉</a>
+          <a href="#">奶粉</a>
+       </div>
+     </div>
+      <div class="shop-car">
+        <a href="#" class="shop-car-a">
+          <span class="cart-info">购物车<b>(1)</b>件</span>
+          <b class="icon-delta"></b>
+         </a>
+          <div class="shop-cart-info">
+             <ul class="shop-cart-list">
+                <li>
+                <div class="car-img clearfix">
+                  <a href="#" class="fl"><img src="../images/tab1.jpg" /> </a>
+                  <dl class="fr car-dl">
+                    <dt>Merries 花王妙而舒 婴儿纸尿裤 </dt>
+                    <dd>L44片*2包</dd>
+                    <dd><i>￥236.00</i>×1</dd>
+                  </dl>
+                </div>
+               </li>              
+              
+                <li>
+                <div class="car-img clearfix">
+                  <a href="#" class="fl"><img src="../images/tab1.jpg" /> </a>
+                  <dl class="fr car-dl">
+                    <dt>Merries 花王妙而舒 婴儿纸尿裤 </dt>
+                    <dd>L44片*2包</dd>
+                    <dd><i>￥236.00</i>×1</dd>
+                  </dl>
+                </div>
+               </li>                
+              <li>
+                <div class="car-img clearfix">
+                  <a href="#" class="fl"><img src="../images/tab1.jpg" /> </a>
+                  <dl class="fr car-dl">
+                    <dt>Merries 花王妙而舒 婴儿纸尿裤 </dt>
+                    <dd>L44片*2包</dd>
+                    <dd><i>￥236.00</i>×1</dd>
+                  </dl>
+                </div>
+               </li>                <li>
+                <div class="car-img clearfix">
+                  <a href="#" class="fl"><img src="images/tab1.jpg" /> </a>
+                  <dl class="fr car-dl">
+                    <dt>Merries 花王妙而舒 婴儿纸尿裤 </dt>
+                    <dd>L44片*2包</dd>
+                    <dd><i>￥236.00</i>×1</dd>
+                  </dl>
+                </div>
+               </li>
+                <div class="shop-pay clearfix">
+                     <ol class="shop-list fl"> 
+                       <li>共<b>1</b>件商品</li>
+                       <li>共计<span>￥236.00</span></li>
+                     </ol>
+                     <a href="#" class="fr">去购物车结算</a>
+                </div>                    
+             </ul>          
+          </div>
+      </div>
+  </div>
+ 
+  <div class="nav">
+    <ul class="nav-list webwidth clearfix">
+       <li class="nav-one"><a href="#">首页</a></li>
+       <li><a href="#">母婴专区</a></li>
+       <li><a href="#">美容彩妆</a></li>
+       <li><a href="#">家居个护</a></li>
+       <li><a href="#">进口美食</a></li>
+       <li><a href="#">营养保健</a></li>
+       <li><a href="#">正品保证</a></li>
+     </ul>
+  </div>
+       <!-------------------------------------------头部结束------------------------------------------------->
+       
+       
+      <!--这是我个人地址信息--->
+      <div class="webwidth margin-bottom100 clearfix">
+      <div class="page"><a>首页</a>><a>个人中心</a>><a>我的订单</a></div>
+
+      <div class="service_l clearfix" >  
+        <ul>
+        <li ><a href="#">我的美联</a></li> 
+        <li><a href="#">我的订单</a></li>
+        <li ><a href="#">基本信息</a></li>
+        <li class="one"><a href="#">收货地址</a></li>
+        <li><a href="#">我的会员等级</a></li>
+        <li><a href="#">我的优惠劵</a></li>
+        <li><a href="#">我的收藏</a></li>
+       </ul>   
+   </div>
+
+       <!--保存地址的信息-->
+      <div class="my_address" >
+       <h2>我的地址</h2>
+       <div class="keep_address">
+       <h3>已保存地址<span>(共两条)最多可保存10条</span></h3>
+        <form>
+         <table>
+           <tr>
+            <th>收货人</th>
+            <th>收货地址</th>
+            <th>联系电话</th>
+            <th>操作</th>
+         
+         </tr>
+        
+         <tr>
+         <td>张三</td>
+         <td>广东省东莞市莞城区八达路恒丰大夏</td>
+         <td>13555555555</td>
+         <td><a>修改</a><a class="delete1">删除</a><i class="default" >默认地址</i></td>
+         
+         
+         </tr>
+        <tr>
+         <td>张三</td>
+         <td>广东省东莞市莞城区八达路恒丰大夏</td>
+         <td>13555555555</td>
+         <td><a>修改</a><a class="delete1">删除</a><i class="default1" >设为默认</i></td>
+        </tr>
+        
+        
+        </table>
+       
+       </form>
+   
+      </div>
+      <!--新增收货地址 无地址时-->
+       <div class="add_address user_info_l ">
+        <h3>新增收货地址</h3>
+        <div class="write_address clearfix">
+         <form method="post">
+           <div class="clearfix">
+            <label><i>＊</i>收货人姓名</label>
+            <input type="text" name="username" value="请使用真实姓名,长度不超过9个字" />
+         </div>
+          
+                 
+                 
+           <div class="address1  clearfix">
+              <label><i>＊</i>省市区</label>
+                <select>
+               <option>广东省</option>
+              </select>
+             
+              <select>
+              <option>深圳市</option>
+           </select>
+           
+              
+              <select>
+              <option>深圳市</option>
+           </select>
+         </div>
+
+           <div class="clearfix">
+          <label><i>＊</i>详细地址</label>
+          <input name="address" type="text" value="无需重复填写省市区" />
+      </div>
+      
+         <div class="clearfix" >
+         <label><i>＊</i>手机号码</label>
+         <input name="telephone" type="text" value="手机号码、电话号码必须填一项" />
+      </div>
+      
+         <div class="telephone">
+         <label>电话号码</label>
+         <input   type="text" value="区号" />&nbsp;-&nbsp;<input type="text" value="电话号码" />&nbsp;-&nbsp;<input type="text"  value="分机号" />
+       </div>
+       
+         <div>
+         <label>邮政编码</label>
+        <input  type="text"  name="emil" value="如你不清楚邮区号，请填写00000" />
+      </div>
+        </form>
+    </div>
+     
+         <div class="default_address">
+         <label><input type="checkbox" /><i></i>设为默认地址</label>
+       </div>
+       <a class="keep">保存新地址 </a>
+    </div>
+  </div>
+ </div>
+
+      <!--底部-->
+      <div class="index-footer"> 
+        <div class="index-foot clearfix"> 
+          <div class="index-foot-l fl">  
+             <div class="foot-l-top">
+                   <ul class="l-top-list">
+                    <li class="clearfix">
+                        <div class="fl top-list-pic">
+                           <img src="../images/zhen.png" />
+                        </div>
+                        <div class="fl top-list-con"> 
+                          <span>100%</span>
+                          <span>原装正品</span>
+                        </div>
+                    </li>
+
+                    <li class="clearfix">
+                        <div class="fl top-list-pic">
+                          <a><img src="../images/feij.png" /></a>
+                        </div>
+                        <div class="fl top-list-con"> 
+                          <span>100%</span>
+                          <span>海外直采</span>
+                        </div>
+                    </li>
+
+                    <li class="clearfix">
+                        <div class="fl top-list-pic">
+                          <a><img src="../images/pai.png" /></a>
+                        </div>
+                        <div class="fl top-list-con"> 
+                          <span>100%</span>
+                          <span>极速发货</span>
+                        </div>
+                    </li>
+
+                     <li class="clearfix">
+                        <div class="fl top-list-pic">
+                          <a><img src="../images/tui.png" /></a>
+                        </div>
+                        <div class="fl top-list-con"> 
+                          <span>100%</span>
+                          <span>无忧退货</span>
+                        </div>
+                    </li>
+                   </ul>
+              </div>
+  
+              <div class="foot-l-bottom clearfix">
+                 <dl class="dl1">
+                   <dt><h3>美联美购保障</h3></dt>
+                   <dd><a href="#">正品保证</a></dd>
+                   <dd><a href="#">国内退货</a></dd>
+                   <dd><a href="#">7天无理由退换货</a></dd>
+                  </dl>
+ 
+                   <dl>
+                   <dt><h3>新手帮助</h3></dt>
+                   <dd><a href="#">购物指南</a></dd>
+                   <dd><a href="#">常见问题</a></dd>
+                   <dd><a href="#">在线客服</a></dd>
+                  </dl>
+                  
+                  <dl>
+                   <dt><h3>支付方式</h3></dt>
+                   <dd><a href="#">支付宝支付</a></dd>
+                   <dd><a href="#">网银支付</a></dd>
+                   <dd><a href="#">快捷支付</a></dd> 
+                  </dl>    
+ 
+                  <dl>
+                   <dt><h3>商家指导</h3></dt>
+                   <dd><a href="#">售后服务</a></dd>
+                   <dd><a href="#">咨询与投诉</a></dd>
+                   <dd><a href="#">退货政策</a></dd>
+                   <dd><a href="#">退货流程</a></dd>
+                  </dl> 
+  
+                   <dl class="lastdl">
+                   <dt><h3>商家指导</h3></dt>
+                   <dd><a href="#">商家帮助</a></dd>
+                   <dd><a href="#">商家入驻</a></dd>
+                   <dd><a href="#">新手指导</a></dd>
+                   <dd><a href="#">广告服务</a></dd>
+                  </dl>                   
+             </div>
+          </div>
+            <div class="index-foot-r fr">
+            <div class="foot-r-phone">
+              <h3>4000-000-000</h3>
+              <p>周一到周日  09:00 - 24:00</p>
+            </div>
+            <div class="foot-r-weixin">
+              <img src="../images/weixin.jpg" />
+              <p>扫描下载客户端</p>
+            </div>
+         </div>
+       </div>
+    </div>
+  <div class="footer-bottom"><span>增值电信业务经营许可证：渝Bx-xxxxxxxx-x</span><span>美联公司版权所有@1997-2015</span></div>
+        <!--蒙版-->
+       <div class="show_layer"></div>
+      
+       <!--删除地址提示-->
+        <div class="delete">
+         <div class="del_2"></div>
+         <h3><img src="../images/status_02.png" />确定要删除该货地址吗?</h3>
+        <div class="confrim_box confrim_box1"><div class="confirm1">确定</div><div class="cencel1">取消</div></div>
+     </div>
+      
+         
+    <div class="m-rightbar" id="rightBar">
+   <ul>
+    <li>
+      <a href="#" class="shops-cars">
+        <span class="txt">购物车</span>
+        <span class="num">333</span>
+      </a>
+    </li>
+    <li><a href=""# class="servon-line"><span class="txt">在线客户</span></a></li>
+    <li><a href="#" class="srcoll-top"></a></li>
+   </ul>
+ </div>
+  
+
+
+ <script>
+ 
+ var footer_top = $(".index-footer").offset().top;
+$(window).scroll(function() {
+    if($(window).scrollTop() + $(window).height() > footer_top + 100) {
+		$(".m-rightbar").css({ top: "auto", bottom: $(".index-footer").height() + 100 });
+    } else {
+		$(".m-rightbar").css({ top: "", bottom: "" });
+	}
+});
+ 
+ 
+    
+	$(window).scroll(function() {
+    if($(window).scrollTop() + $(window).height() > footer_top + 100) {
+		$(".delete").css({ top: "auto", bottom: $(".index_footer").height() + 100 });
+    } else {
+		$(".delete").css({ top: "", bottom: "" });
+	}
+});
+	
+    </script>
+
+   
+</body>
+</html>

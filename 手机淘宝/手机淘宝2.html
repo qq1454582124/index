@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1" />
+<script>
+/*alert(document.documentElement.getBoundingClientRect().width);
+		640的图除以64,320的图除以32
+	取设备宽度
+*/
+var iWidth=document.documentElement.getBoundingClientRect().width;
+
+iWidth=iWidth>540?540:iWidth;
+
+document.getElementsByTagName("html")[0].style.fontSize=iWidth/10+"px";
+
+</script>
+<script src="js/miaov.js"></script>
+<style>
+/* 默认样式 */
+body,dl,dd,ul,ol,h1,h2,h3,h4,h5,h6,form,input,textarea,th,td,p{margin:0;
+padding:0;
+font-szie:12px;
+font-family:Arial,"宋体";
+font-weight: bold;
+}
+table{border-collapse:collapse;
+}
+span{font-weight:normal;
+}
+img{border:none;
+vertical-align:top;
+}
+li{list-style:none;
+vertical-align:top;
+}
+a{text-decoration:none;
+display:block;
+-webkit-tap-highlight-color:rgba(0,0,0,0);
+font-szie:12px;
+font-family:Arial,"宋体";
+}
+textarea{resize:none;
+overflow:auto;
+}
+input,textarea,select,lable{outline:none;
+}
+.clear{zoom:1;
+}
+.clear:after{content:"";
+display:block;
+clear:both;
+}
+/* 大体样式 */
+html{
+height:100%;
+overflow:hidden;
+
+}
+body{
+	height:100%;
+	overflow:auto;
+	margin:0;
+	background:#eee;
+
+}
+#head{
+	width:10rem.;
+	width: 100%;
+	height:33px;
+	padding:8px 0;
+	background:#fe6134;
+	text-align:center;
+	position:absolute;
+	top:0;
+	left:0;
+
+}
+.logo{
+	width:60px;
+	height:0;
+	margin:;
+	overflow:hidden;
+
+	background:url(img/img-1.png) no-repeat 14px 4px;
+	padding-top:0.75rem;
+	float:left;
+
+}
+form input{
+	margin:0 auto;
+	width:7.625rem.;
+	width: 80%;
+	float:left;
+	height:0.515625rem.;
+	height:0.69rem;
+	border:none;
+	background:#e8512a;
+	border-radius:0.078125rem;
+	text-align:center;
+}
+
+/*#content{
+	margin-top:50px.;
+	width:10rem;
+	background:#fff;
+	margin:50px auto;
+	margin-bottom:0.3125rem;
+
+}
+.top{}
+.top img{
+	width:10rem;
+	height:3.125rem;
+	margin:0 auto;
+	padding-top:50px.;
+}
+ .top{position:relative;width:10rem;height:3.125rem;overflow:hidden;}
+.top #list{position:absolute;width:500%;transition:.5s linear;}
+.top #list li{float:left}
+.top input{font-size:50px;color:red;border:none;width:50px;height:50px;background:#000.;opacity:0.2;position:absolute;top:180px;}
+.top .left{left:0;}
+.top .right{right:0;}
+.top .button{position:absolute;bottom:10px;left:40%;}
+.top button{border:none;width:20px;height:20px;margin-right:5px;border-radius:50%;cursor:pointer;}
+.top .hover{background:#f47e1c;}
+ */
+ #content{
+	margin-top:50px.;
+	width:10rem;
+	background:#fff;
+	margin:50px auto;
+	margin-bottom:0.3125rem;
+}
+#picWrap{width:100%; height:3.125rem;overflow:hidden;}
+#picList{width:40rem;height:3.125rem;overflow:hidden;}
+#picList img{width:10rem;float:left;}
+#picBtns{height:0.3rem;margin:0; text-align:center;position:relative;bottom:20px;left:60%;overflow:hidden;width:4rem;}
+#picBtns span{width:0.3rem;height:0.3rem;margin:0 0.1rem; border:1px solid red; display:inline-block; box-sizing:border-box; border-radius:0.15rem; vertical-align:top;z-index:200;}
+#picBtns .active{background:#f60;}
+
+
+#content .brand{
+	text-align:center;
+	padding:0.3125rem 0 0 0.1875rem;
+	margin:0 auto;
+
+}
+
+#content .brand li{
+	width:2.4375rem;
+	float:left;
+	margin:0 0 0.3125rem 0;
+
+}
+#content .brand li a img{
+	width:1.21875rem;
+	text-align:center;
+
+}
+#content .brand li h2{
+	padding-top:0.125rem;
+
+}
+#content .brand li h2 span{
+	width:134%.;
+	font-size:0.29rem;
+	display:block;
+
+}
+
+#content1{
+	margin:0 auto;
+	width:10rem;
+	background:#fff;
+	margin-bottom:0.3125rem;
+
+}
+.list1{
+	float:left;
+	width:3rem;
+	border-right:0.03125rem solid #f8f8f8;
+	padding:0.40625rem 0 0 0.375rem;
+
+}
+.list1 h2{
+	height:0;
+	background:url(img/img-3.png) no-repeat;
+	background-size:3rem 0.8rem;
+
+	padding-top:0.9375rem;
+	overflow:hidden;
+
+}
+.list1 p{
+	font-size:0.375rem;
+	color:#e1e1e1;
+	padding-bottom:0.40625rem;
+
+}
+.list1 time{
+	height:0;
+	overflow:hidden;
+	display: block;
+
+}
+.list1 img{
+	width:3.40625rem;
+	height:3.03125rem;
+
+}
+
+.list2{
+	border-bottom:0.03125rem solid #f8f8f8;
+	width:5.9375rem.;
+	float:left;
+
+}
+.list2 a{
+	float:left;
+	padding:0.375rem 0 0 0.3125rem;
+
+}
+.list2 h2{
+	height:0;
+	background:url(img/img-5.png) no-repeat;
+	background-size:3rem 0.8rem;
+
+	padding-top:0.5625rem.;
+
+	padding-top:0.8rem;
+	overflow:hidden;
+
+	width: 2.1875rem.;
+	width:3rem;
+
+}
+.list2 p{
+	font-size:0.375rem;
+	color:#e1e1e1;
+
+}
+.list2 img{
+	width:2.65625rem;
+	height:2.53125rem;
+	float:left;
+
+}
+
+.list3{
+	float: right;
+
+}
+.list3 h2{
+	height:0;
+	background:url(img/img-5.png) no-repeat;
+	background-size:3rem 0.8rem;
+
+	padding-top:0.5625rem;
+	padding-top:0.8rem;
+	overflow:hidden;
+
+}
+.list3 p{
+	font-size:0.375rem;
+	color:#e1e1e1;
+
+}
+.list3 img{
+	width:1.96875rem;
+	height:1.6875rem;
+
+}
+.list3 li{
+	float:left;
+	padding:0.25rem 0 0 0.375rem.;
+	width:2.9375rem;
+	border-right:0.03125rem solid #f8f8f8;
+
+}
+#content2{
+margin:0 auto;
+width:10rem;
+background:#fff;
+
+}
+#content2 h2{
+line-height:0.9375rem;
+border-bottom:0.03125rem solid #f4f4f4;
+font-size:0.4375rem;
+
+}
+#content2 h2 a{
+font-size:0.375rem;
+float:right;
+color:#a9a9a9;
+
+}
+#content2 h2 a span{
+display:block;
+width:0.40625rem;
+height:0.40625rem;
+float:right;
+padding:18px 7px 0 3px;
+
+background:url(img/img-03.png) no-repeat right;
+background-size:0.40625rem 0.40625rem;
+
+}
+.left{
+width:4.96875rem;
+border-right:0.03125rem solid #f4f4f4;
+float:left;
+
+}
+.left span{
+display:block;
+height:0;
+overflow:hidden;
+
+background:url(img/img-07.png) no-repeat;
+background-size:4.59375rem 1rem;
+
+padding-top:1rem;
+margin:0.625rem 0 0 0.375rem;
+}
+.left img{
+width:5rem;
+height:1.875rem;
+padding-top:0.3125rem;
+
+}
+.right{
+width:5rem.;
+float:right.;
+padding-left:0.375rem;
+
+}
+.right ul li{
+height:2.1875rem;
+
+}
+.right ul li img{}
+.R1 img{
+width:1.4375rem;
+height:1.75rem;
+
+}
+.R2{
+border-top:0.03125rem solid #f8f8f8;
+
+}
+.R2 img{
+width:1.4375rem;
+height:1.125rem;
+
+}
+.R1 span{
+float:left;
+width:2.6875rem;
+
+}
+.R1 span a{
+display:block;
+height:0;
+overflow:hidden;
+
+background:url(img/img-008.png) no-repeat;
+margin-left:13px;
+
+padding-top:0.375rem;
+margin-top:0.625rem;
+
+}
+.R1 span p{
+font-size:0.3125rem;
+color:#b2b2b2;
+float:left;
+padding-left:13px;
+
+}
+.R1 a{
+padding-top:0.375rem;
+
+}
+
+.R2 span{
+float:left;
+width:2.6875rem;
+
+}
+.R2 span a{
+display:block;
+height:0;
+overflow:hidden;
+margin-left:13px;
+
+background:url(img/img-008.png) no-repeat;
+
+padding-top:0.375rem;
+margin-top:0.625rem;
+
+}
+.R2 span p{
+font-size:0.3125rem;
+color:#b2b2b2;
+float:left;
+margin-left:13px;
+
+}
+.R2 a{
+padding-top:0.375rem;
+
+}
+
+.bottom{
+width:10rem.;
+border-top:0.03125rem solid #fcfcfc;
+padding:0 0.25rem;
+float:left;
+
+}
+.bottom li{
+float:left;
+width:2.34375rem;
+
+background:#fefefe;
+text-align:center;
+
+border-right:0.03125rem solid #f9f9f9;
+
+}
+.bottom li span{
+font-size:0.375rem;
+color:#9a9a9a;
+padding-left.:0.375rem;
+padding-top:0.3125rem;
+
+}
+.bottom li p{
+font-size:0.3125rem;
+color:#999;
+
+}
+.bottom li img{
+width:1.75rem;
+height:vertical-align:middle;
+
+}
+.bottom li a span{
+display:block;
+line-height:0.9375rem;
+font-size:0.375rem;
+color:#9a9a9a;
+padding-top:-0.3125rem;
+
+}
+.figure h2{
+overflow:hidden;
+height:0;
+
+}
+.figure img{
+width:10rem;
+height:2rem;
+
+}
+
+#content3{
+margin:0 auto;
+width:10rem;
+background:#fff;
+margin-bottom:0.265625rem;
+
+}
+#content3 h2{
+line-height:0.9375rem;
+border-bottom:0.03125rem solid #f4f4f4;
+font-size:0.4375rem;
+
+}
+#content3 h2 a{
+font-size:0.375rem;
+float:right;
+color:#a9a9a9;
+
+}
+#content3 h2 a span{
+display:block;
+width:0.40625rem;
+height:0.40625rem;
+float:right;
+padding:18px 7px 0 3px;
+
+background:url(img/img-03.png) no-repeat right center;
+background-size:center center;
+
+}
+#content3 li p{
+padding-left:1.375rem.;
+font-size:0.375rem;
+color:#999999;
+border-left:0.03125rem solid #f9f9f9;
+
+}
+#content3 li span{
+padding-left:1.375rem.;
+}
+.left1{
+width:4.96875rem.;
+padding:0.375rem 0.15625rem 0 0.375rem;
+float:left;
+border-right:0.03125rem solid #f9f9f9;
+
+}
+.left1 a{
+font-size:0.375rem;
+color:#999999;
+border-left:0.03125rem solid #f9f9f9;
+
+}
+.left1 span{
+display:block;
+font-size:0.3125rem;
+color:#999999;
+
+}
+.left1 li{
+width:2.0625rem;
+height:2.1875rem;
+float:left;
+
+}
+.left1 li img{
+float:left;
+width:2.0625rem;
+height:2.1875rem;
+
+}
+.right1{
+width:4.96875rem.;
+padding:0.375rem 0 0 0.375rem;
+float:left;
+
+}
+.right1 a{
+font-size:0.375rem;
+color:#999999;
+border-left:0.03125rem solid #f9f9f9;
+
+}
+.right1 span{
+display:block;
+font-size:0.3125rem;
+color:#999999;
+
+}
+.right1 li{
+width:2.0625rem;
+height:2.1875rem;
+float:left;
+
+}
+.right1 li img{
+float:left;
+width:2.0625rem;
+height:2.1875rem;
+
+}
+.bottom1{
+width:10rem;
+}
+.bottom1 ul{
+	border-bottom:0.03125rem solid #fcfcfc;
+	float:left;
+	width:10rem;
+	text-align:center;
+}
+.bottom1 li{
+	float:left;
+	width:2.34375rem;
+	text-align:center;
+}
+.bottom1 span{
+	display:block;
+	font-size:0.3125rem;
+	color:#999999;
+}
+.bottom1 li img{
+	width:2.1875rem;
+}
+
+#content4{
+	margin:0 auto;
+	width:10rem;
+	background:#fff;
+}
+#content4 h2{
+	line-height:0.9375rem;
+	border-bottom:0.03125rem solid #f4f4f4;
+	font-size:0.4375rem;
+}
+#content4 h2 a{
+	font-size:0.375rem;
+	float:right;
+	color:#a9a9a9;
+}
+#content4 h2 a span{
+	display:block;
+	width:0.40625rem;
+	height:0.40625rem;
+	float:right;
+	padding:18px 7px 0 3px;
+
+	background:url(img/img-03.png) no-repeat right center;
+	background-size:center center;
+}
+
+.js{
+	padding:0.15625rem;
+}
+.js img{
+	width:9.625rem;
+}
+.js p{
+	font-size:0.375rem;
+	color:#7d7d7d;
+}
+.js ul{
+	margin:0 auto;
+}
+.js li{
+	width:0.25rem;
+	height:0.25rem;
+	border:0.03125rem solid #ececec;
+
+	float:left;
+	border-radius:50%;
+}
+.js li:hover{
+	background:#ff5501;
+}
+
+#content5{
+	margin:0 auto;
+	width:10rem;
+}
+#content5 h2{
+	font-size:0.375rem;
+	color:#5f646e;
+	text-align:center;
+	padding:0.75rem 0.25rem;
+}
+#content5 h2 span{
+	display:block;
+	width:3.5rem;
+	border:0.03125rem solid #e5e5e5;
+	float:left;
+}
+#content5 ul{
+	padding:0 0.25px;
+}
+#content5 ul li{
+	width:46%;
+	margin:0.25rem 0.15625rem;
+	float:left;
+	background:#fff;
+	border:0.03125rem solid #e6e6e6;
+	border-radius:5px;
+	box-sizing: border-box;
+}
+#content5 ul li img{
+width:4.61rem;
+}
+#content5 ul li p{
+	font-size:0.375rem;
+	color:#5f646e;
+	padding:0.3125rem 0.3125rem;
+	border-bottom:0.03125rem dotted #f7f7f7;
+}
+#content5 ul li span a{
+	padding-left:0.3125rem;
+	display:block;
+	line-height:0.9375rem;
+	font-size:0.375rem;
+	color:#ff783b;
+}
+footer{
+	background:#4e525e;
+}
+footer li{
+	float:left;
+	border:0.03125rem solid #4c4f59;
+	padding:0 0.46875rem;
+	margin:0.625rem 0 0.625rem 0.25rem;
+	border-radius:0.15625rem;
+}
+footer li a{
+	line-height:0.9375rem;
+	font-size:0.375rem;
+	color:#aeb1b6;
+}
+footer p{
+	line-height:0.625rem;
+	font-size:0.375rem;
+	color:#c3c6ca;
+	margin-left:3.28125rem;
+	float:left;
+}
+footer p a{
+	font-size:0.375rem;
+	color:#c3c6ca;
+	float:left;
+}
+footer h2{
+	width:10rem;
+	margin:0.625rem 0 1.40625rem 0;
+	float:left;
+	line-height:0.5625rem;
+	font-size:0.375rem;
+	color:#545865;
+	text-align:center;
+}
+footer .rightF{
+	font-size: 0.375rem;
+	background:#fff;
+	width:1.375rem;
+	height:1.375rem;
+	line-height: 1.875rem;
+	border-radius: 0.6875rem;
+	position:absolute;
+	right: 0.3125rem;
+	bottom: 1.1875rem;
+	float:right;
+}
+footer .rightF a{
+	color:#000;
+}
+footer .rightF span{
+	font-size:0.625rem;
+	width:1.375rem;
+	height:1.375rem;
+	line-height:48px;
+	color:#000;
+}
+footer .rightL{
+	background:#ff5300;
+	width: 1.375rem;
+	height: 1.375rem;
+	border:2px solid #fff;
+	border-radius: 0.6875rem;
+	position:absolute;
+	left: 0.3125rem;
+	bottom: 1.1875rem;
+	float:right;
+
+}
+footer .rightL span{
+	display:block;
+	height:0;
+	overflow:hidden;
+	background:url(img/img-1.png) no-repeat center center;
+	padding-top:1.5rem;
+	background-size:80%;
+	margin:0.375rem.;
+}
+footer .bottomF{
+	background:#000;
+	opacity:0.5;
+	position:absolute;
+	left:0;
+	bottom:0;
+	width:10rem.;
+	width: 100%;
+	height:1.5625rem;
+}
+</style>
+</head>
+<body>
+<section id="section">
+<header id="head">
+	<h2 class="logo clear">淘宝</h2>
+		<form>
+			<input type="text" placeholder="搜索宝贝，店铺" autocomplete="off"></input>
+		</form>
+</header>
+<section id="content"class="clear">
+	<!-- <div class="top">
+		<img src="img/img-2.jpg"/>
+	</div> -->
+<!-- 轮播图 -->
+<!-- 	<div id="box" class="top">
+<ul id="list">
+	<li><img src="img/img-2.jpg"/></li>
+	<li><img src="img/img-1.gif"/></li>
+	<li><img src="img/img-2.gif"/></li>
+	<li><img src="img/img5.jpg"/></li>
+	<li><img src="img/img6.jpg"/></li>
+</ul>
+<input type="button" class="left" value="&lt"/>
+<input type="button" class="right" value="&gt"/>
+<div class="button">
+<button class="hover"></button>
+<button></button>
+<button></button>
+<button></button>
+<button></button>
+</div>
+</div> -->
+<!-- 轮播图结束 -->
+
+<section id="picWrap">
+    <div id="picList">
+        <img src="img/img-2.jpg"/>
+        <img src="img/img-1.gif"/>
+        <img src="img/img-2.gif"/>
+        <img src="img/img-13.png"/>
+        <img src="img/img-14.png"/>
+    </div>
+</section>
+<p id="picBtns">
+	<span class="active"></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</p>
+
+
+<ul class="brand">
+	<li><a href="#"><img src="img/images/img-3_03.jpg"/></a><h2><span>天猫</span></h2></li>
+	<li><a href="#"><img src="img/images/img-3_05.jpg"/></a><h2><span>天猫</span></h2></li>
+	<li><a href="#"><img src="img/images/img-3_07.jpg"/></a><h2><span>淘生活</span></h2></li>
+	<li><a href="#"><img src="img/images/img-3_09.jpg"/></a><h2><span>淘点点</span></h2></li>
+	<li><a href="#"><img src="img/images/img-3_03.jpg"/></a><h2><span>天猫</span></h2></li>
+	<li><a href="#"><img src="img/images/img-3_05.jpg"/></a><h2><span>天猫</span></h2></li>
+	<li><a href="#"><img src="img/images/img-3_07.jpg"/></a><h2><span>淘生活</span></h2></li>
+	<li><a href="#"><img src="img/images/img-3_09.jpg"/></a><h2><span>淘点点</span></h2></li>
+</ul>
+
+</section>
+<section id="content1" class="clear">
+	<div class="list1">
+		<h2>淘抢购</h2>
+		<p>纯棉材质超值组合装</p>
+		<time>00:50:09</time>
+		<a href="#"><img src="img/img-2.png" /></a>
+	</div>
+	<div class="list2">
+		<a href="#"><h2>有好货</h2>
+		<p>新锐设计 小资最爱</p></a>
+		<img src="img/img-4.png" />
+	</div>
+	<div class="list3">
+		<ul>
+			<li>
+		<h2>爱逛街</h2>
+		<p>达人带你来挑欢</p>
+		<a href="#"><img src="img/img-6.png" /></a>
+		</li>
+		<li>
+		<h2>爱逛街</h2>
+		<p>达人带你来挑欢</p>
+		<a href="#"><img src="img/img-6.png" /></a>
+		</li>
+		</ul>
+	</div>
+</section>
+<Section id="content2" class="clear">
+	<h2>特色市场<a href="#">更多<span></span></a></h2>
+	<div class="left">
+		<span><a href="#">天天特价</a>
+		<p>感恩母亲好货10元秒</p></span>
+		<img src="img/img-7.png" />
+	</div>
+	<div class="right">
+		<ul>
+			<li class="R1">
+				<span><a href="#">天猫超市</a>
+				<p>1分钱抢购</p></span>
+				<a href="#"><img src="img/img-8.png"/></a>
+			</li>
+			<li class="R2">
+				<span><a href="#">拍卖会</a>
+				<p>1分钱抢购</p></span>
+				<a href="#"><img src="img/img-08.png"/></a>
+			</li>
+		</ul>
+	</div>
+	<div class="bottom clear">
+		<ul>
+		<li>
+			<span>特色中国</span>
+			<p>9块9葡萄根</p>
+			<img src="img/img-9.png"/>
+			<a href="#"><span>天猫国际</span></a>
+		</li>
+		<li>
+			<span>特色中国</span>
+			<p>9块9葡萄根</p>
+			<img src="img/img-9.png"/>
+			<a href="#"><span>天猫国际</span></a>
+		</li>
+		<li>
+			<span>特色中国</span>
+			<p>9块9葡萄根</p>
+			<img src="img/img-9.png"/>
+			<a href="#"><span>天猫国际</span></a>
+		</li>
+		<li>
+			<span>特色中国</span>
+			<p>9块9葡萄根</p>
+			<img src="img/img-9.png"/>
+			<a href="#"><span>天猫国际</span></a>
+		</li>
+		</ul>
+	</div>
+	<div class="figure">
+		<h2><a href="#">一分钱抢纸</a>800万包五折起 全网比价</h2>
+		<a href="#"><img src="img/img-02.png"/></a>
+	</div>
+</Section>
+<section id="content3" class="clear">
+	<h2>热门市场<a href="#">更多<span></span></a></h2>
+	<div class="left1">
+		<a href="#">女装</a>
+		<span>女神必备</span>
+		<ul>
+			<li>
+				<a href="#"><img src="img/img-10.png"/></a>
+			</li>
+			<li>
+				<a href="#"><img src="img/img-10.png"/></a>
+			</li>
+		</ul>
+	</div>
+	<div class="right1">
+		<a href="#">女装</a>
+		<span>女神必备</span>
+		<ul>
+			<li>
+				<a href="#"><img src="img/img-10.png"/></a>
+			</li>
+			<li>
+				<a href="#"><img src="img/img-10.png"/></a>
+			</li>
+		</ul>
+	</div>
+	<div class="bottom1">
+		<ul>
+			<li>
+				<p>运动</p>
+				<span>活力T恤</span>
+				<img src="img/img-010.png" />
+			</li>
+			<li>
+				<p>运动</p>
+				<span>活力T恤</span>
+				<img src="img/img-010.png" />
+			</li>
+			<li>
+				<p>运动</p>
+				<span>活力T恤</span>
+				<img src="img/img-010.png" />
+			</li>
+			<li>
+				<p>运动</p>
+				<span>活力T恤</span>
+				<img src="img/img-010.png" />
+			</li>
+		</ul>
+	</div>
+		<div class="bottom1">
+		<ul>
+			<li>
+				<p>运动</p>
+				<span>活力T恤</span>
+				<img src="img/img-010.png" />
+			</li>
+			<li>
+				<p>运动</p>
+				<span>活力T恤</span>
+				<img src="img/img-010.png" />
+			</li>
+			<li>
+				<p>运动</p>
+				<span>活力T恤</span>
+				<img src="img/img-010.png" />
+			</li>
+			<li>
+				<p>运动</p>
+				<span>活力T恤</span>
+				<img src="img/img-010.png" />
+			</li>
+		</ul>
+	</div>
+		<div class="figure">
+		<h2><a href="#">一分钱抢纸</a>800万包五折起 全网比价</h2>
+		<a href="#"><img src="img/img-02.png"/></a>
+	</div>
+</section>
+<section id="content4" class="clear">
+	<h2>每日好店<a href="#">更多40个好店<span></span></a></h2>
+	<div class="js">
+	<img src="img/img-11.png" />
+	<p>今日推荐——1天3波<span>女神店没人装</span></p>
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+	</div>
+</section>
+<section id="content5"class="clear">
+	<h2><span></span>猜你喜欢<span></span></h2>
+	<div class="contentC">
+	<ul>
+	<li>
+		<a href="#"><img src="img/img-12.png" /></a>
+		<p>[买手推荐]日本国誉行星一行消橡皮 铅笔…</p>
+		<span><a href="#">¥1000000000</a></span>
+	</li>
+	<li>
+		<a href="#"><img src="img/img-13.png" /></a>
+		<p>[买手推荐]日本国誉行星一行消橡皮 铅笔…</p>
+		<span><a href="#">¥1000000000</a></span>
+	</li>
+	<li>
+		<a href="#"><img src="img/img-14.png" /></a>
+		<p>[买手推荐]日本国誉行星一行消橡皮 铅笔…</p>
+		<span><a href="#">¥1000000000</a></span>
+	</li>
+	<li>
+		<a href="#"><img src="img/img-15.png" /></a>
+		<p>[买手推荐]日本国誉行星一行消橡皮 铅笔…</p>
+		<span><a href="#">¥1000000000</a></span>
+	</li>
+		<li>
+		<a href="#"><img src="img/img-12.png" /></a>
+		<p>[买手推荐]日本国誉行星一行消橡皮 铅笔…</p>
+		<span><a href="#">¥1000000000</a></span>
+	</li>
+	<li>
+		<a href="#"><img src="img/img-13.png" /></a>
+		<p>[买手推荐]日本国誉行星一行消橡皮 铅笔…</p>
+		<span><a href="#">¥1000000000</a></span>
+	</li>
+	<li>
+		<a href="#"><img src="img/img-14.png" /></a>
+		<p>[买手推荐]日本国誉行星一行消橡皮 铅笔…</p>
+		<span><a href="#">¥1000000000</a></span>
+	</li>
+	<li>
+		<a href="#"><img src="img/img-15.png" /></a>
+		<p>[买手推荐]日本国誉行星一行消橡皮 铅笔…</p>
+		<span><a href="#">¥1000000000</a></span>
+	</li>
+		<li>
+		<a href="#"><img src="img/img-12.png" /></a>
+		<p>[买手推荐]日本国誉行星一行消橡皮 铅笔…</p>
+		<span><a href="#">¥1000000000</a></span>
+	</li>
+	<li>
+		<a href="#"><img src="img/img-13.png" /></a>
+		<p>[买手推荐]日本国誉行星一行消橡皮 铅笔…</p>
+		<span><a href="#">¥1000000000</a></span>
+	</li>
+	<li>
+		<a href="#"><img src="img/img-14.png" /></a>
+		<p>[买手推荐]日本国誉行星一行消橡皮 铅笔…</p>
+		<span><a href="#">¥1000000000</a></span>
+	</li>
+	<li>
+		<a href="#"><img src="img/img-15.png" /></a>
+		<p>[买手推荐]日本国誉行星一行消橡皮 铅笔…</p>
+		<span><a href="#">¥1000000000</a></span>
+	</li>
+	</ul>
+	</div>
+</section>
+<footer id="foot" class="clear">
+<ul>
+<li><a href="#">登录</a></li>
+<li><a href="#">注册</a></li>
+<li><a href="#">电脑板</a></li>
+<li><a href="#">用户反馈</a></li>
+</ul>
+<p>2015 浙 B2-20080224 <a href="#">服务中心</a></p>
+<h2>手机淘宝<a href="#">随时随地 想淘就淘</a></h2>
+</div>
+<div class="rightF">
+	<a href="#" id="rightF">
+		<span>&darr;</span>顶部
+	</a>
+</div>
+<div class="rightL">
+<a href="#"><span>淘宝</span></a>
+</div>
+<div class="bottomF"></div>
+</footer>
+</section>
+<script>
+/*function $Id(Id){//获取Id
+	return document.getElementById(Id);//获取到的Id返回出去
+}
+function $Tag(oParent,Tag){//获取父级，标签名，
+	return oParent.getElementsByTagName(Tag);
+}
+function getStyle(obj,sArrt){//获取样式： 获取不同的元素，和样式；注意事项：
+	if (obj.currentStyle) {
+		return obj.currentStyle[sArrt];
+	}else{
+		return getComputedStyle(obj)[sArrt];
+	}
+
+}
+ window.onload=function(){
+ 	var oBox=$Id('box');
+ 	var oList=$Id('list');
+ 	var aLi=$Tag(oList,'li');
+ 	var aBut=$Tag(oBox,'input');//从oBox父级下获取Input
+ 	var aButton=$Tag(oBox,'button');
+ 	var oTimer=0
+ 	var aNow=0;//记录上一个下一个；变量
+ 	var iW=parseInt(getStyle(box,'width'));//取计算后样式
+//图片轮播
+ 	aBut[0].onclick=function(){
+ 		aNow--//点击上一张减
+ 			if (aNow<0) {
+ 				aNow=aLi.length-1
+ 			}
+ 			oList.style.left=-aNow*iW+"px";
+ 			fn1(aButton,aNow);
+ 	}
+ 	
+ 	aBut[1].onclick=tab;
+ 	oTimer=setInterval(tab,2000)//定时器
+ 	function tab(){
+ 		aNow++//点击下一张加
+ 		aNow=aNow%aLi.length;
+ 		oList.style.left=-aNow*iW+'px';
+ 		fn1(aButton,aNow);
+ 	}
+ 	oBox.onmouseover=function(){//鼠标移上让他关闭定时器
+ 		clearInterval(oTimer)
+ 	}
+ 	oBox.onmouseout=function(){//鼠标移开让他开启定时器
+ 		oTimer=setInterval(tab,2000)//定时器
+ 	}
+
+ 	for (var i=0;i<aButton.length;i++) {
+ 		aButton[i].index=i
+ 		aButton[i].onmouseover=function(){
+ 				aNow=this.index//aNow在这是显示当前
+ 				fn1(aButton,aNow);
+ 				this.className="hover";
+ 				oList.style.left=-aNow*iW+"px";
+ 		}
+ 	}
+//回到顶部
+	var oSection=$Id('section');
+	var oRightF=$Id('rightF');
+	oRightF.onclick=function(){
+		document.documentElement.scrollTop=document.body.scrollTop=0;
+	}
+}
+function fn1(obj,aNow){
+		for (var i=0;i<obj.length;i++) {
+ 			obj[i].className="";
+ 		}
+ 			obj[aNow].className="hover";
+}
+*/
+
+var oRightF=document.getElementById('rightF');
+//返回底部
+oRightF.onclick=function(){
+	document.documentElement.scrollTop=0;
+	document.body.scrollTop=0;
+}
+
+document.ontouchmove=function(e)
+{
+	e.preventDefault();
+};
+window.onload=function()
+{
+	var oPicList=document.getElementById("picList");
+	var aBtns=document.getElementById("picBtns").children;
+	var iScroll=0;
+	var iStartX=0;
+	var iStartPageX=0;
+	var iNow=0;
+	var oTimer=0;
+	oPicList.innerHTML+=oPicList.innerHTML;
+	oPicList.style.width=oPicList.clientWidth*2+"px";
+	function autoPlay()
+	{
+		oTimer=setInterval(function(){
+			iNow++;	
+			next();
+		},2000);
+	}
+	autoPlay();
+	oPicList.addEventListener("touchstart",fnStart,false);
+	function fnStart(ev)
+	{
+		clearInterval(oTimer);
+		clearInterval(oPicList.timer);
+		if(iNow<=0)
+		{
+			iNow+=aBtns.length;
+			iScroll=-iNow*window.screen.width;
+			css(oPicList, "translateX", iScroll);
+		}
+		iStartPageX=ev.changedTouches[0].pageX;
+		iStartX=iScroll;
+	};
+	oPicList.addEventListener("touchmove",fnMove,false);
+	function fnMove(ev)
+	{
+		var iDis=ev.changedTouches[0].pageX-iStartPageX;
+		iScroll=iStartX+iDis;
+		css(oPicList, "translateX", iScroll);
+	};
+	oPicList.addEventListener("touchend",fnEnd,false);
+	function fnEnd(ev)
+	{
+		var iDis=ev.changedTouches[0].pageX-iStartPageX;
+		var iNub=Math.round(iDis/window.screen.width);
+		iNow-=iNub;
+		next();
+		autoPlay();
+	};
+	function next()
+	{
+		iScroll=-iNow*window.screen.width;
+		for(var i=0;i<aBtns.length;i++)
+		{
+			aBtns[i].className="";
+		}
+		aBtns[iNow%aBtns.length].className="active";
+		if(iNow>=aBtns.length)
+		{
+			tweenMove(oPicList,{translateX:iScroll},300,"easeOut",function(){
+				iNow=iNow%aBtns.length;
+				iScroll=-iNow*window.screen.width;
+				css(oPicList, "translateX", iScroll);
+			});
+		}
+		else
+		{
+			tweenMove(oPicList,{translateX:iScroll},300,"easeOut");
+		}
+	}
+};
+</script>
+</body>
+</html>

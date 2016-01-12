@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1" />
+
+<style>
+body,dl,dd,ul,ol,h1,h2,h3,h4,h5,h6,form,input,textarea,th,td,p{margin:0;padding:0;font-szie:12px;font-family:Arial,"宋体";}
+table{border-collapse:collapse;}
+span{font-weight:normal;}
+img{border:none; vertical-align:top;}
+li{list-style:none; vertical-align:top;}
+a{text-decoration:none;display:block;-webkit-tap-highlight-color:rgba(0,0,0,0);font-szie:12px;font-family:Arial,"宋体";}
+textarea{resize:none; overflow:auto;}
+input,textarea,select,lable{outline:none;}
+.clear{zoom:1;}
+.clear:after{content:"";display:block;clear:both;}
+
+html{height:100%;overflow:hidden;}
+body{height:100%;overflow:auto;margin:0; background:#eee;}
+#head{width:100%;height:15%.; background:#fe6134;text-align:center;position:relative;top:0;left:0;}
+.logo{width:32px;height:0;overflow:hidden;background:url(img/img-1.png) no-repeat;padding-top:24px;float:left;}
+form input{height:1.03125em;border:none;background:#e8512a;border-radius:0.15625em;text-align:center;}
+
+#content{margin:0 auto;max-width:640px;background:#fff;margin:0 auto;margin-bottom:0.265625em;}
+.top{}
+.top img{width:100%;margin:0 auto;}
+#content ul{width:100%;text-align:center;padding:0.53125em 0 0 0;margin:0 auto;}
+
+#content ul li{width:20%;float:left;margin:0 0em 0 0.5em; 0;}
+#content ul li a img{width:50%;text-align:center;}
+#content ul li h2{width:50%.;
+margin-bottom:0.1875em;line-height:0.5em;}
+#content ul li h2 span{width:134%.;font-size:0.29em;display:block;}
+
+#content1{margin:0 auto;max-width:640px;background:#fff;margin-bottom:0.265625em;}
+.list1{float:left;width:2.703125em.;border-right:1px solid #f8f8f8;padding:0.265625em 0 0 0.28125em;}
+.list1 h2{height:0;background:url(img/img-3.png) no-repeat;padding-top:0.328125em;overflow:hidden;}
+.list1 p{font-size:0.21875em;color:#e1e1e1;}
+.list1 time{height:0;overflow:hidden;display: block;}
+.list1 img{width:100%;}
+
+.list2{float:left;border-bottom:1px solid #f8f8f8;width:50%;}
+.list2 a{float:left;padding:0.265625em 0 0 0.28125em;}
+.list2 h2{height:0;background:url(img/img-5.png) no-repeat;padding-top:0.328125em;overflow:hidden;}
+.list2 p{font-size:0.21875em;color:#e1e1e1;}
+.list2 img{width:100%.;float:right;}
+
+.list3{}
+.list3 h2{height:0;background:url(img/img-5.png) no-repeat;padding-top:0.328125em;overflow:hidden;}
+.list3 p{font-size:0.21875em;color:#e1e1e1;}
+.list3 img{width:100%;}
+.list3 li{float:left;padding:0.265625em 0 0 0.1875em;width:25%;border-right:1px solid #f8f8f8;}
+#content2{margin:0 auto;max-width:640px;background:#fff;}
+#content2 h2{line-height:0.9375em;border:1px solid #f4f4f4;font-size:0.46875em;}
+#content2 h2 a{font-size:0.21875em;float:right;}
+#content2 h2 a span{display:block;width:1.40625em;height:1.40625em;float:right;
+background:url(img/img-03.png) no-repeat right;background-size:100% 100%;}
+.left{width:50%;border-right:1px solid #f4f4f4;float:left;}
+.left span{display:block;height:0;overflow:hidden;
+background:url(img/img-07.png) no-repeat;background-size: 100% 100%;
+padding-top:1em;margin:0.625em 0 .0.3125em;;}
+.left img{width:100%;}
+.right{width:45%;float:right;padding-left:0.375em;}
+.right ul li{height:50%;}
+.right ul li img{width:39%;float:right;}
+.R2{border-top:1px solid #f8f8f8;}
+.R1 span{float:left;width:50%;}
+.R1 span a{display:block;height:0;overflow:hidden;
+background:url(img/img-008.png) no-repeat;
+padding-top:0.4375em;margin-top:0.625em;}
+.R1 span p{font-size:0.3125em;color:#b2b2b2;float:left;}
+.R1 a{padding-top:0.375em;}
+.R2 span{float:left;width:50%;}
+.R2 span a{display:block;height:0;overflow:hidden;
+background:url(img/img-008.png) no-repeat;
+padding-top:0.4375em;margin-top:0.625em;}
+.R2 span p{font-size:0.3125em;color:#b2b2b2;float:left;}
+.R2 a{padding-top:0.5625em;}
+.bottom{width:100%;border-top:1px solid #fcfcfc;padding:0 0.25em;float:left;}
+.bottom li{float:left;padding-top:0.375em;width:24%;
+background:#fefefe;text-align:center;
+border-right:1px solid #f9f9f9;}
+.bottom li span{font-size:0.375em;color:#9a9a9a;padding-left.:0.375em;}
+.bottom li p{font-size:0.3125em;}
+.bottom li img{width:50%;vertical-align:middle;}
+.bottom li a span{display:block;line-height:1.125em;font-size:0.375em;color:#9a9a9a;}
+.figure h2{overflow:hidden;height:0;}
+.figure img{width:100%;}
+
+
+#content3{margin:0 auto;max-width:640px;background:#fff;margin-bottom:0.265625em;}
+#content3 h2{line-height:1.875em;border:1px solid #f4f4f4;font-size:0.46875em;}
+#content3 h2 a{font-size:0.21875em;float:right;}
+#content3 h2 a span{display:block;width:1.40625em;height:1.40625em;float:right;
+background:url(img/img-03.png) no-repeat right center;background-size:center center}
+#content3 li p{padding-left:1.375em;font-size:0.375em;color:#999999;border-left:1px solid #f9f9f9;}
+#content3 li span{padding-left:1.375em;}
+.left1{width:45%;padding:0.375em 0 0 0.375em;float:left;}
+.left1 a{font-size:0.375em;color:#999999;border-left:1px solid #f9f9f9;}
+.left1 span{display:block;font-size:0.3125em;color:#999999;}
+.left1 li{width:50%;float:left;}
+.left1 li img{float:left;width:100%;}
+.right1{width:45%;padding:0.375em 0 0 0.375em;float:right;}
+.right1 a{font-size:0.375em;color:#999999;border-left:1px solid #f9f9f9;}
+.right1 span{display:block;font-size:0.3125em;color:#999999;}
+.right1 li{width:50%;float:left;}
+.right1 li img{float:left;width:100%;}
+.bottom1{width:100%;}
+.bottom1 ul{border-bottom:1px solid #fcfcfc;float: left;width: 100%;}
+.bottom1 li{float:left;width:25%;}
+.bottom1 span{display:block;font-size:0.3125em;color:#999999;}
+.bottom1 li img{width:100%;}
+
+#content4{margin:0 auto;max-width:640px;background:#fff;}
+#content4 h2{line-height:1.9375em;border:1px solid #f4f4f4;font-size:0.46875em;}
+#content4 h2 a{font-size:0.21875em;float:right;}
+#content4 h2 a span{display:block;width:1.40625em;height:1.40625em;float:right;
+background:url(img/img-03.png) no-repeat right;background-size:100% 100%;}
+.js{padding:0.3125em;}
+.js img{width:9.4375em;width:100%;}
+.js p{font-size:0.21875em;color:#7d7d7d;}
+.js ul{margin:0 auto;width:100%;}
+.js li{width:0.25em;height:0.25em;border:1px solid #ececec;
+float:left;border-radius:50%;}
+.js li:hover{background:#ff5501;}
+
+#content5{margin:0 auto;max-width:640px;}
+#content5 h2{font-size:0.21875em;color:#5f646e;text-align:center;padding:0.75em 0.25em;}
+#content5 h2 span{width:3.5em;border:0 solid #e5e5e5;}
+#content5 ul{padding:0 0.25px;}
+#content5 ul li{width:46%;margin:0.25em 0.15625em;float:left;background:#fff;}
+#content5 ul li img{width:100%;}
+#content5 ul li p{width:10s0%;
+font-size:0.21875em;
+color:#5f646e;padding:0.5em 0.3125em;border-bottom:1px dashed #f7f7f7;}
+#content5 ul li span a{display:block;line-height:1.875em;font-size:0.25em;color:#ff783b;}
+</style>
+</head>
+<body>
+<script>
+/*alert(document.documentElement.getBoundingClientRect().width);
+	取设备宽度
+*/
+var iWidth=document.documentElement.getBoundingClientRect().width;
+iWidth=iWidth>540?540:iWidth;
+document.body.style.fontSize=iWidth/10+"px";
+</script>
+<header id="head">
+	<h2 class="logo clear">淘宝</h2>
+		<form>
+			<input type="text" placeholder="搜索宝贝，店铺" autocomplete="off"></input>
+		</form>
+</header>
+<section id="content"class="clear">
+	<div class="top">
+		<img src="img/img-2.jpg"/>
+	</div>
+			<ul class="brand">
+				<li><a href="#"><img src="img/images/img-3_03.jpg"/></a><h2><span>天猫</span></h2></li>
+				<li><a href="#"><img src="img/images/img-3_05.jpg"/></a><h2><span>天猫</span></h2></li>
+				<li><a href="#"><img src="img/images/img-3_07.jpg"/></a><h2><span>淘生活</span></h2></li>
+				<li><a href="#"><img src="img/images/img-3_09.jpg"/></a><h2><span>淘点点</span></h2></li>
+				<li><a href="#"><img src="img/images/img-3_03.jpg"/></a><h2><span>天猫</span></h2></li>
+				<li><a href="#"><img src="img/images/img-3_05.jpg"/></a><h2><span>天猫</span></h2></li>
+				<li><a href="#"><img src="img/images/img-3_07.jpg"/></a><h2><span>淘生活</span></h2></li>
+				<li><a href="#"><img src="img/images/img-3_09.jpg"/></a><h2><span>淘点点</span></h2></li>
+			</ul>
+
+</section>
+<section id="content1" class="clear">
+	<div class="list1">
+		<h2>淘抢购</h2>
+		<p>纯棉材质超值组合装</p>
+		<time>00:50:09</time>
+		<a href="#"><img src="img/img-2.png" /></a>
+	</div>
+	<div class="list2">
+		<a href="#"><h2>有好货</h2>
+		<p>新锐设计 小资最爱</p></a>
+		<img src="img/img-4.png" />
+	</div>
+	<div class="list3">
+		<ul>
+			<li>
+		<h2>爱逛街</h2>
+		<p>达人带你来挑欢</p>
+		<a href="#"><img src="img/img-6.png" /></a>
+		</li>
+		<li>
+		<h2>爱逛街</h2>
+		<p>达人带你来挑欢</p>
+		<a href="#"><img src="img/img-6.png" /></a>
+		</li>
+		</ul>
+	</div>
+</section>
+<Section id="content2" class="clear">
+	<h2>特色市场<a href="#">更多<span></span></a></h2>
+	<div class="left">
+		<span><a href="#">天天特价</a>
+		<p>感恩母亲好货10元秒</p></span>
+		<img src="img/img-7.png" />
+	</div>
+	<div class="right">
+		<ul>
+			<li class="R1">
+				<span><a href="#">天猫超市</a>
+				<p>1分钱抢购</p></span>
+				<a href="#"><img src="img/img-8.png"/></a>
+			</li>
+			<li class="R2">
+				<span><a href="#">拍卖会</a>
+				<p>1分钱抢购</p></span>
+				<a href="#"><img src="img/img-08.png"/></a>
+			</li>
+		</ul>
+	</div>
+	<div class="bottom clear">
+		<ul>
+		<li>
+			<span>特色中国</span>
+			<p>9块9葡萄根</p>
+			<img src="img/img-9.png"/>
+			<a href="#"><span>天猫国际</span></a>
+		</li>
+		<li>
+			<span>特色中国</span>
+			<p>9块9葡萄根</p>
+			<img src="img/img-9.png"/>
+			<a href="#"><span>天猫国际</span></a>
+		</li>
+		<li>
+			<span>特色中国</span>
+			<p>9块9葡萄根</p>
+			<img src="img/img-9.png"/>
+			<a href="#"><span>天猫国际</span></a>
+		</li>
+		<li>
+			<span>特色中国</span>
+			<p>9块9葡萄根</p>
+			<img src="img/img-9.png"/>
+			<a href="#"><span>天猫国际</span></a>
+		</li>
+		</ul>
+	</div>
+	<div class="figure">
+		<h2><a href="#">一分钱抢纸</a>800万包五折起 全网比价</h2>
+		<a href="#"><img src="img/img-02.png"/></a>
+	</div>
+</Section>
+<section id="content3" class="clear">
+	<h2>热门市场<a href="#">更多<span></span></a></h2>
+	<div class="left1">
+		<a href="#">女装</a>
+		<span>女神必备</span>
+		<ul>
+			<li>
+				<a href="#"><img src="img/img-10.png"/></a>
+			</li>
+			<li>
+				<a href="#"><img src="img/img-10.png"/></a>
+			</li>
+		</ul>
+	</div>
+	<div class="right1">
+		<a href="#">女装</a>
+		<span>女神必备</span>
+		<ul>
+			<li>
+				<a href="#"><img src="img/img-10.png"/></a>
+			</li>
+			<li>
+				<a href="#"><img src="img/img-10.png"/></a>
+			</li>
+		</ul>
+	</div>
+	<div class="bottom1">
+		<ul>
+			<li>
+				<p>运动</p>
+				<span>活力T恤</span>
+				<img src="img/img-010.png" />
+			</li>
+			<li>
+				<p>运动</p>
+				<span>活力T恤</span>
+				<img src="img/img-010.png" />
+			</li>
+			<li>
+				<p>运动</p>
+				<span>活力T恤</span>
+				<img src="img/img-010.png" />
+			</li>
+			<li>
+				<p>运动</p>
+				<span>活力T恤</span>
+				<img src="img/img-010.png" />
+			</li>
+		</ul>
+	</div>
+		<div class="bottom1">
+		<ul>
+			<li>
+				<p>运动</p>
+				<span>活力T恤</span>
+				<img src="img/img-010.png" />
+			</li>
+			<li>
+				<p>运动</p>
+				<span>活力T恤</span>
+				<img src="img/img-010.png" />
+			</li>
+			<li>
+				<p>运动</p>
+				<span>活力T恤</span>
+				<img src="img/img-010.png" />
+			</li>
+			<li>
+				<p>运动</p>
+				<span>活力T恤</span>
+				<img src="img/img-010.png" />
+			</li>
+		</ul>
+	</div>
+		<div class="figure">
+		<h2><a href="#">一分钱抢纸</a>800万包五折起 全网比价</h2>
+		<a href="#"><img src="img/img-02.png"/></a>
+	</div>
+</section>
+<section id="content4" class="clear">
+	<h2>每日好店<a href="#">更多40个好店<span></span></a></h2>
+	<div class="js">
+	<img src="img/img-11.png" />
+	<p>今日推荐——1天3波<span>女神店没人装</span></p>
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+	</div>
+</section>
+<section id="content5">
+	<h2><span></span>猜你喜欢<span></span></h2>
+	<div class="contentC">
+	<ul>
+	<li>
+		<a hef="#"><img src="img/img-12.png" /></a>
+		<p>[买手推荐]日本国誉行星一行消橡皮 铅笔…</p>
+		<span><a href="#">&1000000000</a></span>
+	</li>
+	<li>
+		<a hef="#"><img src="img/img-12.png" /></a>
+		<p>[买手推荐]日本国誉行星一行消橡皮 铅笔…</p>
+		<span><a href="#">&1000000000</a></span>
+	</li>
+	<li>
+		<a hef="#"><img src="img/img-12.png" /></a>
+		<p>[买手推荐]日本国誉行星一行消橡皮 铅笔…</p>
+		<span><a href="#">&1000000000</a></span>
+	</li>
+	<li>
+		<a hef="#"><img src="img/img-12.png" /></a>
+		<p>[买手推荐]日本国誉行星一行消橡皮 铅笔…</p>
+		<span><a href="#">&1000000000</a></span>
+	</li>
+	</ul>
+	</div>
+</section>
+</body>
+</html>

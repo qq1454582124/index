@@ -1,0 +1,29 @@
+/* CSS Document */
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td,section,article,aside,header,footer,nav,dialog,figure,hgroup { margin:0; padding:0; }
+table { border-collapse:collapse; border-spacing:0; }
+h1,h2,h3,h4,h5,h6 { font-weight:normal;   }
+ul,ol,li { list-style:none; }
+em,i { font-style:normal; }
+img { border:0; }
+input,img { vertical-align:middle; }
+input:focus { outline:0; }
+a { color:#626262; text-decoration:none; }
+* { -webkit-tap-highlight-color:rgba(0,0,0,0); }
+.fl{ float:left;}
+.fr{ float:right;}
+body { font-family:"微软雅黑"; font-size:12px;   }
+.clearfix:after { clear:both; display:block; visibility:hidden; height:0; content:"."; }
+.clearfix { display:block; }
+.webwidth{ width:1100px; margin:0 auto;}
+
+
+.margin-top{ margin-top:38px;}
+.margin-top15 { margin-top:15px;}
+.margin-top35{  margin-top:35px;}
+.margin-bottom38{ margin-bottom:38px;}
+.margin-bottom83{ margin-bottom:83px;}
+.margin-bottom100{ margin-bottom:100px;}
+.margin-bottom15{ margin-bottom:15px;}
+.margin-bottom300{ margin-bottom:300px;}
+.margin-bottom25{ margin-bottom:25px;}

@@ -1,0 +1,722 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="css/common.css"/>
+<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="js/js.js"></script>
+<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+<SCRIPT src="js/jquery-1.2.6.pack.js" type="text/javascript"></SCRIPT>
+<SCRIPT src="js/base.js" type="text/javascript"></SCRIPT>
+<title>无标题文档</title>
+</head>
+ <script type="text/javascript">
+	 $(function(){	
+      $('.bar-l-li1').hover(function(){
+ 	    $('.bar-ul1').show()
+	    $('.bar-l-li1').addClass('bar-l-li2')
+ 	    },function(){
+ 		        $('.bar-ul1').hide()
+	          $('.bar-l-li1').removeClass('bar-l-li2')
+ 		   })
+ 	  $('.shop-car').hover(function(){
+ 		    $('.shop-cart-info').show();
+		    $('.icon-delta').addClass('icon-delta1')
+  		  },function(){
+ 		     $('.shop-cart-info').hide();
+ 	       $('.icon-delta').removeClass('icon-delta1')
+  		})
+ 
+})
+
+	/*地区选择*/
+	$(function(){
+		 $(".top").click(function(){
+			 $(".city_box").show();	 
+			 })
+		  $(".cencel").click(function(){
+			 $(".city_box").hide();
+			 	 
+			 })  		
+		})	 
+		/*这是我的添加数量*/
+    $(function(){  
+       var  num=document.getElementById("text");
+	     var  $price=document.getElementById("price").innerHTML;
+	     var $num=num.value;
+       var $totalprice; 
+      $(".add").click(function(){
+		    num.value=++$num;
+			  $totalprice=num.value*$price;
+		     document.getElementById("price").innerHTML=$totalprice.toFixed(2);		
+         $("#reduce").attr("src","Images/reduce1.png")
+	         prompt1();
+	 })
+       
+       $(".reduce").click(function(){
+			 if($num>1){
+		        
+			 num.value=--$num;
+		     $totalprice=num.value*$price;
+		     document.getElementById("price").innerHTML=$totalprice.toFixed(2);	
+			  prompt1();		
+			 }
+			 if($num==1){
+		    $("#reduce").attr("src","Images/reduce.png")
+		    prompt1();	 	
+			
+				 }              			 			 			 
+			 })  
+       $(".prompt_2").hover(function(){		   
+		   $(".prompt_3").show();
+		   
+		   },function(){
+			   $(".prompt_3").hide();   
+			   
+			   })
+ 
+   });
+   
+    //海关规则提示
+    function prompt1(){
+     var  num=document.getElementById("text");
+     var $num=num.value;
+	   var  $price=document.getElementById("price").innerHTML;
+	   if($num==1){
+	   $(".prompt_2").hide();
+	   }else if($num>1&&$price>1000){
+		 $(".prompt_2").show() 
+		 $(".purchase").addClass("currentbackground");
+	   }else if($num>1&&$price<1000){
+	  $(".purchase").addClass("purchase1").removeClass("currentbackground");	   
+	   $(".prompt_2").hide() 
+	   }
+	}
+	  /*这是我的商品参数*/
+	  $(function(){  
+		  $(".good_one").click(function(){
+			  window.location.href="#parameter_box";
+			  $(this).addClass("good_one");
+			  $(this).siblings().removeClass("good_one");
+			  })
+		  
+		  $(".good_two").click(function(){
+			  window.location.href="#good_dedatils";
+			  $(this).addClass("good_one");
+			  $(this).siblings().removeClass("good_one");
+			  
+			  })
+			  $(".good_tree").click(function(){
+			  window.location.href="#appraise_maxbox";
+			  $(this).addClass("good_one");
+			  $(this).siblings().removeClass("good_one");
+			  
+			  })
+		  })
+     $(function(){			
+	   $(".jqzoom").jqueryzoom({
+			xzoom:400,
+			yzoom:400,
+			offset:10,
+			position:"right",
+			preload:1,
+			lens:1
+		});
+		$("#spec-list").jdMarquee({
+			deriction:"left",
+			width:350,
+			height:56,
+			step:2,
+			speed:4,
+			delay:10,
+			control:true,
+			_front:"#spec-right",
+			_back:"#spec-left"
+		});
+		$("#spec-list img").bind("mouseover",function(){
+			var src=$(this).attr("src");
+			$("#spec-n1 img").eq(0).attr({
+				src:src.replace("\/n5\/","\/n1\/"),
+				jqimg:src.replace("\/n5\/","\/n0\/")
+			});
+			$(this).css({
+				"border":"2px solid #ff6600",
+				"padding":"1px"
+			});
+		}).bind("mouseout",function(){
+			$(this).css({
+				"border":"1px solid #ccc",
+				"padding":"2px"
+			});
+			
+		});			
+			
+	})
+
+
+
+   </script>
+<body>
+      <div class="head-bar">
+     <div class="head-bar2 webwidth clearfix">
+         <div class="head-bar-l fl clearfix">
+            <div class="webcomes fl">您好，欢迎来到有田美啊</div>
+            <div class="login-con fl">
+             <a href="#">请登录</a> 
+             <a href="#">【免费注册】</a>
+           </div>
+         </div>
+         <div class="head-bar-r fr clearfix">
+           <ul class="bar-r-list-1 fl">
+             <li><a href="#">我的订单</a></li>
+             <li  class="bar-l-li1"><a href="#">我的有田</a>
+                <ul class="bar-ul1">
+                  <li><a href="#">我的订单</a></li>
+                  <li><a href="#">我的钱包</a></li>
+                  <li><a href="#">我的优惠券</a></li>
+                  <li><a href="#">我的收藏</a></li>
+                  <li><a href="#">会员等级</a></li>
+                </ul>
+              </li>
+           </ul>          
+            <ul class="bar-r-list-2 fr">
+             <li class="bar-r-li1"><a href="#">手机有田</a></li>
+             <li><a href="#">联系客服</a></li>
+             <li><a href="#">收藏本站</a></li>
+             <li><a href="#">帮助</a></li>
+            </ul>
+        </div>
+    </div>
+ </div>
+ 
+  <div class="logo-con clearfix">
+      <h1 class="logo fl"><a href="#"><img src="images/logo.png" /></a></h1> 
+      <div class="search-con fl">
+        <div class="search-top">
+         <input type="text" value="奶粉" class="index-search" />
+         <a href="#">搜一搜</a>
+       </div>
+       <div class="search-bottom">
+          <a href="#" class="hota1">奶粉</a>
+          <a href="#">纸尿裤</a>
+          <a href="#">奶粉</a>
+          <a href="#">纸尿裤</a>
+          <a href="#">奶粉</a>
+          <a href="#">纸尿裤</a>
+          <a href="#">奶粉</a>
+          <a href="#">奶粉</a>
+       </div>
+     </div>
+      <div class="shop-car">
+        <a href="#" class="shop-car-a">
+          <span class="cart-info">购物车<b>(1)</b>件</span>
+          <b class="icon-delta"></b>
+         </a>
+          <div class="shop-cart-info">
+             <ul class="shop-cart-list">
+                <li>
+                <div class="car-img clearfix">
+                  <a href="#" class="fl"><img src="images/tab1.jpg" /> </a>
+                  <dl class="fr car-dl">
+                    <dt>Merries 花王妙而舒 婴儿纸尿裤 </dt>
+                    <dd>L44片*2包</dd>
+                    <dd><i>￥236.00</i>×1</dd>
+                  </dl>
+                </div>
+               </li>             
+             
+               <li>
+                 <div class="car-img clearfix">
+                  <a href="#" class="fl"><img src="images/tab1.jpg" /> </a>
+                  <dl class="fr car-dl">
+                    <dt>Merries 花王妙而舒 婴儿纸尿裤 </dt>
+                    <dd>L44片*2包</dd>
+                    <dd><i>￥236.00</i>×1</dd>
+                  </dl>
+                </div>
+               </li>            
+                <li>
+                <div class="car-img clearfix">
+                  <a href="#" class="fl"><img src="images/tab1.jpg" /> </a>
+                  <dl class="fr car-dl">
+                    <dt>Merries 花王妙而舒 婴儿纸尿裤 </dt>
+                    <dd>L44片*2包</dd>
+                    <dd><i>￥236.00</i>×1</dd>
+                  </dl>
+                </div>
+               </li>  
+              <li>
+                <div class="car-img clearfix">
+                  <a href="#" class="fl"><img src="images/tab1.jpg" /> </a>
+                  <dl class="fr car-dl">
+                    <dt>Merries 花王妙而舒 婴儿纸尿裤 </dt>
+                    <dd>L44片*2包</dd>
+                    <dd><i>￥236.00</i>×1</dd>
+                  </dl>
+                </div>
+               </li>
+                <div class="shop-pay clearfix">
+                     <ol class="shop-list fl"> 
+                       <li>共<b>1</b>件商品</li>
+                       <li>共计<span>￥236.00</span></li>
+                     </ol>
+                     <a href="#" class="fr">去购物车结算</a>
+                </div>                 
+             </ul>          
+          </div>
+      </div>
+ </div>
+  <div class="nav">
+    <ul class="nav-list webwidth clearfix">
+       <li class="nav-one"><a href="#">首页</a></li>
+       <li><a href="#">母婴专区</a></li>
+       <li><a href="#">美容彩妆</a></li>
+       <li><a href="#">家居个护</a></li>
+       <li><a href="#">进口美食</a></li>
+       <li><a href="#">营养保健</a></li>
+       <li><a href="#">正品保证</a></li>
+     </ul>
+  </div>  
+<!--品牌购买-->
+<div class="webwidth margin-bottom38">
+  <div class="page"><a>首页</a>><a>特卖专场Merries花王妙而舒</a>><a>【2包装M64 单包仅118元】Merries 花王妙而舒 婴儿纸尿裤 L44片*2包</a></div>
+  <div class="pay_box clearfix" >
+    <div class="brand_pay_l clearfix">
+      <div id="preview">
+        <div class="jqzoom" id="spec-n1"> 
+        <img height="350" src="images/product.png" jqimg="images/product.png" width="350"> 
+        </div>
+        <div id="spec-n5">
+          <div class="control" id="spec-left"> <img src="images/left.png" /> </div>
+          <div id="spec-list">
+            <ul class="list-h">
+              <li><img src="images/product.png"> </li>
+              <li><img src="images/product.png"> </li>
+              <li><img src="images/brand_4.jpg"> </li>
+              <li><img src="images/brand_4.jpg"> </li>
+               <li><img src="images/product.png"> </li>
+              <li><img src="images/product.png"> </li>
+              <li><img src="images/brand_4.jpg"> </li>
+              <li><img src="images/brand_4.jpg"> </li>
+          
+            </ul>
+          </div>
+          <div class="control" id="spec-right"> <img src="images/right.png" /> </div>
+        </div>
+      </div>
+    </div>
+    <div class="brand_pay_r">
+      <h2>【2包装L44 单包仅118元】Merries 花王妙而舒 婴儿纸尿裤 L44片*2包</h2>
+      <p>“ 来自日本的王牌纸尿裤，最受国内欢迎，花王纸尿裤最注重的是通气性和柔软性，使用极细纤维柔软内衬棉，尿显精确，防漏护围设计，保证不含甲醛、不用燃料，控制PH值来自日本的王牌纸尿裤，最受国内欢迎”</p>
+      <ul>
+        <li>
+          <label>价格</label>
+          <i class="price" >￥<span id="price">236.00</span></i> <span class="reference">国内参考价<del>￥538.00</del></span> </li>
+        <li>
+          <label>运费</label>
+          日本至<i class="to">广州市<i class="top"></i></i><em>免运费</em> 
+          <!--城市-->
+          <div class="city_box">
+             <i class="cencel"></i>
+              <ul class="all_city clearfix">
+                <li>北京</li>
+                <li>天津</li>
+                <li>上海</li>
+                <li>重庆</li>
+                <li>河北</li>
+                <li>山西</li>
+                <li>内蒙</li>
+                <li>辽宁</li>
+                <li>吉林</li>
+                <li>黑龙江</li>
+                <li>江苏</li>
+                <li>浙江</li>
+                <li>安徽</li>
+                <li>福建</li>
+             
+                <li>江西</li>
+                <li>山东</li>
+                <li>河南</li>
+                <li>湖北</li>
+                <li>湖南</li>
+            
+                <li>广东</li>
+                <li>广西 </li>
+                <li>海南</li>
+                <li>四川</li>
+                <li>贵州</li>
+              </ul>
+              <ul  class="all_city all_city1 clearfix">
+                <li>广州市</li>
+                <li>韶关市</li>
+                <li>深圳市</li>
+                <li> 珠海市</li>
+                <li>汕头市</li>
+                <li>佛山市</li>
+                <li>江门市</li>
+                <li>湛江市</li>
+                <li>茂名市</li>
+                <li>肇庆市</li>
+                <li>惠州市</li>
+                <li>梅州市</li>
+                <li>汕尾市</li>
+                <li>河源市</li>
+                <li>阳江市</li>
+                <li>清远市</li>
+                <li>东莞市 </li>
+                <li>中山市</li>
+                <li>潮州市</li>
+                <li>揭阳市</li>
+                <li>云浮市</li>
+              </ul>
+              <ul class="all_city all_city2 clearfix" >
+                <li>云南</li>
+                <li>西藏</li>
+                <li>陕西</li>
+                <li>甘肃</li>
+                <li>青海</li>
+           
+                <li>宁夏 </li>
+                <li>新疆</li>
+              </ul>
+        
+          </div>
+        </li>
+        <li>
+          <label>数量</label>
+          <div class="reduce inline "><img id="reduce" src="images/reduce.png" /></div>
+          <input id="text" class="text" type="text" value="1" />
+          <div class="add inline"><img id="add" src="images/add.png" /></div>
+          <em>库存充足</em> <i class="prompt_2">抱歉，您已超过<span>海关限额￥1000</span>，请分次购买</i>
+          <div class="prompt_3"> <i></i>
+            <dl>
+              <dt><span>海关规定:</span></dt>
+              <dd>① 消费者购买进口商品，以“个人自用，合理数量”为原则，每单最大购买金额不得超过1000元人民币（不含关税） 。</dd>
+              <dd>② 如有优惠活动，则1000元限值适用于订单优惠后的金额。</dd>
+              <dd>③ 如果订单只含单件不可分割商品，则可以超过1000元限值。</dd>
+            </dl>
+          </div>
+        </li>
+      </ul>
+      <a class="purchase purchase1">立即购买</a><a class="accede">加入购物车</a> 
+    </div>
+    <div class="brand_logo_r">
+    <a>
+    <dl>
+    <dt><img src="images/55c1b5e761a13.jpg" /></dt>
+    <dd>1234</dd>
+  </dl>
+  </a>
+ </div>
+</div>
+  <!--这是品牌业务-->
+  <div class="brand_business"> 
+  <a><i><img src="images/original.png" /></i>原装正品</a> 
+  <a><i><img src="images/overseas.png" /></i>海外正采</a> 
+  <a><i><img src="images/speed.png"/></i>极速发货</a> 
+  <a><i><img src="images/return.png" /></i>七天退货</a>
+ </div>
+  <!--商品详情和评价-->
+  <div class="good_box">
+    <ul class="clearfix">
+      <li class="good_one">商品参数 </li>
+      <li class="good_two" >商品详情</li>
+      <li class="good_tree">用户评价</li>
+    </ul>
+  </div>
+  <div class="parameter_box clearfix"  id="parameter_box">
+    <div class="good_parameter clearfix">
+      <h3 id="good">商品参数</h3>
+      <ul>
+        <li>品牌:花王/妙而舒</li>
+        <li>规格:L44片两包组合</li>
+        <li>尿不湿品类:拉拉裤</li>
+      </ul>
+      <ul>
+        <li>包装数量(片):88</li>
+        <li>尿片规格型号:L</li>
+        <li>尿片规格型号: L</li>
+      </ul>
+      <ul>
+        <li>系列:三倍透气</li>
+        <li>适用性别:通用</li>
+        <li>产地: 日本</li>
+      </ul>
+    </div>
+  </div>
+  <div class="good_box1" id="goos_box1" >
+    <ul>
+      <li class="good_1"><i><img src="images/navigation.png" /></i><span>商品参数</span></li>
+      <li class="good_2"><i><img src="images/dian.png" /></i><span>商品详细</span></li>
+      <li class="good_3"><i><img src="images/dian.png" /></i><span>用户评价</span></li>
+    </ul>
+  </div>
+  <!--商品详情图片展示-->
+  <div class="good_dedatils" id="good_dedatils">
+    <h3 id="dedatils">商品详情</h3>
+    <div class="dedatils1"><img src="images/good.jpg" /></div>
+    <div class="dedatils2"><img src="images/good_01.jpg" /></div>
+  </div>
+  <!--用户评价-->
+  <div class="appraise_maxbox clearfix"  id="appraise_maxbox" >
+    <div class="good_appraise ">
+      <h3 id="appraise">用户评价</h3>
+      <div class="good_lv"> 
+      <img src="images/comment.png" />
+       <img src="images/comment.png" />
+        <img src="images/comment.png" /> 
+        <img src="images/comment.png" /> 
+        <img src="images/comment.png" /> 
+        <i>98.8<span>%好评</span><a>(共85个评价)</a></i>
+      </div>
+      <div class="all_appraise">
+        <label>
+          <input type="radio" checked="checked" name="appraise" />
+          <i></i><span>全部评论(85)</span></label>
+        <label>
+          <input type="radio" name="appraise"  />
+          <i></i><span>好评(82)</span></label>
+        <label>
+          <input type="radio"  name="appraise" />
+          <i></i><span>中评(3)</span></label>
+        <label>
+          <input type="radio" name="appraise"  />
+          <i></i><span>差评(0)</span></label>
+        <label>
+          <input type="radio" name="appraise" />
+          <i></i><span>晒单(3)</span></label>
+      </div>
+    </div>
+    <ul class="appraise_box">
+    <li>
+      <div class="all_appraise1 clearfix">
+       <a><img src="images/user.jpg" /></a>
+        <div class="appraise_time">
+          <p> <a href="#">j****s</a> 发表于<i>2015-15-11<span>15:37</span></i></p>
+          <p class="publish">
+           <img src="images/comment.png" /> 
+           <img src="images/comment.png" /> 
+           <img src="images/comment.png" /> 
+           <img src="images/comment.png" />
+           <img src="images/comment.png" />
+           <img sr"images/comment_01.png" />
+           </p>
+        </div>
+      </div>
+       <div class="message_box clearfix" >
+        <div class="appraise_message"> 我家宝宝用好奇金装也是红屁股，只有花王能好好的。XL只有44片了，要是便宜点就好了，希望有3包装的。 </div>
+        <div class="appraise_reply"><i class="reply" >回复 ( 3 )</i> <i>赞 ( 88 )</i> </div>
+      </div>
+       <div class="reply_message" style="display:none;">
+        <textarea class="reply_input" placeholder="回复 @j**s"></textarea>
+         <p>内容不能为空</p>
+        <div class="btnbox">
+          <input class="reply_button" type="button" value="提交回复" >
+        </div>
+     </div>   
+     
+      <div class="message_top clearfix">
+        <div class="reply_top">
+        <div><a class="user">小林：</a><span>我家的宝贝也是这样。</span><em>2015-05-20 20:38</em></div>
+        <a class="reply">回复</a>
+      </div>
+     </div>
+       <div class="reply_message" style="display:none;">
+        <textarea class="reply_input" placeholder="回复 @j**s"></textarea>
+         <p>内容不能为空</p>
+        <div class="btnbox">
+          <input class="reply_button" type="button" value="提交回复" >
+        </div>
+    </div>     
+      
+      <div class="message_top clearfix">
+         <div class="reply_top">
+          <div><a class="user">张三</a><i>回复</i><a>小林:</a><span>我家的宝贝也是这样。</span><em>2015-05-20 20:38</em></div>
+          <a class="reply">回复</a>
+      </div>
+    </div>
+        <div class="reply_message" style="display:none;">
+         <textarea class="reply_input" placeholder="回复 @j**s"></textarea>
+          <p>内容不能为空</p>
+       <div class="btnbox">
+          <input class="reply_button" type="button" value="提交回复" >
+        </div>
+      </div>  
+     </li>
+     </ul>
+    <div class="index_page">
+        <a  class="next_page">上一页</a><a>1</a><a>2</a><a>3</a>.....<a class="up_page">下一页</a>
+     </div> 
+    </div>
+ </div>
+      <!--这是底部-->
+       <div class="index-footer"> 
+        <div class="index-foot clearfix"> 
+          <div class="index-foot-l fl">  
+             <div class="foot-l-top">
+                   <ul class="l-top-list">
+                    <li class="clearfix">
+                        <div class="fl top-list-pic">
+                           <img src="images/zhen.png" />
+                        </div>
+                        <div class="fl top-list-con"> 
+                          <span>100%</span>
+                          <span>原装正品</span>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <div class="fl top-list-pic">
+                          <a><img src="images/feij.png" /></a>
+                        </div>
+                        <div class="fl top-list-con"> 
+                          <span>100%</span>
+                          <span>海外直采</span>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <div class="fl top-list-pic">
+                          <a><img src="images/pai.png" /></a>
+                        </div>
+                        <div class="fl top-list-con"> 
+                          <span>100%</span>
+                          <span>极速发货</span>
+                        </div>
+                    </li>
+                     <li class="clearfix">
+                        <div class="fl top-list-pic">
+                          <a><img src="images/tui.png" /></a>
+                        </div>
+                        <div class="fl top-list-con"> 
+                          <span>100%</span>
+                          <span>无忧退货</span>
+                        </div>
+                    </li>
+                   </ul>
+              </div>
+              <div class="foot-l-bottom clearfix">
+                 <dl class="dl1">
+                   <dt><h3>美联美购保障</h3></dt>
+                   <dd><a href="#">正品保证</a></dd>
+                   <dd><a href="#">国内退货</a></dd>
+                   <dd><a href="#">7天无理由退换货</a></dd>
+                  </dl>
+                   <dl>
+                   <dt><h3>新手帮助</h3></dt>
+                   <dd><a href="#">购物指南</a></dd>
+                   <dd><a href="#">常见问题</a></dd>
+                   <dd><a href="#">在线客服</a></dd>
+                  </dl>
+                  <dl>
+                   <dt><h3>支付方式</h3></dt>
+                   <dd><a href="#">支付宝支付</a></dd>
+                   <dd><a href="#">网银支付</a></dd>
+                   <dd><a href="#">快捷支付</a></dd> 
+                  </dl>   
+                  <dl>
+                   <dt><h3>商家指导</h3></dt>
+                   <dd><a href="#">售后服务</a></dd>
+                   <dd><a href="#">咨询与投诉</a></dd>
+                   <dd><a href="#">退货政策</a></dd>
+                   <dd><a href="#">退货流程</a></dd>
+                  </dl> 
+  
+                   <dl class="lastdl">
+                   <dt><h3>商家指导</h3></dt>
+                   <dd><a href="#">商家帮助</a></dd>
+                   <dd><a href="#">商家入驻</a></dd>
+                   <dd><a href="#">新手指导</a></dd>
+                   <dd><a href="#">广告服务</a></dd>
+                  </dl>                   
+             </div>
+          </div>
+            <div class="index-foot-r fr">
+            <div class="foot-r-phone">
+              <h3>4000-000-000</h3>
+              <p>周一到周日  09:00 - 24:00</p>
+            </div>
+            <div class="foot-r-weixin">
+              <img src="images/weixin.jpg" />
+              <p>扫描下载客户端</p>
+            </div>
+         </div>
+       </div>
+    </div>
+  <div class="footer-bottom"><span>增值电信业务经营许可证：渝Bx-xxxxxxxx-x</span><span>美联公司版权所有@1997-2015</span></div>
+<!--蒙版-->
+<div class="show_layer"></div>
+ <div class="m-rightbar" id="rightBar">
+    <ul>
+    <li>
+      <a href="#" class="shops-cars">
+        <span class="txt">购物车</span>
+        <span class="num">1</span>
+      </a>
+    </li>
+    <li><a href=""# class="servon-line"><span class="txt">在线客户</span></a></li>
+    <li><a href="#" class="srcoll-top"></a></li>
+   </ul>
+ </div>
+<SCRIPT src="js/lib.js" type="text/javascript"></SCRIPT> 
+<SCRIPT src="js/zzsc.js" type="text/javascript"></SCRIPT> 
+<script>  
+ var footer_top = $(".index-footer").offset().top;
+   $(window).scroll(function() {
+    if($(window).scrollTop() + $(window).height() > footer_top + 100) {
+	 	$(".m-rightbar").css({ top: "auto", bottom: $(".index-footer").height() + 100 });
+     } else {
+		$(".m-rightbar").css({ top: "", bottom: "" });
+	}
+});
+ window.onscroll = function() {
+  var oscrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+  if (oscrollTop >= 1000) {
+    $(".good_box1").show();
+  } else {
+    $(".good_box1").hide();
+  }
+}
+var footer_top = $(".index-footer").offset().top;
+ $(window).scroll(function() {
+
+   var $window = $(this);
+   if ($window.scrollTop() >= $("#appraise").offset().top - 50) {
+   $(".good_2,.good_1").find('img').attr("src", "images/dian.png");
+	 $(".good_3").find('img').attr("src", "images/navigation.png");
+   } else if ($window.scrollTop() >= $("#dedatils").offset().top - 50) {
+    $(".good_1,.good_3").find('img').attr("src", "images/dian.png");
+	  $(".good_2").find('img').attr("src", "images/navigation.png");
+  } else if ($window.scrollTop() >= $("#good").offset().top - 50) {
+    $(".good_2,.good_3").find('img').attr("src", "images/dian.png");
+	  $(".good_1").find('img').attr("src", "images/navigation.png");  
+  }
+ });
+  $(function(){
+		$('.good_1').click(function(){
+			$(this).find('img').attr('src','images/navigation.png')
+			 window.location.href="#parameter_box";	 
+			})
+		 $('.good_2').click(function(){
+				$(this).find('img').attr('src','images/navigation.png')
+				 window.location.href="#good_dedatils";			
+			})
+		 $('.good_3').click(function(){
+				$(this).find('img').attr('src','images/navigation.png')
+				 window.location.href="#appraise_maxbox";			
+		   })
+   })
+     $(".reply").click(function(){
+	 	 $(this).parent().parent().next(".reply_message").toggle();
+	})
+     $(".reply_button").bind("click",
+   function() {
+   var v = $(".reply_input").val();
+	 if(v==""){
+		$(this).parents().children("p").show();
+	}else{
+	  $(this).parents().children("p").hide();
+	}
+});
+</script>
+</body>
+</html>

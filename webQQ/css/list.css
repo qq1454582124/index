@@ -1,0 +1,99 @@
+@charset "utf-8";
+/* CSS Document */
+body,ul,ol,p,h1,h2,h3,h4,form,input{margin:0;padding:0;}
+img{ border:none; vertical-align:top;}
+li{ list-style:none;}
+.clear{zoom:1;}
+.clear:after{content:"";display:block;clear:both;}
+body{background:#EBEFF2;font:12px/1.5 tahoma,helvetica,clean,sans-serif;}
+.wrapper{width:883px; margin:0 auto;}
+#topNav{height:30px;padding-top:5px;background:#C6C9CE;width:100%; position:fixed;left:0;top:0; z-index:20;}
+.topNav{float:left;margin:0 10px; display:inline;}
+.navBtn{width:66px;height:25px; float:left; background:url(../img/sprite.png) no-repeat;}
+#topNav .refresh{background-position:-1px -752px;}
+#topNav .refresh:hover{ background-position:-1px -783px;}
+#topNav .home{background-position:-1px -368px;}
+#topNav .home:hover{ background-position:-1px -401px;}
+#topSeach{ float:right;margin-right:10px; display:inline;width:187px; position:relative; background:url(../img/sprite.png) -4px -5px no-repeat;height:27px;}
+#searchInput{background:none;padding-left:7px;border:none;width:180px;height:22px; float:left;line-height:22px; font-size:12px;color:#A0A0A0;}
+#searchBtn{width:23px;height:16px;border:none; background: url(../img/sprite.png) -240px -2px no-repeat; position:absolute; right:3px;top:5px; cursor:pointer;}
+#tips{ float:right;padding-right:22px; font-size:12px; line-height:27px;}
+#tips a{ text-decoration:none;color:#FF0000;}
+#appMenu{ position:fixed;width:90px; z-index:100px; top:35px;padding-top:10px;}
+#appMenu li{ float:right; height:32px; width:55px; background:url(../img/cat_bg.gif) no-repeat 0 -66px;padding-left:28px; color:#45659E; line-height:32px;cursor:pointer;margin-bottom:5px;margin-right:-1px; display:inline; position:relative;}
+#appMenu span{ width:16px;height:16px; position:absolute; left:8px;top:8px; background:url(../img/cat_icon.png) no-repeat;}
+#appMenu li.hover{ background-position:0 -33px;}
+#appMenu li.active{ background-position:0 0;}
+#appMenu .ico1{ background-position:-16px 0;}
+#appMenu .ico2{ background-position:-32px 0;}
+#appMenu .ico3{ background-position:-48px 0;}
+#appMenu .ico4{ background-position:-64px 0;}
+#pageContainer{background:#fff;width:761px;float:right; border-left:1px solid #A6A6A6;padding:35px 10px 10px 20px; }
+.appListBox{margin-top:10px;float:left;width:519px;min-height:200px;float:left;}
+.appListHead{height:28px;border-bottom:1px solid #EBEFF2;padding-left:20px;}
+.appListHead a{float:left; width:66px;margin-top:4px; line-height:24px; text-align:center; color:#000; text-decoration:none;}
+.appListHead .active{background:#EBEFF2; border-radius:5px 5px 0 0;cursor:default; font-weight:bold;}
+.appList li{height:56px; overflow:hidden;border-bottom:1px dotted #8E8E8E;padding:10px 11px; vertical-align:middle;}
+.appList .appListLiHover{background-color:#eff7fe;}
+.appList .column1{width:48px;height:48px; float:left; position:relative;margin-right:15px; display:inline;}
+.appList .column1 img{width:48px;height:48px;}
+.appList .appAuth{ position:absolute; right:-5px;bottom:-5px; width:19px;height:19px;background:url(../img/sprite.png) -81px -36px no-repeat;} 
+.appList .column2{width:230px;float:left;}
+.appList .appName{line-height:24px; font-size:12px;}
+.appList .appName a{ text-decoration:none;color:#000;}
+.appList .appBrief{ white-space:nowrap; color:#969696;padding-top:1px;}
+.appList .column3{width:80px;float:left;padding:7px 25px 3px 15px;}
+.appStars{height:16px;overflow:hidden; background:url(../img/sprite.png) no-repeat -280px -2px;}
+.appStar{height:100%;background:url(../img/sprite.png) no-repeat -280px -20px;}
+.appAddedCount{padding-top:8px;color:#969696;}
+.appList .column4{float:left;}
+.appAddBtn{margin:15px 5px 0;display:block;background:url(../img/sprite.png) no-repeat -217px -198px; display:block; width:62px;height:23px; text-indent:-100px;overflow:hidden;}
+.appAddBtn:hover{ background-position:-284px -198px;}
+.appAddedText{color:#799c32;margin:10px 0 0;width: 62px;text-align: center;cursor: text;display: block;text-decoration: none;}
+#appPageBtns{height:22px;padding:10px 0 4px; text-align:center;  font-size:12px; color:#2A2B2B;}
+.btn{ width:16px;height:15px; display:inline-block; background:url(../img/icon.png) no-repeat; vertical-align:middle;}
+#prev{background-position:-47px -28px;}
+#prev:hover{background-position:-29px -63px;}
+#next{background-position:-96px -28px;}
+#next:hover{background-position:-46px -63px;}
+#appPageBtns .nub,#appPageBtns span{ display:inline-block;height:16px; text-decoration:none;color:#525252;line-height:16px;vertical-align:middle;padding:0 7px; font-weight:bold; -webkit-transition:0.2s ease font-size;-moz-transition:0.2s ease font-size;overflow:hidden;}
+#appPageBtns .nub:hover{font-size:18px;}
+#appPageBtns .active{padding:0 5px;border:2px solid #D9CCBD;border-radius:3px;color:#ccc;}
+#appPageBtns .active:hover{ font-size:12px;}
+#appPageBtns .goInput{width:30px;height:12px; border:1px solid #ccc;padding:2px; vertical-align:middle;}
+#appPageBtns .goBtn{ width:20px;height:20px; display:inline-block; vertical-align:middle;background:url(../img/icon.png) no-repeat -88px 0;}
+#appPageBtns .goBtn:hover{background-position:-62px -63px;}
+.allRegion{width:222px;float:right;background:#EBEFF2;border:1px solid #C3C6CB;margin:10px 0; border-radius:5px;}
+.allRegionHead{background:#C8CBD0;height:27px;padding-left:8px;line-height:25px;color:#333; font-size:12px;overflow:hidden;}
+.allRegionBody li{ vertical-align:middle; border-bottom:1px dashed #B2D1F1;}
+.allRegionBody .lastAppListLi{ border:none;}
+.allRegion .appListItem{overflow:hidden; zoom:1; display:block;padding:0 7px 0 8px; text-decoration:none; }
+.allRegion img{ float:right;border:1px solid #FFFFFF;width:76px;height:76px;margin-top:-4px; position:relative;}
+.allRegion .appName{width:120px;line-height:24px;height:24px; overflow:hidden;float:left;color:#333;}
+.allRegion .index .appListItem{padding:10px 7px 10px 8px;}
+.allRegion .index .appName{color:#4565A0;}
+.allRegion .appDesc{width:120px;float:left;line-height:24px;color:#969696;}
+.allRegionHeadNav{margin:-1px 0 0 -10px; position:relative;height:28px;width:224px;}
+.allRegionHeadNav li{ float:left;width:70px; text-align:center; display:inline; cursor:pointer; height:26px;margin:2px 0 0 4px; color:#333;line-height:25px;}
+.allRegionHeadNav .active{background:#EBEFF2; font-weight:bold; border-radius:5px 5px 0 0;}
+.appListUl li{ vertical-align:top; border-bottom:1px dashed #B2D1F1;}
+.appListUl .appAddBtn,.appListUl .appAddedText{float:right;margin-right:-5px;margin-top:12px;}
+.appMidIcon{float:left;width:32px;height:32px;margin:10px 15px 0 0;}
+.appListUl .column2{width:80px;float:left;line-height:18px;padding:5px;overflow:hidden;}
+.selectAppName{width:70px;height:18px; display:block;overflow:hidden;}
+.selectAppHot{color:#969696;}
+.appListUl .appListItemShow{height:50px; display:none;}
+.appListUl .appListItemHide{height:32px;}
+.appListUl .active .appListItemShow{display:block;}
+.appListUl .active .appListItemHide{display:none;}
+.appListUl .appHot{color:#969696; float:right;line-height:32px;}
+.appListUl .appIndex{width:14px; text-align:center; overflow:hidden;height:14px;float:left;background:#f1f1f1;border:1px solid #ccc;margin:8px 6px 0 0; color:#333; border-radius:3px; line-height:14px;}
+.appSmallIcon{width:16px;height:16px;float:left;margin:8px 8px 0 0;}
+.appListUl .appName{ line-height:32px;width:100px;overflow:hidden;}
+.appListUlBtns{ height:24px;padding:8px 12px 0 0; text-align:right;}
+.appListUlBtn{width:16px;height:15px; display:inline-block; background:url(../img/icon.png) no-repeat; vertical-align:middle;}
+.appListUlNub{ display:inline-block;color:#2A2B2B; vertical-align:middle;}
+#prevBtn{ background-position:-63px -28px;}
+#prevBtn:hover{background-position:-29px -63px;}
+#nextBtn{background-position:-96px -28px;}
+#nextBtn:hover{background-position:-46px -63px;}

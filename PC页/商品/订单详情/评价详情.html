@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="../css/common.css"/>
+<link rel="stylesheet" type="text/css" href="../css/style.css"/>
+<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/js.js"></script>
+<title>无标题文档</title>
+</head>      
+  <script type="text/javascript">
+	 $(function(){	
+      $('.bar-l-li1').hover(function(){
+ 	    $('.bar-ul1').show()
+	    $('.bar-l-li1').addClass('bar-l-li2')
+ 	   },function(){
+ 		    $('.bar-ul1').hide()
+	         $('.bar-l-li1').removeClass('bar-l-li2')
+ 		   })
+ 	  $('.shop-car').hover(function(){
+ 		  $('.shop-cart-info').show();
+		   $('.icon-delta').addClass('icon-delta1')
+  		  },function(){
+ 		     $('.shop-cart-info').hide();
+ 	         $('.icon-delta').removeClass('icon-delta1')
+  		})
+ 
+})
+  
+     $(function(){  
+	  $('.group_one').hover(function(){
+		  $('.group_info').show();
+
+		  $('.group_one').addClass("currentcolor");
+					 $(this).addClass("currentimages").removeClass("group_one");
+		  	  
+		  },function(){
+	       $('.group_info').hide();  
+			   $('.group_one').removeClass("currentcolor");
+				 	$(this).addClass("group_one").removeClass("currentimages");
+		 
+			  })
+			  
+		  $("#group1 a,#group2 a").click(function(){
+			$("#group1 a").removeClass();
+			$("#group2 a").removeClass();
+			$(this).addClass("allgroup");
+		})	 
+	  
+
+	   
+    })
+		
+	   		</script>
+<body>
+
+        <div class="header_box"> 
+       <div class="head-bar" >
+      <div class="head-bar2 webwidth clearfix"> 
+        <div class="head-bar-l fl clearfix">
+            <div class="webcomes fl">hi,xxxxx,欢迎来到美联美购</div>
+            <div class="login-con fl">
+             <a href="#">请登录</a> 
+             <a href="#">【免费注册】</a>
+         </div>
+       </div>
+   
+         <div class="head-bar-r fr clearfix">
+           <ul class="bar-r-list-1 fl">
+             <li><a href="#">我的订单</a></li>
+             <li  class="bar-l-li1"><a href="#">我的美购</a>
+                <ul class="bar-ul1">
+                  <li><a href="#">我的订单</a></li>
+                  <li><a href="#"> 我的钱包</a></li>
+                  <li><a href="#">我的优惠券</a></li>
+                  <li><a href="#"> 我的收藏</a></li>
+                  <li><a href="#"> 会员等级</a></li>
+                </ul>
+             </li>
+           </ul>          
+            
+           <ul class="bar-r-list-2 fl">
+             <li class="bar-r-li1"><a href="#">手机美购</a></li>
+             <li><a href="#">联系客服</a></li>
+             <li><a href="#">收藏本站</a></li>
+             <li><a href="#">帮助</a></li>
+          </ul>
+        </div>
+      </div>
+     </div>   
+        <div class="logo-con clearfix ">
+          <div  class="logo fl "><img src="../images/logo.png" /></div>
+       </div>       
+ </div>
+   
+   
+     <div class="webwidth margin-bottom300">
+      <div class="page2"><a>首页</a>><a>个人中心</a>><a>我的订单</a>><a>商品详情</a></div>
+      <dl class="depict_list clearfix">
+      <dt><a><img src="../images/tab1.jpg" /></a></dt>
+      <dd>
+      <span class="title">Merries 花王妙而舒 婴儿纸尿裤 L44片*2包</span>
+      <em>尺寸：XL </em><em>颜色：白色</em>
+     </dd>
+     <dd><span>2015-08-15<span><span>08:02:14</span></dd>
+    <dd><i class="commemt_one">好评</i></dd> 
+   </dl>
+
+    <div class="comment_details">
+    <ul>
+    <li>
+    <label>总评分：</label>
+    <span class="star1"></span><span class="star1"></span><span class="star1"></span><span class="star1"></span><span class="star2"></span>
+   </li>
+    <li><label>评&nbsp;&nbsp;价&nbsp;：</label> 质量不错喜欢！质量不错喜欢！质量不错喜欢！质量不错喜欢！</li>
+    <li><label>晒&nbsp;&nbsp;图&nbsp;：</label><i><img src="../images/baby.png" /></i><i><img src="../images/baby.png" /></i></li>
+    </ul>  
+    <i class="top_r"></i>
+    </div>
+    <div class="thanks_you">感谢你有的评价</div>
+ </div>
+    
+    
+    
+</body>
+</html>

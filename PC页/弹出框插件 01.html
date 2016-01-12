@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<style>	
+	.xu-wrap{ display:none; position:absolute; top:22px; left:0;}
+	.xu-list{margin:0; padding:0; list-style:none;}
+	.xu-conList a{text-decoration:none; color:inherit;}	
+	.xu-head{width:262px;margin-top:0;}	
+	.xu-box{position:relative;  color:#4d4d4d; width:585px; margin:0 auto; }
+	.xu-listWrapOut{width:550px;height:649px; border:solid 1px #00a0e6; position:relative; overflow:hidden;}
+	.xu-listWrap{ width:570px; height:618px; overflow:auto; background-color:#fafafa;}
+	.xu-in{font-size:40px; text-align:center;}
+	.xu-in-tit{height:35px; line-height:35px; font-size:20px; border-top:solid 1px #00a0e6;border-bottom:solid 1px #00a0e6; margin:0;}
+	.xu-in-txt{text-align:left;height:35px; line-height:35px; text-indent:10px; font-size:20px;}	
+	.xu-conList{width:35px; height:650px; margin-top:1px; position:absolute; left:551px; top:0px;}
+	.xu-con{width:33px;height:25px; line-height:25px; display:block;text-align:center; margin-top:-1px; vertical-align:middle;background-color:#f2f2f2; border:solid 1px #00a0e6; }
+	.xu-list label{ width:220px; font-size:16px; margin-left:-15px; display:inline-block;}
+	.xu-CanBtn{width:550px; height:28px; line-height:28px; text-align:center; position:absolute; left:0; bottom:0; font-size:20px; color:#00a0e6; background-color:#eee; border-top:solid 1px #e6e6e6;}
+	
+</style>
+<body>
+<p class="xu-head"><input type="text" value="输入国家名称" readonly="readonly" id="xu-txt"/>
+<input type="button" value="选择" style="width:50px;" id="xu-btn"/>
+</p>
+<div class="xu-wrap" id="xu-wrap">
+	<div class="xu-box" id="xu-box">
+		<div class="xu-listWrapOut">
+			<div class="xu-listWrap">
+				<ul class="xu-list" id="xu-list">
+					<li class="xu-in" id="aaa">
+						<h2 class="xu-in-tit">A</h2>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n1"/>
+							<label for="n1">Afghanistan</label>
+							<input type="checkbox" id="n2"/>
+							<label for="n2">Aland Island (Finland)</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n3"/>
+							<label for="n3">Albania</label>
+							<input type="checkbox" id="n4"/>
+							<label for="n4">Algeria</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n5"/>
+							<label for="n5">American Samoa</label>
+							<input type="checkbox" id="n6"/>
+							<label for="n6">Andorra</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n7"/>
+							<label for="n7">Angola</label>
+							<input type="checkbox" id="n8"/>
+							<label for="n8">Anguilla</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n9"/>
+							<label for="n9">Antigua and Barbuda</label>
+							<input type="checkbox" id="n10"/>
+							<label for="n10">Argentina</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n11"/>
+							<label for="n11">Armenia</label>
+							<input type="checkbox" id="n12"/>
+							<label for="n12">Aruba</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n13"/>
+							<label for="n13">Australia</label>
+							<input type="checkbox" id="n14"/>
+							<label for="n14">Austria</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n15"/>
+							<label for="n15">Azerbaijan</label>
+							<input type="checkbox" id="n16"/>
+							<label for="n16">Azores (Portugal)</label>
+						</div>
+					</li>
+					<li class="xu-in" id="bbb">
+						<h2 class="xu-in-tit">B</h2>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n17"/>
+							<label for="n17">Bahamas</label>
+							<input type="checkbox" id="n18"/>
+							<label for="n18">Bahrain</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n19"/>
+							<label for="n19">Bangladesh</label>
+							<input type="checkbox" id="n20"/>
+							<label for="n20">Barbados</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n21"/>
+							<label for="n21">Belarus/ Byelorussia</label>
+							<input type="checkbox" id="n22"/>
+							<label for="n22">Belgium</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n23"/>
+							<label for="n23">Belize</label>
+							<input type="checkbox" id="n24"/>
+							<label for="n24">Benin</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n25"/>
+							<label for="n25">Bermuda</label>
+							<input type="checkbox" id="n26"/>
+							<label for="n26">Bhutan</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n27"/>
+							<label for="n27">Bolivia</label>
+							<input type="checkbox" id="n28"/>
+							<label for="n28">Bonaire,St.Eustatius,Saba</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n29"/>
+							<label for="n29">Bosnia and Herzegovina</label>
+							<input type="checkbox" id="n30"/>
+							<label for="n30">Botswana</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n31"/>
+							<label for="n31">Brazil</label>
+							<input type="checkbox" id="n32"/>
+							<label for="n32">British Virgin Islands</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n33"/>
+							<label for="n33">Brunei</label>
+							<input type="checkbox" id="n34"/>
+							<label for="n34">Buesingen (Germany)</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n35"/>
+							<label for="n35">Bulgaria</label>
+							<input type="checkbox" id="n36"/>
+							<label for="n36">Burkina Faso</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n37"/>
+							<label for="n37">Burundi</label>
+						</div>
+					</li>
+					<li class="xu-in" id="ccc">
+						<h2 class="xu-in-tit">C</h2>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n38"/>
+							<label for="n38">Cambodia</label>
+							<input type="checkbox" id="n39"/>
+							<label for="n39">Cameroon</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n40"/>
+							<label for="n40">Campione/Lake Lugano(Italy)</label>
+							<input type="checkbox" id="n41"/>
+							<label for="n41">Canada</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n42"/>
+							<label for="n42">Canary Islands(Spain)</label>
+							<input type="checkbox" id="n43"/>
+							<label for="n43">Cape Verde</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n44"/>
+							<label for="n44">Cayman Islands</label>
+							<input type="checkbox" id="n45"/>
+							<label for="n45">Central African Republic</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n46"/>
+							<label for="n46">Ceuta (Spain)</label>
+							<input type="checkbox" id="n47"/>
+							<label for="n47">Chad</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n48"/>
+							<label for="n48">Chile</label>
+							<input type="checkbox" id="n49"/>
+							<label for="n49">Colombia</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n50"/>
+							<label for="n50">Comoros</label>
+							<input type="checkbox" id="n51"/>
+							<label for="n51">Congo (Brazzaville)</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n52"/>
+							<label for="n52" title="Congo, Democratic Republic of">Congo, Democratic ...</label>
+							<input type="checkbox" id="n53"/>
+							<label for="n53">Cook Islands</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n54"/>
+							<label for="n54">Costa Rica</label>
+							<input type="checkbox" id="n55"/>
+							<label for="n55">Cote d'Ivoire (Ivory Coast)</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n56"/>
+							<label for="n56">Croatia</label>
+							<input type="checkbox" id="n57"/>
+							<label for="n57">Curacao</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n58"/>
+							<label for="n58">Cyprus</label>
+							<input type="checkbox" id="n59"/>
+							<label for="n59">Czech Republic</label>
+						</div>
+					</li>
+					<li class="xu-in" id="d">
+						<h2 class="xu-in-tit">D</h2>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n60"/>
+							<label for="n60">Denmark</label>
+							<input type="checkbox" id="n61"/>
+							<label for="n61">Djibouti</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n62"/>
+							<label for="n62">Dominica</label>
+							<input type="checkbox" id="n63"/>
+							<label for="n63">Dominican Republic</label>
+						</div>
+					</li>
+					<li class="xu-in" id="e">
+						<h2 class="xu-in-tit">E</h2>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n64"/>
+							<label for="n64">Ecuador</label>
+							<input type="checkbox" id="n65"/>
+							<label for="n65">Egypt</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n66"/>
+							<label for="n66">El Salvador</label>
+							<input type="checkbox" id="n67"/>
+							<label for="n67">England (United Kingdom)</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n68"/>
+							<label for="n68">Equatorial Guinea</label>
+							<input type="checkbox" id="n69"/>
+							<label for="n69">Eritrea</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n70"/>
+							<label for="n70">Estonia</label>
+							<input type="checkbox" id="n71"/>
+							<label for="n71">Ethiopia</label>
+						</div>
+					</li>
+					<li class="xu-in" id="f">
+						<h2 class="xu-in-tit">F</h2>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n72"/>
+							<label for="n72">Faroe Islands</label>
+							<input type="checkbox" id="n73"/>
+							<label for="n73">Fiji</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n74"/>
+							<label for="n74">Finland</label>
+							<input type="checkbox" id="n75"/>
+							<label for="n75">France</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n76"/>
+							<label for="n76">French Guiana</label>
+							<input type="checkbox" id="n77"/>
+							<label for="n77">French Polynesia</label>
+						</div>
+					</li>
+					<li class="xu-in" id="g">
+						<h2 class="xu-in-tit">G</h2>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n78"/>
+							<label for="n78">Gabon</label>
+							<input type="checkbox" id="n79"/>
+							<label for="n79">Gambia</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n80"/>
+							<label for="n80">Georgia</label>
+							<input type="checkbox" id="n81"/>
+							<label for="n81">Germany</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n82"/>
+							<label for="n82">Ghana</label>
+							<input type="checkbox" id="n83"/>
+							<label for="n83">Gibraltar</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n84"/>
+							<label for="n84">Greece</label>
+							<input type="checkbox" id="n85"/>
+							<label for="n85">Greenland</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n86"/>
+							<label for="n86">Grenada</label>
+							<input type="checkbox" id="n87"/>
+							<label for="n87">Guadeloupe</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n88"/>
+							<label for="n88">Guam</label>
+							<input type="checkbox" id="n89"/>
+							<label for="n89">Guatemala</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n90"/>
+							<label for="n90">Guernsey (Channel Islands)</label>
+							<input type="checkbox" id="n91"/>
+							<label for="n91">Guinea</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n92"/>
+							<label for="n92">Guinea-Bissau</label>
+							<input type="checkbox" id="n93"/>
+							<label for="n93">Guyana</label>
+						</div>
+					</li>
+					<li class="xu-in" id="h">
+						<h2 class="xu-in-tit">H</h2>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n94"/>
+							<label for="n94">Haiti</label>
+							<input type="checkbox" id="n95"/>
+							<label for="n95">Heligoland (Germany)</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n96"/>
+							<label for="n96">Honduras</label>
+							<input type="checkbox" id="n97"/>
+							<label for="n97">Hong Kong</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n98"/>
+							<label for="n98">Hungary</label>
+						</div>
+					</li>
+					<li class="xu-in" id="i">
+						<h2 class="xu-in-tit">I</h2>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n99"/>
+							<label for="n99">Iceland</label>
+							<input type="checkbox" id="n100"/>
+							<label for="n100">India</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n101"/>
+							<label for="n101">Indonesia</label>
+							<input type="checkbox" id="n102"/>
+							<label for="n102">Iraq</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n103"/>
+							<label for="n103">Ireland, Republic of</label>
+							<input type="checkbox" id="n104"/>
+							<label for="n104">Israel</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n105"/>
+							<label for="n105">Italy</label>
+						</div>
+					</li>
+					<li class="xu-in" id="j">
+						<h2 class="xu-in-tit">J</h2>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n106"/>
+							<label for="n106">Jamaica</label>
+							<input type="checkbox" id="n107"/>
+							<label for="n107">Japan</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n108"/>
+							<label for="n108">Jersey (Channel Islands)</label>
+							<input type="checkbox" id="n109"/>
+							<label for="n109">Jordan</label>
+						</div>
+					</li>
+					<li class="xu-in" id="k">
+						<h2 class="xu-in-tit">K</h2>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n110"/>
+							<label for="n110">Kazakhstan</label>
+							<input type="checkbox" id="n111"/>
+							<label for="n111">Kenya</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n112"/>
+							<label for="n112">Kirghizia (Kyrgyzstan)</label>
+							<input type="checkbox" id="n113"/>
+							<label for="n113">Kiribati</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n114"/>
+							<label for="n114">Korea, South</label>
+							<input type="checkbox" id="n115"/>
+							<label for="n115">Kosovo</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n116"/>
+							<label for="n116" title="Kosrae(Micronesia,Federated States of)">Kosrae(Micronesia,Federated...</label>
+							<input type="checkbox" id="n117"/>
+							<label for="n117">Kuwait</label>
+						</div>
+					</li>
+					<li class="xu-in" id="l">
+						<h2 class="xu-in-tit">L</h2>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n118"/>
+							<label for="n118">Laos</label>
+							<input type="checkbox" id="n119"/>
+							<label for="n119">Latvia</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n120"/>
+							<label for="n120">Lebanon</label>
+							<input type="checkbox" id="n121"/>
+							<label for="n121">Lesotho</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n122"/>
+							<label for="n122">Liberia</label>
+							<input type="checkbox" id="n123"/>
+							<label for="n123">Libyan Arab Jamahiriya</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n124"/>
+							<label for="n124">Liechtenstein</label>
+							<input type="checkbox" id="n125"/>
+							<label for="n125">Lithuania</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n126"/>
+							<label for="n126">Livigno (Italy)</label>
+							<input type="checkbox" id="n127"/>
+							<label for="n127">Luxembourg</label>
+						</div>
+					</li>
+					<li class="xu-in" id="m">
+						<h2 class="xu-in-tit">M</h2>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n128"/>
+							<label for="n128">Macau</label>
+							<input type="checkbox" id="n129"/>
+							<label for="n129">Macedonia (FYROM)</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n130"/>
+							<label for="n130">Madagascar</label>
+							<input type="checkbox" id="n131"/>
+							<label for="n131">Madeira (Portugal)</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n132"/>
+							<label for="n132">Malawi</label>
+							<input type="checkbox" id="n133"/>
+							<label for="n133">Malaysia</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n134"/>
+							<label for="n134">Maldives</label>
+							<input type="checkbox" id="n135"/>
+							<label for="n135">Mali</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n136"/>
+							<label for="n136">Malta</label>
+							<input type="checkbox" id="n137"/>
+							<label for="n137">Marshall Islands</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n138"/>
+							<label for="n138">Martinique</label>
+							<input type="checkbox" id="n139"/>
+							<label for="n139">Mauritania</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n140"/>
+							<label for="n140">Mauritius</label>
+							<input type="checkbox" id="n141"/>
+							<label for="n141">Mayotte</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n142"/>
+							<label for="n142">Melilla (Spain)</label>
+							<input type="checkbox" id="n143"/>
+							<label for="n143">Mexico</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n144"/>
+							<label for="n144" title="Micronesia, Federated States of">Micronesia, Federated...</label>
+							<input type="checkbox" id="n145"/>
+							<label for="n145">Moldova</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n146"/>
+							<label for="n146">Monaco (France)</label>
+							<input type="checkbox" id="n147"/>
+							<label for="n147">Mongolia</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n148"/>
+							<label for="n148">Montenegro</label>
+							<input type="checkbox" id="n149"/>
+							<label for="n149">Montserrat</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n150"/>
+							<label for="n150">Morocco</label>
+							<input type="checkbox" id="n151"/>
+							<label for="n151">Mount Athos (Greece)</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n152"/>
+							<label for="n152">Mozambique</label>
+							<input type="checkbox" id="n153"/>
+							<label for="n153">Myanmar</label>
+						</div>
+					</li>
+					<li class="xu-in" id="n">
+						<h2 class="xu-in-tit">N</h2>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n154"/>
+							<label for="n154">Namibia</label>
+							<input type="checkbox" id="n155"/>
+							<label for="n155">Nepal</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n156"/>
+							<label for="n156">Netherlands (Holland)</label>
+							<input type="checkbox" id="n157"/>
+							<label for="n157">New Caledonia</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n158"/>
+							<label for="n158">New Zealand</label>
+							<input type="checkbox" id="n159"/>
+							<label for="n159">Nicaragua</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n160"/>
+							<label for="n160">Niger</label>
+							<input type="checkbox" id="n161"/>
+							<label for="n161">Nigeria</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n162"/>
+							<label for="n162">Norfolk Island (Australia)</label>
+							<input type="checkbox" id="n163"/>
+							<label for="n163" title="Northern Ireland (United Kingdom)">Northern Ireland (United...</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n164"/>
+							<label for="n164">Northern Mariana Islands</label>
+							<input type="checkbox" id="n165"/>
+							<label for="n165">Norway</label>
+						</div>
+					</li>
+					<li class="xu-in" id="o">
+						<h2 class="xu-in-tit">O</h2>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n166"/>
+							<label for="n166">Oman</label>
+						</div>
+					</li>
+					<li class="xu-in" id="p">
+						<h2 class="xu-in-tit">P</h2>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n167"/>
+							<label for="n167">Pakistan</label>
+							<input type="checkbox" id="n168"/>
+							<label for="n168">Palau</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n169"/>
+							<label for="n169">Panama</label>
+							<input type="checkbox" id="n170"/>
+							<label for="n170">Papua New Guinea</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n171"/>
+							<label for="n171">Paraguay</label>
+							<input type="checkbox" id="n172"/>
+							<label for="n172">Peru</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n173"/>
+							<label for="n173">Philippines</label>
+							<input type="checkbox" id="n174"/>
+							<label for="n174">Poland</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n175"/>
+							<label for="n175" title="Ponape (Micronesia, Federated States of)">Ponape (Micronesia...</label>
+							<input type="checkbox" id="n176"/>
+							<label for="n176">Portugal</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n177"/>
+							<label for="n177">Puerto Rico</label>
+						</div>
+					</li>
+					<li class="xu-in" id="q">
+						<h2 class="xu-in-tit">Q</h2>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n178"/>
+							<label for="n178">Qatar</label>
+						</div>
+					</li>
+					<li class="xu-in" id="r">
+						<h2 class="xu-in-tit">R</h2>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n179"/>
+							<label for="n179">Reunion Island</label>
+							<input type="checkbox" id="n180"/>
+							<label for="n180">Romania</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n181"/>
+							<label for="n181" title="Rota (Northern Mariana Islands)">Rota (Northern Mariana...</label>
+							<input type="checkbox" id="n182"/>
+							<label for="n182">Russia</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n183"/>
+							<label for="n183">Rwanda</label>
+						</div>
+					</li>
+					<li class="xu-in" id="s">
+						<h2 class="xu-in-tit">S</h2>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n184"/>
+							<label for="n184" title="Saipan (Northern Mariana Islands)">Saipan (Northern...</label>
+							<input type="checkbox" id="n185"/>
+							<label for="n185">Samoa</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n186"/>
+							<label for="n186">San Marino</label>
+							<input type="checkbox" id="n187"/>
+							<label for="n187">Saudi Arabia</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n188"/>
+							<label for="n188">Scotland (United Kingdom)</label>
+							<input type="checkbox" id="n189"/>
+							<label for="n189">Senegal</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n190"/>
+							<label for="n190">Serbia</label>
+							<input type="checkbox" id="n191"/>
+							<label for="n191">Seychelles</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n192"/>
+							<label for="n192">Sierra Leone</label>
+							<input type="checkbox" id="n193"/>
+							<label for="n193">Singapore</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n194"/>
+							<label for="n194">Slovakia</label>
+							<input type="checkbox" id="n195"/>
+							<label for="n195">Slovenia</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n196"/>
+							<label for="n196">Solomon Islands</label>
+							<input type="checkbox" id="n197"/>
+							<label for="n197">South Africa</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n198"/>
+							<label for="n198">Spain</label>
+							<input type="checkbox" id="n199"/>
+							<label for="n199">Sri Lanka</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n200"/>
+							<label for="n200">St. Barthelemy</label>
+							<input type="checkbox" id="n201"/>
+							<label for="n201">St. Christopher (St. Kitts)</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n202"/>
+							<label for="n202" title="St. Croix (U.S. Virgin Islands)">St. Croix (U.S. Virgin...</label>
+							<input type="checkbox" id="n203"/>
+							<label for="n203" title="St. John (U.S. Virgin Islands)">St. John (U.S. Virgin...</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n204"/>
+							<label for="n204">St. Kitts and Nevis</label>
+							<input type="checkbox" id="n205"/>
+							<label for="n205">St. Lucia</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n206"/>
+							<label for="n206">St. Maarten, St. Martin</label>
+							<input type="checkbox" id="n207"/>
+							<label for="n207" title="St. Thomas (U.S. Virgin Islands)">St. Thomas (U.S. Virgin...</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n208"/>
+							<label for="n208">St. Vincent & the Grenadines</label>
+							<input type="checkbox" id="n209"/>
+							<label for="n209">Suriname</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n210"/>
+							<label for="n210">Swaziland</label>
+							<input type="checkbox" id="n211"/>
+							<label for="n211">Sweden</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n212"/>
+							<label for="n212">Switzerland</label>
+							<input type="checkbox" id="n213"/>
+							<label for="n213">Syrian Arab Republic</label>
+						</div>
+					</li>
+					<li class="xu-in" id="t">
+						<h2 class="xu-in-tit">T</h2>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n214"/>
+							<label for="n214">Tahiti (French Polynesia)</label>
+							<input type="checkbox" id="n215"/>
+							<label for="n215">Taiwan</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n216"/>
+							<label for="n216">Tajikistan</label>
+							<input type="checkbox" id="n217"/>
+							<label for="n217">Tanzania, United Republic of</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n218"/>
+							<label for="n218">Thailand</label>
+							<input type="checkbox" id="n219"/>
+							<label for="n219">Timor-Leste</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n220"/>
+							<label for="n220" title="Tinian (Northern Mariana Islands)">Tinian (Northern Mariana...</label>
+							<input type="checkbox" id="n221"/>
+							<label for="n221">Togo</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n222"/>
+							<label for="n222">Tonga</label>
+							<input type="checkbox" id="n223"/>
+							<label for="n223" title="Tortola (British Virgin Islands)">Tortola (British Virgin...</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n224"/>
+							<label for="n224">Trinidad & Tobago</label>
+							<input type="checkbox" id="n225"/>
+							<label for="n225" title="Truk (Micronesia, Federated States of)">Truk (Micronesia...</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n226"/>
+							<label for="n226">Tunisia</label>
+							<input type="checkbox" id="n227"/>
+							<label for="n227">Turkey</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n228"/>
+							<label for="n228">Turks & Caicos Islands</label>
+							<input type="checkbox" id="n229"/>
+							<label for="n229">Tuvalu</label>
+						</div>					
+					</li>
+					<li class="xu-in" id="u">
+						<h2 class="xu-in-tit">U</h2>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n230"/>
+							<label for="n230">U.S. Virgin Islands</label>
+							<input type="checkbox" id="n231"/>
+							<label for="n231">Uganda</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n232"/>
+							<label for="n232">Ukraine</label>
+							<input type="checkbox" id="n233"/>
+							<label for="n233" title="Union Islands (St. Vincent & the Grenadines)">Union Islands (St...</label>
+						</div><div class="xu-in-txt">
+							<input type="checkbox" id="n234"/>
+							<label for="n234">United Arab Emirates</label>
+							<input type="checkbox" id="n235"/>
+							<label for="n235">United Kingdom</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n236"/>
+							<label for="n236">United States</label>
+							<input type="checkbox" id="n237"/>
+							<label for="n237">Uruguay</label>
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n238"/>
+							<label for="n238">Uzbekistan</label>						
+						</div>
+					</li>
+					<li class="xu-in" id="v">
+						<h2 class="xu-in-tit">V</h2>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n239"/>
+							<label for="n239">Vanuatu</label>
+							<input type="checkbox" id="n240"/>
+							<label for="n240">Vatican City (Italy)</label>						
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n241"/>
+							<label for="n241">Venezuela</label>
+							<input type="checkbox" id="n242"/>
+							<label for="n242">Vietnam</label>						
+						</div>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n243"/>
+							<label for="n243" title="Virgin Gorda (British Virgin Islands)">Virgin Gorda (British...</label>
+						</div>
+					</li>
+					<li class="xu-in" id="w">
+						<h2 class="xu-in-tit">W</h2>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n244"/>
+							<label for="n244">Wales (United Kingdom)</label>
+							<input type="checkbox" id="n245"/>
+							<label for="n245">Wallis & Futuna Islands</label>						
+						</div>
+					</li>
+					<li class="xu-in" id="y">
+						<h2 class="xu-in-tit">Y</h2>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n246"/>
+							<label for="n246" title="Yap (Micronesia, Federated States of)">Yap (Micronesia...</label>
+							<input type="checkbox" id="n247"/>
+							<label for="n247">Yemen, Republic of</label>						
+						</div>
+					</li>
+					<li class="xu-in" id="z">
+						<h2 class="xu-in-tit">Z</h2>
+						<div class="xu-in-txt">
+							<input type="checkbox" id="n248"/>
+							<label for="n248">Zambia</label>
+							<input type="checkbox" id="n249"/>
+							<label for="n249">Zimbabwe</label>	
+						</div>	
+					</li>
+				</ul>		
+			</div>
+			<div class="xu-CanBtn" id="xu-CanBtn1"><b>Close</b></div>
+		</div>
+
+		<div class="xu-conList" id="xu-conList1">
+			<a href="#aaa" class="xu-con">A</a>
+			<a href="#bbb" class="xu-con">B</a>
+			<a href="#ccc" class="xu-con">C</a>
+			<a href="#d" class="xu-con">D</a>
+			<a href="#e" class="xu-con">E</a>
+			<a href="#f" class="xu-con">F</a>
+			<a href="#g" class="xu-con">G</a>
+			<a href="#h" class="xu-con">H</a>
+			<a href="#i" class="xu-con">I</a>
+			<a href="#j" class="xu-con">J</a>
+			<a href="#k" class="xu-con">K</a>
+			<a href="#l" class="xu-con">L</a>
+			<a href="#m" class="xu-con">M</a>
+			<a href="#n" class="xu-con">N</a>
+			<a href="#o" class="xu-con">O</a>
+			<a href="#p" class="xu-con">P</a>
+			<a href="#q" class="xu-con">Q</a>
+			<a href="#r" class="xu-con">R</a>
+			<a href="#s" class="xu-con">S</a>
+			<a href="#t" class="xu-con">T</a>
+			<a href="#u" class="xu-con">U</a>
+			<a href="#v" class="xu-con">V</a>
+			<a href="#w" class="xu-con">W</a>		
+			<a href="#y" class="xu-con">Y</a>
+			<a href="#z" class="xu-con">Z</a>		
+		</div>
+	</div>
+</div>
+<script>
+	var Xu_oBtn = document.getElementById('xu-btn');
+	var Xu_oTxt = document.getElementById('xu-txt');
+	var Xu_Wrap = document.getElementById('xu-wrap');
+	var Xu_CanBtn = document.getElementById('xu-CanBtn1');
+	var Xu_oList = document.getElementById('xu-list');
+	var Xu_aLi = Xu_oList.getElementsByTagName('li');
+	var Xu_aDiv = Xu_oList.getElementsByTagName('div');
+	var Xu_aInput = Xu_oList.getElementsByTagName('input');
+	var Xu_aLabel = Xu_oList.getElementsByTagName('label');
+	var Xu_ConList = document.getElementById('xu-conList1');
+	var Xu_Aa = Xu_ConList.getElementsByTagName('a');
+
+	
+	for(var i=0;i<Xu_Aa.length;i++){
+		Xu_Aa[i].index=i;
+		Xu_Aa[i].onmouseover = function(){
+			for(var i=0;i<Xu_Aa.length;i++){
+				Xu_Aa[i].style.backgroundColor="#f2f2f2";
+			}
+			this.style.backgroundColor = '#00a0e6';
+		}
+		Xu_Aa[i].onmouseout = function(){
+			for(var i=0;i<Xu_Aa.length;i++){
+				Xu_Aa[i].style.backgroundColor="#f2f2f2";
+			}
+		}
+	}
+	
+	for(var i=0;i<Xu_aInput.length;i++){
+		Xu_aInput[i].index=i;
+		Xu_aInput[i].onclick = function(){
+			for(var i=0;i<Xu_aInput.length;i++){
+				Xu_aInput[i].checked = false;
+			}
+			this.checked = true;			
+			Xu_oTxt.value = Xu_aLabel[this.index].innerHTML;			
+		}
+	}
+
+	Xu_CanBtn.onclick = function(ev){
+		var e = ev||event;
+		Xu_Wrap.style.display="none";
+		e.cancelBubble = true;
+	}
+	
+	document.onclick = function(){
+		Xu_Wrap.style.display="none";
+	}
+	
+	Xu_oBtn.onclick = Xu_Wrap.onclick = function(ev){
+		var e = ev||event;
+		Xu_Wrap.style.display="block";
+		e.cancelBubble = true;
+	}
+
+	for(var i=0;i<Xu_aDiv.length;i++){
+		Xu_aDiv[i].index=i;
+		Xu_aDiv[i].onmouseover = function(){
+			for(var i=0;i<Xu_aDiv.length;i++){
+				Xu_aDiv[i].style.backgroundColor = "#fafafa";
+			}
+		this.style.backgroundColor = "#00a0e6"
+		}
+		Xu_aDiv[i].onmouseout = function(){
+			for(var i=0;i<Xu_aDiv.length;i++){
+				Xu_aDiv[i].style.backgroundColor = "#fafafa";
+			}
+		}
+	}
+</script>
+</body>
+</html>

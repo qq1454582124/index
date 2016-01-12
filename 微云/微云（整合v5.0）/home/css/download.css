@@ -1,0 +1,49 @@
+@charset "utf-8";
+/* CSS Document */
+/*公共样式*/
+body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div,dl,dt,dd,input{margin:0;padding:0;border:0;}
+body{font-size:12px;font-family:'微软雅黑';}
+img{border:none;}
+ul,ol{list-style:none;}
+input,select,textarea{outline:none;}
+textarea{resize:none;}
+a{text-decoration:none;}
+
+
+/*清浮动和浮动*/
+.clear:after{content:"";display:block;clear:both;}
+.clear{zoom:1;}
+.left{ float:left; _display:inline;}
+.right{ float:right;}
+
+/*通用样式*/
+.conWidth{width:962px;margin:0 auto;}
+.conRight{margin-right:82px;}
+
+/*头部*/
+.headerbox{height:65px;background:#fcfcfc;border-bottom:1px solid #d9d9d9;padding-top:13px;margin-bottom:40px;}
+.logo{margin-right:204px;}
+.headerbox li{ float:left;margin-top:16px;margin-right:40px;}
+.headerbox a{font-size:15px; color:#8d8d8d;}
+.headerbox li .now{font-weight:bold;color:#000;}
+.headerbox .page{display:block;width:85px;height:25px;font-size:12px;background:#3091f2;color:#fff;border-radius:5px;padding-top:15px;padding-left:25px;}
+
+/*内容*/
+.ad{border-bottom:1px solid #e6e6e6;padding-bottom:20px;margin-bottom:76px;}
+.ad div{margin-bottom:20px;}
+.windows{float:left;margin-bottom:20px;width:410px;height:115px;background:#f2f2f2;padding-left:30px;padding-top:32px;border-radius:5px;}
+.title{font-size:22px;}
+.bluebtn{display:block;width:110px;height:38px;border-radius:5px;background:#3091f2;margin-top:20px;}
+.bluebtn img{display:block;float:left;margin:12px 8px 0 10px}
+.btnw{float:left;margin-top:9px;color:#fff;font-size:13px;}
+.rside{width:209px;line-height:22px;margin-top:4px;color:#999;}
+
+.con_bottom{height:308px;background:url(images/web_img.jpg) no-repeat 25px 0;padding-top:32px;}
+.enter{padding-left:531px;}
+.fon12{font-size:12px;color:#999;}
+.fon13{font-size:13px;color:#fff;}
+.green{display:block;width:110px;height:38px;background:#36c205;border-radius:5px;line-height:36px;text-align:center;margin-top:22px;}
+.title1{font-size:22px;margin-bottom:22px;}
+
+/*尾部*/
+.end{height:124px;background:#e6e6e6;}

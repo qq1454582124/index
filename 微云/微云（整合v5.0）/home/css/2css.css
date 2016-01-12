@@ -1,0 +1,108 @@
+@charset "utf-8";
+/* CSS Document */
+/*----------------------------------------------初始化------------------------------------------------------*/
+body{ padding:0; margin:0 auto; background-color:#FFF; font:12px/24px Microsoft Yahei;}
+img{ border:none;}
+h1,h2,h3,h4,h5,h6,hr,blockquote,form,ul,ol,li,p,pre,dl,dt,dd,fieldset,legend,button,input,textarea,th,td{ padding:0; margin:0;}
+a{text-decoration:none;}
+i{font-style:normal;}
+ul,ol,li{ list-style:none;}
+sup{ vertical-align:text-top;}
+sub{ vertical-align:text-bottom;}
+legend { color:#000;}
+fieldset{ border:0;} 
+button,input,select,textarea { font-size:100%;}
+table{ border-collapse:collapse; border-spacing:0;}
+.clear{ zoom:1;}
+.clear:after{ content:""; display:block; height:0; clear:both;}
+.left{ float:left; _display:inline;}
+.right{ float:right;}
+.hr_10{ clear:both; height:10px; overflow:hidden; font-size:1px; line-height:1px;}
+.hr_20{ clear:both; height:20px; overflow:hidden; font-size:1px; line-height:1px;}
+
+/*-----------------------------首页（陈倩）----------------------------------*/
+
+/*头部*/
+.head_top{width:100%;height:80px;background:#fff;position:absolute;top:0;left:0;z-index:100;opacity:0.8;}
+.head_middle{width:960px;height:80px;margin:0 auto;position:relative;}
+.logo{float:left;margin-top:15px;}
+.list{float:right;}
+.list li{float:left;}
+.list a{display:inline-block;height:80px;line-height:80px;padding:0 20px;color:#8d8d8d;font-size:16px;}
+.list3{padding-right:60px;}
+.list4{position:relative;}
+.list4 a{background:#3091f2;padding:0;padding-right:20px;width:90px;height:40px;line-height:40px;color:#fff;margin-top:20px;border-radius:4px; text-align:center;}
+.list .list_r{overflow:hidden;display:block;border-color:transparent transparent transparent #fff;border-style:dashed dashed dashed solid;border-width:5px;position:absolute;top:36px;left:85px;width:0;height:0;}
+.list a.active{border-bottom:4px solid #3091f2;height:76px;font-weight:bold;font-size:16px;color:#000;}
+
+/*焦点图*/
+.wrap{margin:auto;width:100%;height:680px;overflow:hidden;position:relative;}
+.content{width:1600px;height:680px;position:absolute;left:50%;margin-left:-800px;}
+#focus{width:1600px;height:680px;position:absolute;left:50%;margin-left:-800px;}
+#focus .con_img{position:absolute;left:0;top:0;z-index:18;opacity:0;transition:1s;}
+#focus .con_pic{position:absolute;top:232px;left:50%;margin-left:68px;}
+#focus .con_load{position:absolute;top:504px;left:50%;margin-left:340px;}
+#focusBtn{position:absolute;bottom:15px;left:50%;margin-left:-75px;z-index:30;}
+#focusBtn li{width:16px;height:16px;background:#fff;border:2px solid #333;border-radius:50%;float:left;margin-right:10px;}
+#focusBtn .active{background:#46A4E8;box-shadow:0 0 4px #fff inset;}
+#focusBtn li:hover{background:#46A4E8;box-shadow:0 0 4px #fff inset;}
+#focus .banner{z-index:20;position:absolute;left:0;top:0;opacity:1;transition:1s;}
+
+/*内容样式*/
+.con_box{width:100%;height:360px;}
+.con_mbox{width:960px;height:360px;margin:0 auto;}
+.con_mpic{float:left;margin-top:40px;}
+.con_mpic a{margin-right:30px;}
+.con_text{float:left;width:300px;margin-top:40px;}
+.con_text li{position:relative;height:47px;background:#f2f2f2;margin-bottom:4px;padding:8px 0 0 14px;}
+.con_listr{overflow:hidden;display:block;border-color:transparent transparent transparent #cecece;border-style:dashed dashed dashed solid;border-width:5px;position:absolute;top:24px;right:20px;width:0;height:0;}
+.con_text p{color:#4c4c4c;font-size:14px;line-height:20px;}
+.con_text span{color:#b2b2bd;font-size:12px;font-family:Arial;}
+
+/*页脚*/
+.foot{width:100%;height:126px;background:#e6e6e6; font-family:SimSun;}
+.f_mid{width:960px;height:126px;margin:0 auto;}
+.f_pic{float:left;width:112px;height:50px;margin-top:40px;}
+.f_text{float:left;margin-top:54px;padding-left:18px;font:12px/16px}
+.f_atext{font-size:0;}
+.f_atext a{font-size:12px;color:#999999;padding:0 6px;border-right:1px solid #b399b3;}
+.f_atext .f_a1{padding-left:0;}
+.f_atext .f_a2{border-right:none;}
+.f_text p{font-size:12px;color:#999999;line-height:18px;font-family:Arial;}
+
+/*--------------------功能页（吕佳琳）--------------------*/
+
+/*通用样式*/
+.bordT{border-top:1px solid #d9d9d9; margin-top:80px; padding-top:40px;}
+./*通用样式*/
+.conWidth{width:962px;margin:0 auto;}
+.conWidth2{width:862px;margin:0 auto;}
+.conRight{margin-right:82px;}
+.conMessage{height:325px;padding-top:25px;border-bottom:1px solid #e6e6e6;overflow:hidden;}
+
+/*内容*/
+body{background:#f2f2f2;}
+.vedio{width:960px;height:540px;background:url(../img/video.jpg) no-repeat;margin:0 auto 30px;}
+.content{background:#fff;height:2370px;margin-bottom:80px;}
+#btn{height:130px;border-bottom:1px solid #e6e6e6;padding-top:50px;}
+#btn a{display:block; width:84px; height:101px; float:left; position:relative;top:0;left:0;}
+.photo{background:url(../img/function-icons.png) no-repeat 0 0; margin-right:70px;}
+.note{background:url(../img/function-icons.png) no-repeat -122px 0; margin-right:70px;}
+.manage{background:url(../img/function-icons.png) no-repeat -243px 0; margin-right:70px;}
+.code{background:url(../img/function-icons.png) no-repeat -483px 0; margin-right:70px;}
+.give{background:url(../img/function-icons.png) no-repeat -608px 0; margin-right:70px;}
+.cut{background:url(../img/function-icons.png) no-repeat -730px 0;}
+
+
+.M-title{font-size:22px;color:#000;line-height:34px;}
+.M-con{font-size:15px;color:#666;line-height:22px;}
+.M1-left{width:412px;height:225px;padding-top:100px;position:relative;top:0;left:-200px;}
+.M1-right{width:450px;height:325px;position:relative;top:200px;left:0;}/*图片位置改变*/
+.M2-left{width:412px;height:325px;position:relative;top:200px;left:0;}
+.M2-right{width:400px;height:225px;padding-top:100px;padding-left:50px;position:relative;top:0;left:200px;}
+.bg1{background:url(../img/function1.jpg) no-repeat;}
+.bg2{background:url(../img/function2.jpg) no-repeat;}
+.bg3{background:url(../img/function4.jpg) no-repeat;}
+.bg4{background:url(../img/function5.jpg) no-repeat;}
+.bg5{background:url(../img/function6.jpg) no-repeat;}
+.bg6{background:url(../img/function7.jpg) no-repeat;}

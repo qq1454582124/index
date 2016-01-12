@@ -1,0 +1,633 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<link href="css/index.css" rel="stylesheet"/>
+<script src="js/tween.js"></script>
+</head>
+<body>
+<!-- 开始动画 -->
+<div id="starting" style="display:none;">
+	<div class="startLogo"></div>
+    <div class="starting">
+    	starting ...
+    </div>
+    <div class="startbar">
+    	<div class="ico"></div>
+    </div>
+    <div class="startLoading"id="startLoading">0%</div>
+</div>
+<!-- 开始动画结束 -->
+<!-- 页面背景 -->
+<img src="img/page_bg/blue_glow.jpg" alt="" id="pageBg"/>
+<!-- <div id="pageBg"></div>
+ -->
+<div id="desktop">
+	<!-- 主菜单 --> <!-- 问题是和他的那个元素放一起来了，因该把他放的外边，这样他的层级就可以提上来了 -->
+	<div id="topMenu" class="mainMenu">
+    	
+    </div>
+    <div id="leftMenu" class="mainMenu" style="width:73px;" >
+    	<div id="mainMenu">
+        	<ul id="mainMenuList" class="mainMenuList">
+            	<li class="show">
+                	<img src="img/ico/appmarket.png" alt="应用市场" width="48"/>
+                </li>
+                <li class="hide">
+                	<img src="img/ico/app_disk.png" alt="我的网盘" width="48"/>
+                </li>
+                <li>
+                	<img src="img/ico/app_qq.png" alt="QQ" width="48"/>
+                </li>
+                <li>
+                	<img src="img/ico/app_qzone.png" alt="QQ空间" width="48"/>
+                </li>
+                <li>
+                	<img src="img/ico/app_mail.png" alt="QQ邮箱" width="48"/>
+                </li>
+                <li>
+                	<img src="img/ico/app_weibo.png" alt="腾讯微博" width="48"/>
+                </li>
+            </ul>
+            <div class="mainMenuRows">
+            	<a href="javascript:;" class="mainMenuPinyin mainMenuIcon" title="QQ拼音输入法"></a>
+                <a href="javascript:;" class="mainMenuSound mainMenuIcon" title="静音"></a>
+            </div>
+            <div class="mainMenuRows">
+                <a href="javascript:;" class="mainMenuIcon mainMenuSetting" title="系统设置"></a>
+                <a href="javascript:;" class="mainMenuIcon mainMenuTheme" id="mainMenuIcon" title="主题设置"></a>
+            </div>
+            <a href="javascript:;" id="mainMenuStart" title="点击这里开始"></a>
+        </div>
+    </div>
+    <div id="rightMenu" class="mainMenu">
+    </div>
+    <!-- 主题设置 -->
+    <div id="web_box_content">
+            <span><a href="javascript:;"id="disB">X</a></span>
+            <ul id="skin_img">
+                <li>
+                    <img src="img/page_bg/bg3.jpg"/>
+                    <p>梦翔天际</p>
+                </li>
+                <li>
+                    <img src="img/page_bg/bg4.jpg"/>
+                    <p>茫茫野草</p>
+                </li>
+                <li>
+                    <img src="img/page_bg/bg6.jpg"/>
+                    <p>蒲英之梦</p>
+                </li>
+                <li>
+                    <img src="img/page_bg/blue.jpg"/>
+                    <p>仰望苍穹</p>
+                </li>
+                <li>
+                    <img src="img/page_bg/blue_glow.jpg"/>
+                    <p>水梦年华</p>
+                </li>
+                <li>
+                    <img src="img/page_bg/pinky_night.jpg"/>
+                    <p>空灵蓝调</p>
+                </li>
+
+            </ul>
+            </div>
+     <!-- 主题设置结束 -->
+    <div id="topMenuBorder" class="mainMenuBorder"></div>
+    <div id="leftMenuBorder" class="mainMenuBorder"></div>
+    <div id="rightMenuBorder" class="mainMenuBorder"></div>
+    <!-- 主菜单结束 -->
+    <!-- 桌面主体 -->
+    <div id="desktopWrapper" style="margin-left:73px;">
+    	<ul id="desktopContents">
+        	<li class="desktopContent"  style="left:0;">
+            	<ul class="appList">
+                	<li class="show">
+                    	<div class="appPic">
+                        	<img src="img/ico/app_browser.png" alt="妙味课堂"/>
+                        </div>
+                         <div class="appTitle">
+                        	<strong>QQ宝贝</strong><span></span>
+                        </div>
+                    </li>
+                    <li class="hide">
+                    	<div class="appPic">
+                        	<img src="img/ico/big(4).png" alt="妙味课堂"/>
+                        </div>
+                        <div class="appTitle">
+                        	<strong>QQ应用1</strong><span></span>
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="appPic">
+                        	<img src="img/ico/big(5).png" alt="妙味课堂"/>
+                        </div>
+                        <div class="appTitle">
+                        	<strong>QQ应用2</strong><span></span>
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="appPic">
+                        	<img src="img/ico/big(6).png" alt="妙味课堂"/>
+                        </div>
+                        <div class="appTitle">
+                        	<strong>QQ应用3</strong><span></span>
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="appPic">
+                        	<img src="img/ico/big(7).png" alt="妙味课堂"/>
+                        </div>
+                        <div class="appTitle">
+                        	<strong>QQ应用5</strong><span></span>
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="appPic">
+                        	<img src="img/ico/big(9).png" alt="妙味课堂"/>
+                        </div>
+                        <div class="appTitle">
+                        	<strong>QQ应用5</strong><span></span>
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="appPic">
+                        	<img src="img/ico/big(10).png" alt="妙味课堂"/>
+                        </div>
+                        <div class="appTitle">
+                        	<strong>QQ应用5</strong><span></span>
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="appPic">
+                        	<img src="img/ico/big(11).png" alt="妙味课堂"/>
+                        </div>
+                        <div class="appTitle">
+                        	<strong>QQ应用5</strong><span></span>
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="appPic">
+                        	<img src="img/ico/big(12).png" alt="妙味课堂"/>
+                        </div>
+                        <div class="appTitle">
+                        	<strong>QQ应用5</strong><span></span>
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="appPic">
+                        	<img src="img/ico/big(13).png" alt="妙味课堂"/>
+                        </div>
+                        <div class="appTitle">
+                        	<strong>QQ应用5</strong><span></span>
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="appPic">
+                        	<img src="img/ico/big(14).png" alt="妙味课堂"/>
+                        </div>
+                        <div class="appTitle">
+                        	<strong>QQ应用5</strong><span></span>
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="appPic">
+                        	<img src="img/ico/big(15).png" alt="妙味课堂"/>
+                        </div>
+                        <div class="appTitle">
+                        	<strong>QQ应用5</strong><span></span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li class="desktopContent">
+            	<ul class="appList">
+                	<li>
+                    	<div class="appPic">
+                        	<img src="img/ico/app_browser.png" alt="妙味课堂"/>
+                        </div>
+                         <div class="appTitle">
+                        	<strong>QQ宝贝</strong><span></span>
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="appPic">
+                        	<img src="img/ico/big(4).png" alt="妙味课堂"/>
+                        </div>
+                        <div class="appTitle">
+                        	<strong>QQ应用1</strong><span></span>
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="appPic">
+                        	<img src="img/ico/big(5).png" alt="妙味课堂"/>
+                        </div>
+                        <div class="appTitle">
+                        	<strong>QQ应用2</strong><span></span>
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="appPic">
+                        	<img src="img/ico/big(6).png" alt="妙味课堂"/>
+                        </div>
+                        <div class="appTitle">
+                        	<strong>QQ应用3</strong><span></span>
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="appPic">
+                        	<img src="img/ico/big(7).png" alt="妙味课堂"/>
+                        </div>
+                        <div class="appTitle">
+                        	<strong>QQ应用5</strong><span></span>
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="appPic">
+                        	<img src="img/ico/big(9).png" alt="妙味课堂"/>
+                        </div>
+                        <div class="appTitle">
+                        	<strong>QQ应用5</strong><span></span>
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="appPic">
+                        	<img src="img/ico/big(10).png" alt="妙味课堂"/>
+                        </div>
+                        <div class="appTitle">
+                        	<strong>QQ应用5</strong><span></span>
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="appPic">
+                        	<img src="img/ico/big(11).png" alt="妙味课堂"/>
+                        </div>
+                        <div class="appTitle">
+                        	<strong>QQ应用5</strong><span></span>
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="appPic">
+                        	<img src="img/ico/big(12).png" alt="妙味课堂"/>
+                        </div>
+                        <div class="appTitle">
+                        	<strong>QQ应用5</strong><span></span>
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="appPic">
+                        	<img src="img/ico/big(13).png" alt="妙味课堂"/>
+                        </div>
+                        <div class="appTitle">
+                        	<strong>QQ应用5</strong><span></span>
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="appPic">
+                        	<img src="img/ico/big(14).png" alt="妙味课堂"/>
+                        </div>
+                        <div class="appTitle">
+                        	<strong>QQ应用5</strong><span></span>
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="appPic">
+                        	<img src="img/ico/big(15).png" alt="妙味课堂"/>
+                        </div>
+                        <div class="appTitle">
+                        	<strong>QQ应用5</strong><span></span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li class="desktopContent">
+            	<ul class="appList">
+                	<li>
+                    	<div class="appPic">
+                        	<img src="img/ico/app_browser.png" alt="妙味课堂"/>
+                        </div>
+                         <div class="appTitle">
+                        	<strong>QQ宝贝</strong><span></span>
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="appPic">
+                        	<img src="img/ico/big(4).png" alt="妙味课堂"/>
+                        </div>
+                        <div class="appTitle">
+                        	<strong>QQ应用1</strong><span></span>
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="appPic">
+                        	<img src="img/ico/big(7).png" alt="妙味课堂"/>
+                        </div>
+                        <div class="appTitle">
+                        	<strong>QQ应用5</strong><span></span>
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="appPic">
+                        	<img src="img/ico/big(9).png" alt="妙味课堂"/>
+                        </div>
+                        <div class="appTitle">
+                        	<strong>QQ应用5</strong><span></span>
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="appPic">
+                        	<img src="img/ico/big(10).png" alt="妙味课堂"/>
+                        </div>
+                        <div class="appTitle">
+                        	<strong>QQ应用5</strong><span></span>
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="appPic">
+                        	<img src="img/ico/big(11).png" alt="妙味课堂"/>
+                        </div>
+                        <div class="appTitle">
+                        	<strong>QQ应用5</strong><span></span>
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="appPic">
+                        	<img src="img/ico/big(12).png" alt="妙味课堂"/>
+                        </div>
+                        <div class="appTitle">
+                        	<strong>QQ应用5</strong><span></span>
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="appPic">
+                        	<img src="img/ico/big(13).png" alt="妙味课堂"/>
+                        </div>
+                        <div class="appTitle">
+                        	<strong>QQ应用5</strong><span></span>
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="appPic">
+                        	<img src="img/ico/big(14).png" alt="妙味课堂"/>
+                        </div>
+                        <div class="appTitle">
+                        	<strong>QQ应用5</strong><span></span>
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="appPic">
+                        	<img src="img/ico/big(15).png" alt="妙味课堂"/>
+                        </div>
+                        <div class="appTitle">
+                        	<strong>QQ应用5</strong><span></span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li class="desktopContent">
+            	<ul class="appList">
+                	<li>
+                    	<div class="appPic">
+                        	<img src="img/ico/app_browser.png" alt="妙味课堂"/>
+                        </div>
+                         <div class="appTitle">
+                        	<strong>QQ宝贝</strong><span></span>
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="appPic">
+                        	<img src="img/ico/big(4).png" alt="妙味课堂"/>
+                        </div>
+                        <div class="appTitle">
+                        	<strong>QQ应用1</strong><span></span>
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="appPic">
+                        	<img src="img/ico/big(5).png" alt="妙味课堂"/>
+                        </div>
+                        <div class="appTitle">
+                        	<strong>QQ应用2</strong><span></span>
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="appPic">
+                        	<img src="img/ico/big(6).png" alt="妙味课堂"/>
+                        </div>
+                        <div class="appTitle">
+                        	<strong>QQ应用3</strong><span></span>
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="appPic">
+                        	<img src="img/ico/big(14).png" alt="妙味课堂"/>
+                        </div>
+                        <div class="appTitle">
+                        	<strong>QQ应用5</strong><span></span>
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="appPic">
+                        	<img src="img/ico/big(15).png" alt="妙味课堂"/>
+                        </div>
+                        <div class="appTitle">
+                        	<strong>QQ应用5</strong><span></span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li class="desktopContent">
+            	<ul class="appList">
+                	<li>
+                    	<div class="appPic">
+                        	<img src="img/ico/app_browser.png" alt="妙味课堂"/>
+                        </div>
+                         <div class="appTitle">
+                        	<strong>QQ宝贝</strong><span></span>
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="appPic">
+                        	<img src="img/ico/big(4).png" alt="妙味课堂"/>
+                        </div>
+                        <div class="appTitle">
+                        	<strong>QQ应用1</strong><span></span>
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="appPic">
+                        	<img src="img/ico/big(5).png" alt="妙味课堂"/>
+                        </div>
+                        <div class="appTitle">
+                        	<strong>QQ应用2</strong><span></span>
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="appPic">
+                        	<img src="img/ico/big(6).png" alt="妙味课堂"/>
+                        </div>
+                        <div class="appTitle">
+                        	<strong>QQ应用3</strong><span></span>
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="appPic">
+                        	<img src="img/ico/big(7).png" alt="妙味课堂"/>
+                        </div>
+                        <div class="appTitle">
+                        	<strong>QQ应用5</strong><span></span>
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="appPic">
+                        	<img src="img/ico/big(9).png" alt="妙味课堂"/>
+                        </div>
+                        <div class="appTitle">
+                        	<strong>QQ应用5</strong><span></span>
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="appPic">
+                        	<img src="img/ico/big(10).png" alt="妙味课堂"/>
+                        </div>
+                        <div class="appTitle">
+                        	<strong>QQ应用5</strong><span></span>
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="appPic">
+                        	<img src="img/ico/big(11).png" alt="妙味课堂"/>
+                        </div>
+                        <div class="appTitle">
+                        	<strong>QQ应用5</strong><span></span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!-- 桌面主体结束 -->
+</div>
+<!-- 主导航 -->
+<div id="mainNav">
+    <h2 class="mainNavHeader" title="请登录">
+        <img src="img/ico/avatar.png" />
+    </h2>
+    <ol class="mainNavBtns">
+        <li class="active"><a href="javascript:;" title="桌面1，Ctrl + Alt + 1" class="mainNavBtns_1">1</a></li>
+        <li><a href="javascript:;" title="桌面2，Ctrl + Alt + 2" class="mainNavBtns_2">2</a></li>
+        <li><a href="javascript:;" title="桌面3，Ctrl + Alt + 3" class="mainNavBtns_3">3</a></li>
+        <li><a href="javascript:;" title="桌面4，Ctrl + Alt + 4" class="mainNavBtns_4">4</a></li>
+        <li><a href="javascript:;" title="桌面5，Ctrl + Alt + 5" class="mainNavBtns_5">5</a></li>
+    </ol>
+    <a href="javascript:;" title="搜索" id="mainNavSeach"></a>
+    <a href="javascript:;" title="全局视图，Ctrl + Alt + ↑" id="mainNavManage"></a>
+</div>
+<!-- 主导航结束 -->
+
+<!-- 下拉菜单 -->
+<ul id="contextMenu" class="contextMenu">
+	<li>
+        <a class="contextMenuList" href="javascript:;" title="显示桌面">显示桌面</a>
+    </li>
+    <li>
+        <a class="contextMenuList" href="javascript:;" title="锁定">锁定</a>
+    </li>
+    <li class="rows show">
+        <a class="contextMenuList" href="javascript:;" title="添加">
+        	添加
+            <span class="contextMenuIco contextMenuIco1"></span>
+        </a>
+        <ul class="contextMenu">
+        	<li>
+                <a class="contextMenuList" href="javascript:;" title="添加应用">
+                	添加应用
+                	<span class="contextMenuIco contextMenuIco2"></span>
+                </a>
+            </li>
+            <li>
+                <a class="contextMenuList" href="javascript:;" title="添加桌面联系人">
+                	添加桌面联系人
+                    <span class="contextMenuIco contextMenuIco3"></span>
+                 </a>
+            </li>
+        </ul>
+    </li>
+    <li class="rows">
+        <a class="contextMenuList" href="javascript:;" title="QQ云词典">QQ云词典</a>
+    </li>
+    <li class="rows">
+        <a class="contextMenuList" href="javascript:;" title="主题设置">主题设置</a>
+    </li>
+    <li>
+        <a class="contextMenuList" href="javascript:;" title="系统设置">系统设置</a>
+    </li>
+    <li class="show">
+        <a class="contextMenuList" href="javascript:;" title="图标设置">
+        	图标设置
+            <span class="contextMenuIco contextMenuIco1"></span>
+        </a>
+        <ul class="contextMenu">
+        	<li>
+                <a class="contextMenuList" href="javascript:;" title="小图标">
+                	小图标
+                </a>
+            </li>
+            <li>
+                <a class="contextMenuList" href="javascript:;" title="大图片">
+                	大图片
+                    <span class="contextMenuIco contextMenuIco4"></span>
+                 </a>
+            </li>
+        </ul>
+    </li>
+    <li class="rows">
+        <a class="contextMenuList" href="javascript:;" title="反馈">反馈</a>
+    </li>
+    <li>
+        <a class="contextMenuList" href="javascript:;" title="注销">注销</a>
+    </li>
+</ul>
+<!-- 下拉菜单结束 -->
+<!-- 弹窗 -->
+<div id="window" class="window">
+    <div class="windowContent">
+        <div class="widnowHead">
+            <h2 class="widnowHeadTitle">
+                <span></span><strong>应用市场</strong>
+            </h2>
+            <p class="windowBtns">
+                <a href="javascript:;" class="windowClose" title="关闭"></a>
+                <a href="javascript:;" class="windowMax" title="最大化"></a>
+                <a href="javascript:;" class="window_restore" title="还原"></a>
+                <a href="javascript:;" class="windowMin" title="最小化"></a>
+            </p>
+            <ul id="list"></ul>
+        </div>
+    </div>
+</div>
+<!-- 弹窗结束 -->
+
+<!-- 弹窗的还原 -->
+<div class="Reduction" id="Reduction">
+    <ul id="WindowReduction"></ul>
+</div>
+<!-- 弹窗的还原结束 -->
+
+<!-- 钟表 -->
+<div id="cont">
+    <div id="iHour"></div>
+    <div id="iMin"></div>
+    <div id="iSec"></div>
+    <div id="cent"></div>
+    <div id="line"></div>
+    <ul id="ul1">
+    </ul>
+</div>
+<!-- 钟表结束 -->
+<script src="js/index.js"></script>
+
+</body>
+</html>

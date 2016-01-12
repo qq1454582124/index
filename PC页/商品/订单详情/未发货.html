@@ -1,0 +1,420 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link rel="stylesheet" type="text/css" href="../css/common.css"/>
+<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+<link rel="stylesheet" type="text/css" href="../css/style.css"/>
+<script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
+</head>
+    <script>
+		
+			 $(function(){	
+      $('.bar-l-li1').hover(function(){
+ 	    $('.bar-ul1').show()
+	    $('.bar-l-li1').addClass('bar-l-li2')
+ 	   },function(){
+ 		    $('.bar-ul1').hide()
+	         $('.bar-l-li1').removeClass('bar-l-li2')
+ 		   })
+ 	  $('.shop-car').hover(function(){
+ 		  $('.shop-cart-info').show();
+		   $('.icon-delta').addClass('icon-delta1')
+  		  },function(){
+ 		     $('.shop-cart-info').hide();
+ 	         $('.icon-delta').removeClass('icon-delta1')
+  		})
+ 
+})
+		
+    
+	$(function(){
+		 $(".order_confirm").click(function(){
+			$(".show_layer").show();
+			$(".remind").show();
+			})
+	})
+    $(function(){
+		$(".del_3").click(function(){	   
+			$(".show_layer").hide();
+			$(".remind").hide();
+			})
+	})
+  
+</script>
+
+
+  <body>
+        <div class="header_box"> 
+       <div class="head-bar" >
+      <div class="head-bar2 webwidth clearfix"> 
+        <div class="head-bar-l fl clearfix">
+            <div class="webcomes fl">hi,xxxxx,欢迎来到美联美购</div>
+            <div class="login-con fl">
+             <a href="#">请登录</a> 
+             <a href="#">【免费注册】</a>
+         </div>
+       </div>
+      </div>
+     </div>   
+         <div class="logo-con clearfix ">
+          <div  class="logo fl "><img src="../images/logo.png" /></div>
+       </div>       
+ </div>
+<!---------------------------------end-------------------------------------------------->
+
+   <div class="business_box" style="margin-bottom:180px;">
+     <div class="page2"><a>首页</a>><a>个人中心</a>><a>我的订单</a>><span><a>订单详情</a></span></div>
+        <!--订单程度条-->
+         <div class="business active-3">
+            <div class="active active2"></div>
+            <ul>
+             <li><i class="order1"></i>提交订单</li>
+             <li><i class="order6"></i>付款成功</li>
+             <li><i class="order3"></i>美购美发</li>
+             <li><i class="order4"></i>确认收货</li>
+             <li><i class="order5"></i>评价成功</li>
+          </ul>
+      </div>
+    </div>
+      <!--订单状态-->
+     <div class="order_box clearfix">
+      
+      <div class="order_status clearfix">
+      <div class="order_status_l fl">
+       <h3 >订单状态:付款成功，等待卖家发货</h3> 
+      <div class="order_submit"><a class="order_confirm">提醒发货</a><a class="order_cancel">申请退款</a></div>
+    </div>
+    <div class="order_status_r fr">
+     <div class="scan_l fl">
+     <img src="../images/scan1.png" />
+    </div>
+    <div class="scan_r fr">
+    <p><a href="#"><i>下载美购手机app</i></a></p>
+    <p  class="shi"><a href="#">实时跟踪订单物流></a></p>
+    </div>
+   </div>
+      <div class="remind">
+     <div class="del_1"><img class="del_3"  src="../images/del_3.png" /></div>
+     提醒发货成功，我们将尽快安排给你发货！
+   </div>
+ </div>
+    <!--商品详情-->
+   <div class="order_details">
+     <h3>订单详情</h3>
+     <ul>
+      <li>收货地址：广东省东莞省东莞市莞城区八达路大夏，张三，1355555555</li>
+      <li>订&nbsp;单&nbsp;&nbsp;号：201506301546224845655544666</li>
+      <li>支付金额：<em>￥236.00</em></li>
+      <li>下单时间：2015.07.02<span>14:01:32</span></li>
+      <li>补充说明：检查好再发货！</li>
+    </ul>
+   </div>
+ 
+      <div class="good_info2 clearfix">
+       <form>
+        <table>
+        <tr>
+         <th class="th_one">商品信息</th>
+         <th>重量(千克)</th> 
+         <th>单价(元)</th>
+         <th>数量</th> 
+         <th>优惠</th>
+       </tr>
+        <tr>
+        <td class="bbimg" >
+                 <img src="../images/tab1.jpg" />
+                 <span>Merries 花王妙而舒 婴儿纸尿裤 L44片*2包</span>
+        </td>
+         <td>3.90</td>
+         <td id="price">236.00</td>
+         <td>1</td>
+         <td>-￥5.00</td>
+      </tr>
+     </table> 
+   </form>
+        <div class="sumbit_box2">
+         <div ><label>商品总价：</label><span>￥<i>236.00</i></span> </div>
+         <div ><label>活动优惠：</label><em>-￥5.00</em></div> 
+         <div ><label>运费：</label><em>￥0.00</em></div>
+         <div class="price1"><label>应付金额：</label><i>￥231.00</i></div>
+       </div>
+    </div>
+  </div>
+    <div class="webwidth margin-bottom100">
+     <div class="guess_box guess_box1 clearfix">
+     <h2>猜你喜欢<span>根据你的浏览记录推荐的商品</span></h2>
+      <ul class="clearfix">
+       <li class="line">
+        <a href="#">
+        <div class="new"><img src="../images/xinpin.png" /></div>
+        <div class="guess"><img src="../images/mask.png" /></div>
+        <div class="title">
+        <p>猪皮蜗牛美白淡斑修复面膜</p>
+        <p>Milky Piggy Glutinous 80%</p>
+       </div>      
+       </a>
+      <dl>
+       <dt>￥<span>54.</span>90</dt>
+       <dd>国内参考价<del>￥89.00</del></dd>
+     </dl>
+     </li>
+       <li>
+       <a href="#">
+        <div class="new"><img src="../images/xinpin.png" /></div>
+        <div class="guess"><img src="../images/mask.png" /></div>
+        <div class="title">
+        <p>猪皮蜗牛美白淡斑修复面膜</p>
+        <p>Milky Piggy Glutinous 80%</p>
+      </div>      
+      </a>
+      <dl>
+       <dt>￥<span>54.</span>90</dt>
+       <dd>国内参考价<del>￥89.00</del></dd>
+     </dl>
+     </li>
+      <li>
+       <a href="#">
+        <div class="new"><img src="../images/xinpin.png" /></div>
+        <div class="guess"><img src="../images/mask.png" /></div>
+        <div class="title">
+        <p>猪皮蜗牛美白淡斑修复面膜</p>
+        <p>Milky Piggy Glutinous 80%</p>
+      </div>      
+      </a>
+      <dl>
+       <dt>￥<span>54.</span>90</dt>
+       <dd>国内参考价<del>￥89.00</del></dd>
+     </dl>
+     </li>
+       <li>
+       <a href="#">
+        <div class="new"><img src="../images/xinpin.png" /></div>
+        <div class="guess"><img src="../images/mask.png" /></div>
+        <div class="title">
+        <p>猪皮蜗牛美白淡斑修复面膜</p>
+        <p>Milky Piggy Glutinous 80%</p>
+      </div>      
+      </a>
+      <dl>
+       <dt>￥<span>54.</span>90</dt>
+       <dd>国内参考价<del>￥89.00</del></dd>
+     </dl>
+    </li>
+     <li>
+       <a href="#">
+        <div class="new"><img src="../images/xinpin.png" /></div>
+        <div class="guess"><img src="../images/mask.png" /></div>
+        <div class="title">
+        <p>猪皮蜗牛美白淡斑修复面膜</p>
+        <p>Milky Piggy Glutinous 80%</p>
+      </div>      
+      </a>
+      <dl>
+       <dt>￥<span>54.</span>90</dt>
+       <dd>国内参考价<del>￥89.00</del></dd>
+     </dl>
+     </li>
+   </ul>
+   </div>
+    <div class="guess_box clearfix">
+     <h2>大家都在买<span>全网最热门的商品推荐</span></h2>
+      <ul class="clearfix">
+      <li class="line">
+       <a href="#">
+        <div class="new"><img src="../images/xinpin.png" /></div>
+        <div class="guess"><img src="../images/mask.png" /></div>
+        <div class="title">
+        <p>猪皮蜗牛美白淡斑修复面膜</p>
+        <p>Milky Piggy Glutinous 80%</p>
+      </div>      
+      </a>
+      <dl>
+       <dt>￥<span>54.</span>90</dt>
+       <dd>国内参考价<del>￥89.00</del></dd>
+     </dl>
+  </li>
+      <li>
+       <a href="#">
+        <div class="new"><img src="../images/xinpin.png" /></div>
+        <div class="guess"><img src="../images/mask.png" /></div>
+        <div class="title">
+        <p>猪皮蜗牛美白淡斑修复面膜</p>
+        <p>Milky Piggy Glutinous 80%</p>
+      </div>      
+      </a>
+      <dl>
+       <dt>￥<span>54.</span>90</dt>
+       <dd>国内参考价<del>￥89.00</del></dd>
+     </dl>
+   </li>
+       <li>
+       <a href="#">
+        <div class="new"><img src="../images/xinpin.png" /></div>
+        <div class="guess"><img src="../images/mask.png" /></div>
+        <div class="title">
+        <p>猪皮蜗牛美白淡斑修复面膜</p>
+        <p>Milky Piggy Glutinous 80%</p>
+      </div>      
+      </a>
+      <dl>
+       <dt>￥<span>54.</span>90</dt>
+       <dd>国内参考价<del>￥89.00</del></dd>
+     </dl>
+   </li>
+      <li>
+       <a href="#">
+        <div class="new"><img src="../images/xinpin.png" /></div>
+        <div class="guess"><img src="../images/mask.png" /></div>
+        <div class="title">
+        <p>猪皮蜗牛美白淡斑修复面膜</p>
+        <p>Milky Piggy Glutinous 80%</p>
+      </div>      
+      </a>
+      <dl>
+       <dt>￥<span>54.</span>90</dt>
+       <dd>国内参考价<del>￥89.00</del></dd>
+     </dl>
+   </li>
+       <li>
+       <a href="#">
+        <div class="new"><img src="../images/xinpin.png" /></div>
+        <div class="guess"><img src="../images/mask.png" /></div>
+        <div class="title">
+        <p>猪皮蜗牛美白淡斑修复面膜</p>
+        <p>Milky Piggy Glutinous 80%</p>
+      </div>      
+      </a>
+      <dl>
+       <dt>￥<span>54.</span>90</dt>
+       <dd>国内参考价<del>￥89.00</del></dd>
+     </dl>
+     </li>
+   </ul>
+  </div>
+  </div>       
+      <!--这是底部-->
+      <div class="index-footer"> 
+         <div class="index-foot clearfix"> 
+            <div class="index-foot-l fl">  
+              <div class="foot-l-top">
+                   <ul class="l-top-list">
+                    <li class="clearfix">
+                        <div class="fl top-list-pic">
+                           <img src="../images/zhen.png" />
+                        </div>
+                        <div class="fl top-list-con"> 
+                          <span>100%</span>
+                          <span>原装正品</span>
+                        </div>
+                    </li>
+                         <li class="clearfix">
+                          <div class="fl top-list-pic">
+                          <a><img src="../images/feij.png" /></a>
+                         </div>
+                          <div class="fl top-list-con"> 
+                          <span>100%</span>
+                          <span>海外直采</span>
+                        </div>
+                    </li>
+                       <li class="clearfix">
+                          <div class="fl top-list-pic">
+                          <a><img src="../images/pai.png" /></a>
+                         </div>
+                          <div class="fl top-list-con"> 
+                          <span>100%</span>
+                          <span>极速发货</span>
+                        </div>
+                    </li>
+                     <li class="clearfix">
+                        <div class="fl top-list-pic">
+                          <a><img src="../images/tui.png" /></a>
+                        </div>
+                        <div class="fl top-list-con"> 
+                          <span>100%</span>
+                          <span>无忧退货</span>
+                        </div>
+                    </li>
+                   </ul>
+              </div>
+                 <div class="foot-l-bottom clearfix">
+                   <dl class="dl1">
+                   <dt><h3>美联美购保障</h3></dt>
+                   <dd><a href="#">正品保证</a></dd>
+                   <dd><a href="#">国内退货</a></dd>
+                   <dd><a href="#">7天无理由退换货</a></dd>
+                 </dl>
+                  <dl>
+                   <dt><h3>新手帮助</h3></dt>
+                   <dd><a href="#">购物指南</a></dd>
+                   <dd><a href="#">常见问题</a></dd>
+                   <dd><a href="#">在线客服</a></dd>
+                </dl>
+                   <dl>
+                   <dt><h3>支付方式</h3></dt>
+                   <dd><a href="#">支付宝支付</a></dd>
+                   <dd><a href="#">网银支付</a></dd>
+                   <dd><a href="#">快捷支付</a></dd> 
+                </dl>    
+                   <dl>
+                   <dt><h3>商家指导</h3></dt>
+                   <dd><a href="#">售后服务</a></dd>
+                   <dd><a href="#">咨询与投诉</a></dd>
+                   <dd><a href="#">退货政策</a></dd>
+                   <dd><a href="#">退货流程</a></dd>
+                 </dl> 
+                   <dl class="lastdl">
+                    <dt><h3>商家指导</h3></dt>
+                    <dd><a href="#">商家帮助</a></dd>
+                    <dd><a href="#">商家入驻</a></dd>
+                    <dd><a href="#">新手指导</a></dd>
+                    <dd><a href="#">广告服务</a></dd>
+                  </dl>                   
+             </div>
+          </div>
+            <div class="index-foot-r fr">
+            <div class="foot-r-phone">
+              <h3>4000-000-000</h3>
+              <p>周一到周日  09:00 - 24:00</p>
+            </div>
+            <div class="foot-r-weixin">
+              <img src="../images/weixin.jpg" />
+              <p>扫描下载客户端</p>
+            </div>
+         </div>
+       </div>
+    </div>
+  <div class="footer-bottom"><span>增值电信业务经营许可证：渝Bx-xxxxxxxx-x</span><span>美联公司版权所有@1997-2015</span></div>
+     <!--这是蒙版-->
+     <div class="show_layer"></div>
+      <div class="m-rightbar" id="rightBar">
+     <ul>
+      <li>
+       <a href="#" class="shops-cars">
+        <span class="txt">购物车</span>
+        <span class="num">333</span>
+      </a>
+    </li>
+    <li><a href=""# class="servon-line"><span class="txt">在线客户</span></a></li>
+    <li><a href="#" class="srcoll-top"></a></li>
+   </ul>
+ </div>
+  
+
+
+ <script>
+ 
+ var footer_top = $(".index-footer").offset().top;
+$(window).scroll(function() {
+    if($(window).scrollTop() + $(window).height() > footer_top + 100) {
+		$(".m-rightbar").css({ top: "auto", bottom: $(".index-footer").height() + 100 });
+    } else {
+		$(".m-rightbar").css({ top: "", bottom: "" });
+	}
+});
+ 
+ 
+ </script>
+</body>
+</html>
